@@ -759,7 +759,7 @@
     "delivery-arrived_light.png": "green",
     "delivery-in-progress_dark.png": "red",
     "delivery-in-progress_light.png": "red",
-    "delivery-preparation_day.png": "blue",
+    "delivery-preparation_day.png": "green",
     "delivery-preparation_night.png": "green",
     "delivery-processing-payment.png": "green",
     "driver-accepted-change_icon.png": "red",

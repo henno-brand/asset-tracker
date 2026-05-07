@@ -318,6 +318,7 @@
   <div class="spacer"></div>
   <button class="tb-btn dropbox-btn" id="btn-dropbox" onclick="connectDropbox()">📦 Connect Dropbox</button>
   <button class="tb-btn" id="btn-reload" onclick="reloadImages()" style="display:none">🔄 Reload</button>
+  <button class="tb-btn" id="btn-scan" onclick="autoScanWorkFiles()">🤖 Auto-Scan</button>
   <button class="tb-btn" onclick="exportData()">📥 Export</button>
   <button class="tb-btn" id="btn-edit" onclick="toggleEditMode()">🔒 Edit Mode</button>
   <button class="tb-btn danger" onclick="clearAll()">↺ Reset</button>
@@ -1267,6 +1268,56 @@ function submitPassword(){
 document.getElementById('pw-close').onclick=()=>document.getElementById('pw-backdrop').classList.remove('open');
 document.getElementById('pw-backdrop').addEventListener('click',e=>{ if(e.target===document.getElementById('pw-backdrop')) document.getElementById('pw-backdrop').classList.remove('open'); });
 document.getElementById('pw-input').addEventListener('keydown',e=>{ if(e.key==='Enter') submitPassword(); });
+
+// ── AUTO SCAN ──
+let activeWorkHandle = null;
+
+async function autoScanWorkFiles(){
+  if(!assets.length){ toast('Load images first'); return; }
+  if(!window.showDirectoryPicker){ toast('Requires Chrome or Edge'); return; }
+  if(!activeWorkHandle){
+    try {
+      activeWorkHandle = await showDirectoryPicker({mode:'read'});
+      toast('✓ Work folder linked — scanning…');
+    } catch(e){ if(e.name!=='AbortError') toast('Could not open folder'); return; }
+  }
+  setStatus('saving','Scanning work files…');
+  const names = [];
+  await collectWorkNames(activeWorkHandle, names);
+  setStatus('saving',`Matching ${names.length} entries…`);
+  await new Promise(r=>setTimeout(r,0));
+  let changed = 0;
+  assets.forEach(cat=>cat.items.forEach(item=>{
+    if(item.status==='blue') return;
+    const base = item.name.replace(/\.[^/.]+$/,'').toLowerCase();
+    const found = names.some(n => workFilesMatch(base, n));
+    const next = found ? 'green' : (item.status==='yellow' ? 'yellow' : 'red');
+    if(item.status !== next){ item.status=next; statuses[item.name]=next; changed++; }
+  }));
+  if(changed){ render(); ghSave(); setStatus('synced','Ready'); toast(`✓ Scan done — ${changed} updated`); }
+  else { toast('✓ Scan done — nothing changed'); setStatus('synced','Ready'); }
+}
+
+async function collectWorkNames(dirH, arr){
+  for await(const [name, h] of dirH.entries()){
+    if(h.kind==='file') arr.push(name.replace(/\.[^/.]+$/,'').toLowerCase());
+    else if(h.kind==='directory'){ arr.push(name.toLowerCase()); await collectWorkNames(h, arr); }
+    if(arr.length % 200 === 0){ setStatus('saving',`Scanning… ${arr.length} found`); await new Promise(r=>setTimeout(r,0)); }
+  }
+}
+
+function workFilesMatch(imgBase, fileName){
+  const ci = imgBase.replace(/[^a-z0-9]/g,'');
+  const cf = fileName.replace(/[^a-z0-9]/g,'');
+  if(!ci||!cf) return false;
+  if(ci===cf) return true;
+  if(ci.length>=5 && cf.includes(ci)) return true;
+  if(cf.length>=5 && ci.includes(cf)) return true;
+  const wi=imgBase.split(/[^a-z0-9]+/).filter(w=>w.length>2);
+  const wf=fileName.split(/[^a-z0-9]+/).filter(w=>w.length>2);
+  if(wi.length>=2 && wi.filter(w=>wf.includes(w)).length/wi.length>=0.75) return true;
+  return false;
+}
 
 // ── EXPORT ──
 function exportData(){

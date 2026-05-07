@@ -325,15 +325,25 @@
       #status-bar { display: none !important; }
       #mob-hamburger, #mob-search-btn { display: flex; }
 
-      /* Search expands full-width from top */
-      #search-wrap { display: none; max-width: none; flex: 1; }
+      /* Search: expands but keeps hamburger + title visible */
+      #search-wrap { display: none; }
       #search-wrap.mob-open {
-        display: block; position: fixed;
-        top: 0; left: 0; right: 0; z-index: 400;
-        padding: 8px 12px; background: var(--surface);
+        display: flex; align-items: center;
+        position: fixed;
+        top: 0; left: 0; right: 0; height: 52px; z-index: 400;
+        padding: 0 10px; gap: 8px;
+        background: var(--surface);
         border-bottom: 1px solid var(--border);
       }
-      #search-wrap.mob-open #search-input { width: 100%; height: 44px; font-size: 0.85rem; padding: 10px 36px 10px 32px; }
+      /* mob-hamburger stays visible inside search overlay */
+      #search-wrap.mob-open + * #mob-hamburger,
+      body #mob-hamburger { pointer-events: auto; }
+      #search-wrap.mob-open #search-input {
+        flex: 1; height: 36px; font-size: 0.85rem;
+        padding: 8px 32px 8px 30px;
+      }
+      /* Close button becomes the × at right */
+      #search-wrap.mob-open #search-clear { display: block; }
 
       /* Sidebar becomes slide-in drawer */
       #layout { display: block; height: calc(100vh - 52px); }
@@ -348,15 +358,20 @@
       #sidebar-overlay.visible { display: block; }
       #sidebar-close-btn { display: flex; }
 
-      /* Main */
+      /* Main — leave room only for bottom nav, not summary bar */
       #main { height: calc(100vh - 52px - 58px); padding: 12px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 
-      /* Bottom nav */
+      /* Hide summary bar on mobile — info is already in topbar */
+      #summary-bar { display: none !important; }
+      #toast { bottom: 80px; }
+
+      /* Bottom nav — high z-index, pointer-events always on */
       #bottom-nav {
         display: flex; position: fixed;
         bottom: 0; left: 0; right: 0; height: 58px;
         background: var(--surface); border-top: 1px solid var(--border);
-        z-index: 150; align-items: stretch;
+        z-index: 500; align-items: stretch;
+        pointer-events: auto;
       }
       .bn-btn {
         flex: 1; display: flex; flex-direction: column;
@@ -364,25 +379,28 @@
         background: none; border: none; color: var(--muted);
         font-family: 'DM Mono', monospace; font-size: 0.58rem;
         cursor: pointer; -webkit-tap-highlight-color: transparent;
+        pointer-events: auto; touch-action: manipulation;
+        min-height: 44px; /* iOS minimum tap target */
       }
       .bn-btn .bn-icon { font-size: 1.15rem; line-height: 1; }
       .bn-btn.active { color: var(--accent); }
 
-      /* Bottom sheet */
+      /* Bottom sheet — sits just above nav, high z-index */
       #bottom-sheet-overlay {
         display: none; position: fixed;
-        inset: 0; bottom: 58px; z-index: 199;
+        inset: 0; bottom: 58px; z-index: 490;
         background: rgba(0,0,0,0.45);
       }
       #bottom-sheet-overlay.vis { display: block; }
       #bottom-sheet {
         display: block; position: fixed;
-        bottom: 58px; left: 0; right: 0; z-index: 200;
+        bottom: 58px; left: 0; right: 0; z-index: 495;
         background: var(--surface); border-top: 1px solid var(--border);
         border-radius: 16px 16px 0 0; padding: 16px;
         max-height: 72vh; overflow-y: auto;
         transform: translateY(100%);
         transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+        pointer-events: auto;
       }
       #bottom-sheet.open { transform: translateY(0); }
       .bs-handle { width: 36px; height: 4px; border-radius: 2px; background: var(--border); margin: 0 auto 14px; }
@@ -409,6 +427,7 @@
         cursor: pointer; display: flex; align-items: center;
         justify-content: center; gap: 5px; transition: all 0.12s;
         -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
       }
       .ql-s-btn .qsd { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
       .ql-s-btn.on-green  { border-color: var(--green);  background: var(--green-dim);  color: var(--green);  font-weight: 600; }
@@ -417,8 +436,6 @@
       .ql-s-btn.on-blue   { border-color: var(--blue);   background: var(--blue-dim);   color: var(--blue);   font-weight: 600; }
 
       /* Misc */
-      #summary-bar { bottom: 70px; }
-      #toast { bottom: 130px; }
       .gallery { gap: 7px; }
       #connect-screen, #setup-screen { margin: 20px auto; padding: 0 4px; }
       .connect-title { font-size: 1.5rem; }
@@ -1695,16 +1712,30 @@ function closeSidebar(){
 
 function toggleMobSearch(){
   const wrap = document.getElementById('search-wrap');
+  const hamburger = document.getElementById('mob-hamburger');
+  const topbar = document.getElementById('topbar');
   if(wrap.classList.contains('mob-open')){
-    wrap.classList.remove('mob-open'); clearSearch();
+    wrap.classList.remove('mob-open');
+    // Move hamburger back to topbar
+    topbar.insertBefore(hamburger, topbar.firstChild);
+    clearSearch();
   } else {
     wrap.classList.add('mob-open');
+    // Move hamburger inside search bar so it stays visible
+    wrap.insertBefore(hamburger, wrap.firstChild);
     setTimeout(()=>document.getElementById('search-input').focus(), 80);
   }
 }
 // Close mobile search on Escape
 document.getElementById('search-input').addEventListener('keydown', e => {
-  if(e.key==='Escape' && isMob()){ document.getElementById('search-wrap').classList.remove('mob-open'); clearSearch(); }
+  if(e.key==='Escape' && isMob()){
+    const wrap = document.getElementById('search-wrap');
+    const hamburger = document.getElementById('mob-hamburger');
+    const topbar = document.getElementById('topbar');
+    wrap.classList.remove('mob-open');
+    topbar.insertBefore(hamburger, topbar.firstChild);
+    clearSearch();
+  }
 });
 
 // Bottom sheet

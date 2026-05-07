@@ -644,17 +644,17 @@ async function loadFromDropbox(){
         const base = e.name.replace(/\.[^/.]+$/,'').toLowerCase();
         videoPathMap[base] = e.path_display || e.path_lower;
       });
-      // Mark blue for any item that has a matching video
+      // Mark blue for any item that has a matching video (regardless of current status)
       let blueCount = 0;
       assets.forEach(cat => cat.items.forEach(item => {
         const base = item.name.replace(/\.[^/.]+$/,'').toLowerCase();
-        if(videoPathMap[base] && item.status !== 'blue'){
+        if(videoPathMap[base]){
           item.status = 'blue';
           statuses[item.name] = 'blue';
           blueCount++;
         }
       }));
-      if(blueCount > 0) ghSave();
+      if(blueCount > 0){ ghSave(); }
     } catch(e){ console.warn('Could not load videos:', e.message); }
 
     setLoading(false);
@@ -1236,14 +1236,15 @@ document.getElementById('ql-toggle-media').onclick=async e=>{
   const vidEl=document.getElementById('ql-video');
   btn._showingVideo=!btn._showingVideo;
   if(btn._showingVideo){
-    // Load video from Dropbox
     const item=qlItems[qlIndex];
     const base=item.name.replace(/\.[^/.]+$/,'').toLowerCase();
     const vPath=videoPathMap[base];
-    if(vPath && !vidEl.src){
+    if(vPath){
+      // Always fetch a fresh temp link (they expire)
       toast('Loading video…',4000);
       const link=await dbxGetTempLink(vPath);
       if(link){ vidEl.src=link; }
+      else { toast('Could not load video'); btn._showingVideo=false; return; }
     }
     imgEl.style.display='none'; vidEl.style.display=''; vidEl.play();
     btn.textContent='🖼';

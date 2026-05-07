@@ -624,6 +624,7 @@
 const DROPBOX_APP_KEY   = 'l64s07wricdl2ns';
 const DROPBOX_REDIRECT  = 'https://henno-brand.github.io/asset-tracker/';
 const IMG_FOLDER        = '/Asset Tracker/Bolt Illustrations';
+const IMG_FOLDER_THUMBS = '/Asset Tracker/Bolt Illustrations _thumbs'; // 400px PNGs, transparent
 const VIDEO_FOLDER      = '/Asset Tracker/Animated Illustrations/MP4';
 const GH_CONFIG_KEYS    = { token: 'at_gh_token', repo: 'at_gh_repo', path: 'at_gh_path' };
 const DEFAULT_FILENAME  = 'asset_tracker_data.json';
@@ -819,8 +820,12 @@ async function loadFromDropbox(){
         .sort((a,b) => a.name.localeCompare(b.name, undefined, {numeric:true, sensitivity:'base'}))
         .map(f => ({
           name: f.name,
-          path: f.path,
-          src: null, // loaded on demand
+          path: f.path,                          // full-res original
+          thumbPath: f.path.replace(            // 400px transparent PNG in _thumbs folder
+            new RegExp(IMG_FOLDER.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'i'),
+            IMG_FOLDER_THUMBS
+          ),
+          src: null,
           fullSrc: null,
           status: statuses[f.name] || null,
           tags: [...(tags[f.name] || [])]
@@ -868,15 +873,28 @@ async function loadFromDropbox(){
 }
 
 // ── PRELOAD ALL THUMBNAILS IN BATCHES ──
+// Fetches temp links from the _thumbs folder (400px transparent PNGs).
+// Falls back to the Dropbox JPEG thumbnail API if _thumbs doesn't exist yet.
 let preloadTotal = 0, preloadDone = 0;
+let thumbsAvailable = null; // null = unknown, true/false after first check
 
 function updatePreloadStatus(){
   if(preloadTotal === 0) return;
-  if(preloadDone >= preloadTotal){
-    setStatus('synced', 'Ready');
-  } else {
-    setStatus('saving', `Loading thumbnails… ${preloadDone} / ${preloadTotal}`);
-  }
+  if(preloadDone >= preloadTotal){ setStatus('synced', 'Ready'); }
+  else { setStatus('saving', `Loading thumbnails… ${preloadDone} / ${preloadTotal}`); }
+}
+
+async function checkThumbsFolder(){
+  if(thumbsAvailable !== null) return thumbsAvailable;
+  try {
+    const res = await fetch('https://api.dropboxapi.com/2/files/get_metadata', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer '+dropboxToken, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: IMG_FOLDER_THUMBS })
+    });
+    thumbsAvailable = res.ok;
+  } catch(e){ thumbsAvailable = false; }
+  return thumbsAvailable;
 }
 
 async function preloadAllImages(){
@@ -889,29 +907,47 @@ async function preloadAllImages(){
   preloadDone = 0;
   updatePreloadStatus();
 
-  // Use thumbnail batch API — 25 per request, much faster than individual temp links
-  const BATCH = 25;
-  for(let i = 0; i < allItems.length; i += BATCH){
-    const batch = allItems.slice(i, i + BATCH);
-    const paths = batch.map(({item}) => item.path.toLowerCase());
-    const thumbs = await dbxGetThumbnailsBatch(paths);
+  const hasThumbs = await checkThumbsFolder();
 
-    batch.forEach(({item, ci, ii}) => {
-      const thumbUrl = thumbs[item.path.toLowerCase()];
-      if(thumbUrl){
-        item.src = thumbUrl;
-        // fullSrc stays null — fetched on demand when quick-look opens
-        const card = document.querySelector(`.asset-item[data-ci="${ci}"][data-ii="${ii}"]`);
-        if(card){
-          const img = card.querySelector('img');
-          if(img){ img.src = thumbUrl; img.classList.remove('loading'); }
+  if(hasThumbs){
+    // Use _thumbs folder — transparent PNGs, temp links, batched in parallel
+    const BATCH = 20;
+    for(let i = 0; i < allItems.length; i += BATCH){
+      const batch = allItems.slice(i, i + BATCH);
+      await Promise.all(batch.map(async ({item, ci, ii}) => {
+        try {
+          const link = await dbxGetTempLink(item.thumbPath);
+          if(link){
+            item.src = link;
+            const card = document.querySelector(`.asset-item[data-ci="${ci}"][data-ii="${ii}"]`);
+            if(card){ const img=card.querySelector('img'); if(img){ img.src=link; img.classList.remove('loading'); } }
+          }
+        } catch(e){ /* skip */ }
+        preloadDone++;
+        updatePreloadStatus();
+      }));
+      await new Promise(r => setTimeout(r, 0));
+    }
+  } else {
+    // Fallback: Dropbox JPEG thumbnail API (white background, but works without setup)
+    setStatus('saving', 'Tip: run make_thumbs.py for transparent thumbnails');
+    const BATCH = 25;
+    for(let i = 0; i < allItems.length; i += BATCH){
+      const batch = allItems.slice(i, i + BATCH);
+      const paths = batch.map(({item}) => item.path.toLowerCase());
+      const thumbs = await dbxGetThumbnailsBatch(paths);
+      batch.forEach(({item, ci, ii}) => {
+        const url = thumbs[item.path.toLowerCase()];
+        if(url){
+          item.src = url;
+          const card = document.querySelector(`.asset-item[data-ci="${ci}"][data-ii="${ii}"]`);
+          if(card){ const img=card.querySelector('img'); if(img){ img.src=url; img.classList.remove('loading'); } }
         }
-      }
-      preloadDone++;
-    });
-
-    updatePreloadStatus();
-    await new Promise(r => setTimeout(r, 0)); // yield to browser
+        preloadDone++;
+      });
+      updatePreloadStatus();
+      await new Promise(r => setTimeout(r, 0));
+    }
   }
 }
 
@@ -941,14 +977,17 @@ function loadThumbnailsLazily(){
 async function loadItemThumb(item, card){
   if(item.src) return;
   try {
-    const thumbs = await dbxGetThumbnailsBatch([item.path.toLowerCase()]);
-    const url = thumbs[item.path.toLowerCase()];
+    const hasThumbs = await checkThumbsFolder();
+    let url = null;
+    if(hasThumbs){
+      url = await dbxGetTempLink(item.thumbPath);
+    } else {
+      const thumbs = await dbxGetThumbnailsBatch([item.path.toLowerCase()]);
+      url = thumbs[item.path.toLowerCase()] || null;
+    }
     if(!url) return;
     item.src = url;
-    if(card){
-      const img = card.querySelector('img');
-      if(img){ img.src = url; img.classList.remove('loading'); }
-    }
+    if(card){ const img=card.querySelector('img'); if(img){ img.src=url; img.classList.remove('loading'); } }
   } catch(e){ /* silently skip */ }
 }
 

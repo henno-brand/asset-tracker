@@ -648,8 +648,7 @@ async function loadFromDropbox(){
       // Mark blue for any item that has a matching video (regardless of current status)
       let blueCount = 0;
       assets.forEach(cat => cat.items.forEach(item => {
-        const base = item.name.replace(/\.[^/.]+$/,'').toLowerCase();
-        if(videoPathMap[base]){
+        if(getVideoMatch(item.name)){
           item.status = 'blue';
           statuses[item.name] = 'blue';
           blueCount++;
@@ -1238,8 +1237,8 @@ document.getElementById('ql-toggle-media').onclick=async e=>{
   btn._showingVideo=!btn._showingVideo;
   if(btn._showingVideo){
     const item=qlItems[qlIndex];
-    const base=item.name.replace(/\.[^/.]+$/,'').toLowerCase();
-    const vPath=videoPathMap[base];
+    const matchedKey=getVideoMatch(item.name);
+    const vPath=matchedKey ? videoPathMap[matchedKey] : null;
     if(vPath){
       // Always fetch a fresh temp link (they expire)
       toast('Loading video…',4000);
@@ -1377,6 +1376,24 @@ function workFilesMatch(imgBase, fileName){
 }
 
 // ── SCAN FOR VIDEOS ──
+function getVideoMatch(itemName){
+  // Exact match first
+  const base = itemName.replace(/\.[^/.]+$/,'').toLowerCase();
+  if(videoPathMap[base]) return base;
+  // Strip common suffixes: _dark, _light, _v1, _v2, _loop, _1, _2, _close-up, _16x9, _1x1 etc
+  const stripped = base
+    .replace(/[_-](dark|light|loop|rewind|spin|waving|close[_-]up|landscape|horizontal|vertical|portrait|\d+x\d+)$/,'')
+    .replace(/[_-]v\d+$/,'')
+    .replace(/[_-]\d+$/,'');
+  if(stripped !== base && videoPathMap[stripped]) return stripped;
+  // Also try normalizing separators (hyphens vs underscores)
+  const normBase = base.replace(/[_]/g,'-');
+  if(videoPathMap[normBase]) return normBase;
+  const normStripped = stripped.replace(/[_]/g,'-');
+  if(normStripped !== normBase && videoPathMap[normStripped]) return normStripped;
+  return null;
+}
+
 async function scanForVideos(){
   if(!assets.length){ toast('Load images first'); return; }
   if(Object.keys(videoPathMap).length === 0){
@@ -1384,8 +1401,7 @@ async function scanForVideos(){
   }
   let changed = 0;
   assets.forEach(cat => cat.items.forEach(item => {
-    const base = item.name.replace(/\.[^/.]+$/,'').toLowerCase();
-    if(videoPathMap[base]){
+    if(getVideoMatch(item.name)){
       item.status = 'blue';
       statuses[item.name] = 'blue';
       changed++;
@@ -1397,8 +1413,6 @@ async function scanForVideos(){
     toast(`🎬 ${changed} illustrations marked animated`);
   } else {
     toast('No matching videos found');
-    console.log('videoPathMap keys:', Object.keys(videoPathMap).slice(0,5));
-    console.log('sample PNG bases:', assets[0]?.items.slice(0,5).map(i=>i.name.replace(/\.[^/.]+$/,'').toLowerCase()));
   }
 }
 

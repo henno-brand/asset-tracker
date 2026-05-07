@@ -744,6 +744,44 @@ async function dbxGetTempLinks(paths){
   return results;
 }
 
+// ── DROPBOX THUMBNAIL API (batch, fast) ──
+// Returns a map of path → object URL for up to 25 images per call
+async function dbxGetThumbnailsBatch(paths, size='w256h256'){
+  const results = {};
+  const BATCH = 25; // Dropbox max per batch call
+  for(let i=0; i<paths.length; i+=BATCH){
+    const batch = paths.slice(i, i+BATCH);
+    try {
+      const res = await fetch('https://content.dropboxapi.com/2/files/get_thumbnail_batch', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer '+dropboxToken,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          entries: batch.map(path => ({
+            path,
+            format: 'jpeg',
+            size,
+            mode: 'fitone_bestfit'
+          }))
+        })
+      });
+      if(res.status === 401){ localStorage.removeItem('dbx_token'); dropboxToken=null; showConnect(); throw new Error('Dropbox token expired'); }
+      if(!res.ok) continue;
+      const data = await res.json();
+      (data.entries || []).forEach(entry => {
+        if(entry['.tag'] === 'success' && entry.thumbnail){
+          // thumbnail is base64-encoded JPEG
+          const url = 'data:image/jpeg;base64,' + entry.thumbnail;
+          results[entry.metadata.path_lower] = url;
+        }
+      });
+    } catch(e){ console.warn('Thumbnail batch error:', e.message); }
+  }
+  return results;
+}
+
 // ── LOAD IMAGES FROM DROPBOX ──
 async function loadFromDropbox(){
   document.getElementById('connect-screen').style.display = 'none';
@@ -829,7 +867,7 @@ async function loadFromDropbox(){
   }
 }
 
-// ── PRELOAD ALL IMAGES IN BATCHES ──
+// ── PRELOAD ALL THUMBNAILS IN BATCHES ──
 let preloadTotal = 0, preloadDone = 0;
 
 function updatePreloadStatus(){
@@ -837,12 +875,11 @@ function updatePreloadStatus(){
   if(preloadDone >= preloadTotal){
     setStatus('synced', 'Ready');
   } else {
-    setStatus('saving', `Loading images… ${preloadDone} / ${preloadTotal}`);
+    setStatus('saving', `Loading thumbnails… ${preloadDone} / ${preloadTotal}`);
   }
 }
 
 async function preloadAllImages(){
-  // Collect all items that need loading
   const allItems = [];
   assets.forEach((cat, ci) => cat.items.forEach((item, ii) => {
     if(!item.src) allItems.push({item, ci, ii});
@@ -852,38 +889,34 @@ async function preloadAllImages(){
   preloadDone = 0;
   updatePreloadStatus();
 
-  const BATCH = 16;
+  // Use thumbnail batch API — 25 per request, much faster than individual temp links
+  const BATCH = 25;
   for(let i = 0; i < allItems.length; i += BATCH){
     const batch = allItems.slice(i, i + BATCH);
-    await Promise.all(batch.map(async ({item, ci, ii}) => {
-      try {
-        const link = await dbxGetTempLink(item.path);
-        if(!link) return;
-        item.src = link;
-        item.fullSrc = link;
-        // Update DOM in place
+    const paths = batch.map(({item}) => item.path.toLowerCase());
+    const thumbs = await dbxGetThumbnailsBatch(paths);
+
+    batch.forEach(({item, ci, ii}) => {
+      const thumbUrl = thumbs[item.path.toLowerCase()];
+      if(thumbUrl){
+        item.src = thumbUrl;
+        // fullSrc stays null — fetched on demand when quick-look opens
         const card = document.querySelector(`.asset-item[data-ci="${ci}"][data-ii="${ii}"]`);
         if(card){
           const img = card.querySelector('img');
-          if(img){ img.src = link; img.classList.remove('loading'); }
+          if(img){ img.src = thumbUrl; img.classList.remove('loading'); }
         }
-        // Update quick-look if open
-        if(qlItems[qlIndex] === item){
-          const qlImg = document.getElementById('ql-img');
-          if(qlImg) { qlImg.src = link; document.getElementById('ql-spinner').style.display='none'; }
-        }
-      } catch(e){ /* skip */ }
+      }
       preloadDone++;
-      updatePreloadStatus();
-    }));
-    // Small yield between batches to keep UI responsive
-    await new Promise(r => setTimeout(r, 0));
+    });
+
+    updatePreloadStatus();
+    await new Promise(r => setTimeout(r, 0)); // yield to browser
   }
 }
 
 // Keep lazy loader for re-renders (items already have src, this is a no-op mostly)
 function loadThumbnailsLazily(){
-  // After preload, any remaining unloaded items (e.g. after filter change) get loaded on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if(!entry.isIntersecting) return;
@@ -893,7 +926,7 @@ function loadThumbnailsLazily(){
       const item = assets[ci]?.items[ii];
       if(!item || item.src) return;
       observer.unobserve(card);
-      loadItemImage(item, card);
+      loadItemThumb(item, card);
     });
   }, { rootMargin: '400px' });
   document.querySelectorAll('.asset-item[data-ci]').forEach(card => {
@@ -904,22 +937,29 @@ function loadThumbnailsLazily(){
   });
 }
 
-async function loadItemImage(item, card){
+// Load a single thumbnail (used by lazy loader)
+async function loadItemThumb(item, card){
   if(item.src) return;
   try {
-    const link = await dbxGetTempLink(item.path);
-    if(!link) return;
-    item.src = link;
-    item.fullSrc = link;
+    const thumbs = await dbxGetThumbnailsBatch([item.path.toLowerCase()]);
+    const url = thumbs[item.path.toLowerCase()];
+    if(!url) return;
+    item.src = url;
     if(card){
       const img = card.querySelector('img');
-      if(img){ img.src = link; img.classList.remove('loading'); }
-    }
-    if(qlItems[qlIndex] === item){
-      const qlImg = document.getElementById('ql-img');
-      if(qlImg.src !== link){ qlImg.src = link; document.getElementById('ql-spinner').style.display='none'; }
+      if(img){ img.src = url; img.classList.remove('loading'); }
     }
   } catch(e){ /* silently skip */ }
+}
+
+// Load full-res image — only called when quick-look opens
+async function loadItemFullRes(item){
+  if(item.fullSrc) return item.fullSrc;
+  try {
+    const link = await dbxGetTempLink(item.path);
+    if(link) item.fullSrc = link;
+    return link;
+  } catch(e){ return null; }
 }
 
 async function reloadImages(){
@@ -1337,25 +1377,17 @@ function renderQuickLook(item){
   const spinner=document.getElementById('ql-spinner');
   const toggleBtn=document.getElementById('ql-toggle-media');
 
-  // Check for video
   const videoBase=item.name.replace(/\.[^/.]+$/,'').toLowerCase();
   const hasVideo=!!videoPathMap[videoBase];
 
-  if(item.src){
-    imgEl.src=item.src; spinner.style.display='none'; imgEl.style.display='';
-  } else {
-    imgEl.src=''; imgEl.style.display=''; spinner.style.display='';
-    // Load on demand
-    loadItemImage(item, document.querySelector(`.asset-item[data-ci][data-ii]`));
-    dbxGetTempLink(item.path).then(link=>{ if(link){ item.src=link; item.fullSrc=link; imgEl.src=link; spinner.style.display='none'; } });
-  }
+  // Show thumbnail immediately while full-res loads
+  if(item.src){ imgEl.src=item.src; spinner.style.display='none'; }
+  else { imgEl.src=''; spinner.style.display=''; }
+  imgEl.style.display='';
 
   vidEl.src=''; vidEl.style.display='none';
-  if(hasVideo){
-    toggleBtn.style.display='flex'; toggleBtn.textContent='▶'; toggleBtn._showingVideo=false;
-  } else {
-    toggleBtn.style.display='none';
-  }
+  if(hasVideo){ toggleBtn.style.display='flex'; toggleBtn.textContent='▶'; toggleBtn._showingVideo=false; }
+  else { toggleBtn.style.display='none'; }
 
   document.getElementById('ql-name').textContent=item.name;
   const sr=document.getElementById('ql-status-row');
@@ -1371,6 +1403,16 @@ function renderQuickLook(item){
   document.getElementById('ql-tag-input').value='';
   document.getElementById('ql-tag-input')._item=item;
   if(editMode) setTimeout(()=>document.getElementById('ql-tag-input').focus(),80);
+
+  // Fetch full-res in background, swap in when ready
+  loadItemFullRes(item).then(link => {
+    if(!link) return;
+    // Only update if this item is still the one being shown
+    if(qlItems[qlIndex] === item && imgEl.style.display !== 'none'){
+      imgEl.src = link;
+      spinner.style.display = 'none';
+    }
+  });
 }
 
 function qlNavigate(dir){

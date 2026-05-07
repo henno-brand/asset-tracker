@@ -664,8 +664,8 @@ async function loadFromDropbox(){
     setStatus('synced', 'Ready');
     render();
 
-    // 5. Lazy-load thumbnails for visible items in batches
-    loadThumbnailsLazily();
+    // 5. Preload all images eagerly in background batches
+    preloadAllImages();
 
   } catch(e){
     setLoading(false);
@@ -675,9 +675,61 @@ async function loadFromDropbox(){
   }
 }
 
-// Lazy thumbnail loading using IntersectionObserver
+// ── PRELOAD ALL IMAGES IN BATCHES ──
+let preloadTotal = 0, preloadDone = 0;
+
+function updatePreloadStatus(){
+  if(preloadTotal === 0) return;
+  if(preloadDone >= preloadTotal){
+    setStatus('synced', 'Ready');
+  } else {
+    setStatus('saving', `Loading images… ${preloadDone} / ${preloadTotal}`);
+  }
+}
+
+async function preloadAllImages(){
+  // Collect all items that need loading
+  const allItems = [];
+  assets.forEach((cat, ci) => cat.items.forEach((item, ii) => {
+    if(!item.src) allItems.push({item, ci, ii});
+  }));
+
+  preloadTotal = allItems.length;
+  preloadDone = 0;
+  updatePreloadStatus();
+
+  const BATCH = 16;
+  for(let i = 0; i < allItems.length; i += BATCH){
+    const batch = allItems.slice(i, i + BATCH);
+    await Promise.all(batch.map(async ({item, ci, ii}) => {
+      try {
+        const link = await dbxGetTempLink(item.path);
+        if(!link) return;
+        item.src = link;
+        item.fullSrc = link;
+        // Update DOM in place
+        const card = document.querySelector(`.asset-item[data-ci="${ci}"][data-ii="${ii}"]`);
+        if(card){
+          const img = card.querySelector('img');
+          if(img){ img.src = link; img.classList.remove('loading'); }
+        }
+        // Update quick-look if open
+        if(qlItems[qlIndex] === item){
+          const qlImg = document.getElementById('ql-img');
+          if(qlImg) { qlImg.src = link; document.getElementById('ql-spinner').style.display='none'; }
+        }
+      } catch(e){ /* skip */ }
+      preloadDone++;
+      updatePreloadStatus();
+    }));
+    // Small yield between batches to keep UI responsive
+    await new Promise(r => setTimeout(r, 0));
+  }
+}
+
+// Keep lazy loader for re-renders (items already have src, this is a no-op mostly)
 function loadThumbnailsLazily(){
-  // Use IntersectionObserver to load images as they scroll into view
+  // After preload, any remaining unloaded items (e.g. after filter change) get loaded on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if(!entry.isIntersecting) return;
@@ -689,9 +741,13 @@ function loadThumbnailsLazily(){
       observer.unobserve(card);
       loadItemImage(item, card);
     });
-  }, { rootMargin: '200px' });
-
-  document.querySelectorAll('.asset-item[data-ci]').forEach(card => observer.observe(card));
+  }, { rootMargin: '400px' });
+  document.querySelectorAll('.asset-item[data-ci]').forEach(card => {
+    const ci = parseInt(card.dataset.ci);
+    const ii = parseInt(card.dataset.ii);
+    const item = assets[ci]?.items[ii];
+    if(item && !item.src) observer.observe(card);
+  });
 }
 
 async function loadItemImage(item, card){
@@ -705,7 +761,6 @@ async function loadItemImage(item, card){
       const img = card.querySelector('img');
       if(img){ img.src = link; img.classList.remove('loading'); }
     }
-    // Update quick-look if this item is open
     if(qlItems[qlIndex] === item){
       const qlImg = document.getElementById('ql-img');
       if(qlImg.src !== link){ qlImg.src = link; document.getElementById('ql-spinner').style.display='none'; }

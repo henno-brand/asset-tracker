@@ -319,6 +319,7 @@
   <button class="tb-btn dropbox-btn" id="btn-dropbox" onclick="connectDropbox()">📦 Connect Dropbox</button>
   <button class="tb-btn" id="btn-reload" onclick="reloadImages()" style="display:none">🔄 Reload</button>
   <button class="tb-btn" id="btn-scan" onclick="autoScanWorkFiles()">🤖 Auto-Scan</button>
+  <button class="tb-btn" id="btn-scan-video" onclick="scanForVideos()">🎬 Scan Videos</button>
   <button class="tb-btn" onclick="exportData()">📥 Export</button>
   <button class="tb-btn" id="btn-edit" onclick="toggleEditMode()">🔒 Edit Mode</button>
   <button class="tb-btn danger" onclick="clearAll()">↺ Reset</button>
@@ -1373,6 +1374,32 @@ function workFilesMatch(imgBase, fileName){
   const wf=fileName.split(/[^a-z0-9]+/).filter(w=>w.length>2);
   if(wi.length>=2 && wi.filter(w=>wf.includes(w)).length/wi.length>=0.75) return true;
   return false;
+}
+
+// ── SCAN FOR VIDEOS ──
+async function scanForVideos(){
+  if(!assets.length){ toast('Load images first'); return; }
+  if(Object.keys(videoPathMap).length === 0){
+    toast('No videos loaded — check video folder'); return;
+  }
+  let changed = 0;
+  assets.forEach(cat => cat.items.forEach(item => {
+    const base = item.name.replace(/\.[^/.]+$/,'').toLowerCase();
+    if(videoPathMap[base]){
+      item.status = 'blue';
+      statuses[item.name] = 'blue';
+      changed++;
+    }
+  }));
+  if(changed){
+    render();
+    ghSave();
+    toast(`🎬 ${changed} illustrations marked animated`);
+  } else {
+    toast('No matching videos found');
+    console.log('videoPathMap keys:', Object.keys(videoPathMap).slice(0,5));
+    console.log('sample PNG bases:', assets[0]?.items.slice(0,5).map(i=>i.name.replace(/\.[^/.]+$/,'').toLowerCase()));
+  }
 }
 
 // ── EXPORT ──

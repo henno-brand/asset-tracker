@@ -1,893 +1,774 @@
 {
   "statuses": {
-    "Booster Seat (1).png": "red",
-    "0_Row 395 Emoji Sticker_Front_Option.png": "red",
-    "0_Row 395 Emoji_Sticker.png": "red",
-    "0_Row 395 Loyalty Campaign_Front.png": "red",
-    "0_Row 395 Loyalty Campaign_L.png": "red",
-    "0_Row 395 Loyalty Campaign_R.png": "red",
-    "Arrived 2.png": "green",
-    "Asian.png": "blue",
-    "Breakfast.png": "green",
-    "Chinese Flag (option).png": "red",
-    "Confirmation Mobile Payments  (Version 2).png": "blue",
-    "Confirmation Mobile Payments (Version 1).png": "red",
-    "Confirmation Mobile Payments 2.png": "blue",
-    "Credit card.png": "red",
-    "Decline Mobile Payments (Version 2).png": "red",
-    "Decline Mobile Payments 2.png": "red",
-    "Delivery in progress_2.png": "red",
-    "Electronics.png": "green",
-    "Fast Food.png": "red",
-    "Health & Beauty.png": "green",
-    "Icecream.png": "green",
-    "Indian Flag (option).png": "red",
-    "Italian Flag (option).png": "red",
-    "Off X_Closed_Starship Robot.png": "red",
-    "Off X_Open_Starship Robot.png": "red",
-    "Pharmacy.png": "red",
-    "Pizza.png": "blue",
-    "Preparation_Day.png": "blue",
-    "Processing payment.png": "blue",
-    "Riding with Pets.png": "red",
-    "Row 14_ Car Rentals v2 (Key).png": "red",
-    "Row 15 Scheduling a car.png": "blue",
-    "Row 16 Car with calendar.png": "green",
-    "Row 47 Baggages (Solo).png": "red",
-    "Row 47 Baggages.png": "green",
-    "Row 48 Pet Friendly.png": "green",
-    "Row 48_ Pet-friendly (Cat).png": "green",
-    "Row 49_ Air-conditioner.png": "green",
-    "Row 50_ Child Seat.png": "green",
-    "Row 51_ Get assistance from driver_1.png": "green",
-    "Row 51_ Get assistance from driver_2.png": "green",
-    "Row 53_ Electric.png": "green",
-    "Row 56 Set pick-up Location_1.png": "blue",
-    "Row 56 Set pick-up Location_2.png": "green",
-    "Row 57 Set Location denied_1.png": "red",
-    "Row 57 Set Location denied_2.png": "red",
-    "Row 58_ App update.png": "red",
-    "Row 60_ Wrong Location.png": "red",
-    "Row 61 No Internet 2.png": "red",
-    "Row 62_ General Error.png": "red",
-    "Row 64 Chat with driver_Solo 1.png": "green",
-    "Row 64 Chat with driver_Solo 2.png": "green",
-    "Row 64_ Chat with driver.png": "green",
-    "Row 65 Nothing found.png": "green",
-    "Row 66_ Chat with Support - empty state.png": "red",
-    "Row 68_ Verification_1.png": "red",
-    "Row 69_ Verification_2.png": "red",
-    "Row 70_ Verification_3.png": "blue",
-    "Row 71 Verification 4 orange.png": "red",
-    "Row 71_ Verification_4.png": "blue",
-    "Row 72_ Email-Locked.png": "red",
-    "Row 73_ Email Done.png": "red",
-    "Row 74_ Email Error.png": "red",
-    "Row 76_ Authentication_1.png": "green",
-    "Row 77 Authentication_2.png": "blue",
-    "Row 78_ Authentication_3.png": "red",
-    "Row 84 Work Rides.png": "red",
-    "Row 85_ Work Profile.png": "green",
-    "Row 86_ Work Profile with Promo.png": "red",
-    "Row 87_ T&C_1.png": "red",
-    "Row 88_ T&C_2.png": "green",
-    "Row 89 Bolt Plus (Solo Green).png": "blue",
-    "Row 89 Bolt Plus full (Green).png": "red",
-    "Row 89_ Bolt Plus_3.png": "green",
-    "Row 91_ License (No Icon)_1.png": "red",
-    "Row 91_ License (No Icon)_2.png": "red",
-    "Row 91_ License Failed_1.png": "red",
-    "Row 91_ License Failed_2.png": "red",
-    "Row 92_ Cancel Ride Icon.png": "red",
-    "Row 93_ Driver busy Icon.png": "red",
-    "Row 94_ Driver accepted change request Icon.png": "blue",
-    "Row 97 Wallet XL.png": "blue",
-    "Row 99 Payment Failed - Wallet.png": "red",
-    "Row 100 Add Money.png": "green",
-    "Row 101_ Plane arrived at an airport.png": "blue",
-    "Row 106 Default Illustration for promo_Gift only 2.png": "blue",
-    "Row 106 Default Illustration for promo_Gift only 3.png": "red",
-    "Row 106 Default Illustration for promo_Gift only.png": "red",
-    "Row 107 Illustration for Safety.png": "red",
-    "Row 109_ Delivery Bag.png": "blue",
-    "Row 110_ Delivery Discount.png": "blue",
-    "Row 111_ Paperbag with branding (pickup order).png": "red",
-    "Row 112_ Food Order.png": "red",
-    "Row 113_ Discounts.png": "blue",
-    "Row 114_ Order again.png": "red",
-    "Row 115_ Grocery order.png": "red",
-    "Row 116_ Food Order (Dine-in_ No Delivery) .png": "blue",
-    "Row 117_ Service (Dine-In)_1.png": "green",
-    "Row 117_ Service (Dine-In)_2.png": "green",
-    "Row 118_ Night (24_7 or late night food options).png": "green",
-    "Row 119 Fast Delivery with icon.png": "red",
-    "Row 119 Fast Delivery.png": "blue",
-    "Row 120_ Breakfast.png": "red",
-    "Row 122 Groceries (without bag, delivery).png": "red",
-    "Row 124_ Alcohol.png": "red",
-    "Row 125_ Bakery.png": "red",
-    "Row 126_ Books.png": "red",
-    "Row 128_ Flowers.png": "green",
-    "Row 129_ Gifts.png": "red",
-    "Row 130_ Health and beauty.png": "red",
-    "Row 131_ Pet supplies.png": "red",
-    "Row 132_ Sweets.png": "green",
-    "Row 133_ Toys and Games.png": "red",
-    "Row 134_ New merchants.png": "red",
-    "Row 137_ Menu Discounts.png": "green",
-    "Row 138 Special offer, gift.png": "red",
-    "Row 139_ Exclusive.png": "red",
-    "Row 144 Search no results.png": "red",
-    "Row 146_ Failed General.png": "red",
-    "Row 149 Empty Basket.png": "red",
-    "Row 150_ Orders no results.png": "red",
-    "Row 151_ Cash Info_1.png": "blue",
-    "Row 151_ Cash Info_2.png": "blue",
-    "Row 173_ Tree 1, round tree.png": "red",
-    "Row 173_ Tree 2, two tier heart tree.png": "red",
-    "Row 173_ Tree 3, topless cone tree.png": "red",
-    "Row 173_ Tree 4, oval tree.png": "red",
-    "Row 173_ Tree 5, snowman tree.png": "red",
-    "Row 173_ Tree 6, square tree.png": "red",
-    "Row 174_ Cloud 1.png": "red",
-    "Row 174_ Cloud 2.png": "red",
-    "Row 174_ Cloud 3.png": "red",
-    "Row 175_ Location pin (based on the letter O and dot under it in Bolt logo).png": "red",
-    "Row 314-319 Car Branding_Back_Solo.png": "red",
-    "Row 314-319 Car Branding_Front_Solo.png": "red",
-    "Row 314-319 Car Branding_Left_Solo.png": "red",
-    "Row 314-319 Car Branding_Right_Solo.png": "red",
-    "Row 314-319_ Car Branding_Green Icon_Solo.png": "blue",
-    "Row 314-319_ Car Branding_Red Icon_Solo.png": "red",
-    "Row 314, 317_ Car Branding_Hand_1.png": "red",
-    "Row 314, 317_ Car Branding_Hand_2.png": "red",
-    "Row 320 Electric charging stand.png": "red",
-    "Row 321 Petrol refueling stand.png": "red",
-    "Row 322 Personal Data Export flow 1.png": "red",
-    "Row 322 Personal Data Export flow 2.png": "red",
-    "Row 322 Personal Data Export flow 3.png": "red",
-    "Row 322 Personal Data Export flow 4.png": "red",
-    "Row 322 Personal Data Export flow 5.png": "red",
-    "Row 322 Personal Data Export flow 6.png": "red",
-    "Row 324 Price bidding flow (Bolt Negotiate).png": "red",
-    "Row 326 AI chatbot agent.png": "blue",
-    "Row 327 Suitcase Bolt business.png": "red",
-    "Row 328 Bolt Business policy.png": "red",
-    "Row 329 Bolt Business time.png": "red",
-    "Row 330 Bolt Business voucher_coupon.png": "red",
-    "Row 331 Bolt Business card_money 1.png": "red",
-    "Row 333 Error invoice.png": "red",
-    "Row 334 Success app (open app) 1.png": "blue",
-    "Row 334 Success app (open app) 2.png": "red",
-    "Row 335 Download the bolt app 1.png": "red",
-    "Row 335 Download the bolt app 2.png": "red",
-    "Row 336 Enter the SMS code - shown during sign up 1.png": "red",
-    "Row 336 Enter the SMS code - shown during sign up 2.png": "red",
-    "Row 337 Empty orders.png": "red",
-    "Row 338 & 348 Calendar Icon_ Base Green.png": "red",
-    "Row 338 & Row 348 Calendar Icon_ Base Red.png": "red",
-    "Row 338 & Row 348 Calendar Icon_ Solo Icon 3 (check).png": "red",
-    "Row 338 & Row 348 Calendar Icon_ Solo Icon 4 (X).png": "red",
-    "Row 342 Coupon.png": "red",
-    "Row 344 Favorite place 1.png": "blue",
-    "Row 344 Favorite place 2.png": "blue",
-    "Row 347 Credit card.png": "red",
-    "Row 348 Calendar Icon_ Base Yellow.png": "red",
-    "Row 348 Calendar Icon_ Clear.png": "red",
-    "Row 348 Calendar Icon_ Solo Icon 1 (!).png": "red",
-    "Row 348 Calendar Icon_ Solo Icon 2 (_).png": "red",
-    "Row 349 Icon 1_Solo.png": "red",
-    "Row 349 Icon 1_Solo(1).png": "red",
-    "Row 349 Icon 2_Solo.png": "red",
-    "Row 349 ID Card Approved 1 full.png": "red",
-    "Row 349 ID Card Approved 1_Base.png": "red",
-    "Row 349 ID Card Approved 2 full.png": "red",
-    "Row 349 ID Card Approved 2_Base.png": "red",
-    "Row 349 ID Card Error 1 full.png": "red",
-    "Row 349 ID Card Error 1_Base.png": "red",
-    "Row 349 ID Card Error 2 full.png": "red",
-    "Row 349 ID Card Error 2_Base.png": "red",
-    "Row 349 ID Card Expiring 1 full.png": "red",
-    "Row 349 ID Card expiring 1_Base.png": "red",
-    "Row 349 ID Card Expiring 2 full.png": "red",
-    "Row 349 ID Card expiring 2_Base.png": "red",
-    "Row 350 Extra Icon (_).png": "red",
-    "Row 350 Extra Icon (!).png": "red",
-    "Row 350 Work Profile Error Base.png": "red",
-    "Row 350 Work Profile Error_full.png": "red",
-    "Row 350 Work Profile warning Base.png": "red",
-    "Row 350 Work Profile warning_full.png": "red",
-    "Row 351 Extra Icon Check.png": "red",
-    "Row 351 Extra Icon Download.png": "red",
-    "Row 351 Invoice and T&C clear.png": "blue",
-    "Row 351 Invoice and T&Cs download_full.png": "red",
-    "Row 351 Invoice and T&Cs success base.png": "red",
-    "Row 351 Invoice and T&Cs success_full.png": "red",
-    "Row 352 Business payment method added base.png": "red",
-    "Row 352 Business payment method added_full.png": "red",
-    "Row 352 Business payment method failed base.png": "red",
-    "Row 352 Business payment method failed.png": "red",
-    "Row 352 Business payment method missing base.png": "red",
-    "Row 352 Business payment method missing.png": "red",
-    "Row 352 Cashless wallet.png": "yellow",
-    "Row 352 Extra Icon (_).png": "red",
-    "Row 352 Extra Icon (X).png": "red",
-    "Row 352 Extra Icon check .png": "red",
-    "Row 354 Thumbs up_1.png": "green",
-    "Row 354 Thumbs up_2.png": "green",
-    "Row 355 Thumbs down_1.png": "green",
-    "Row 355 Thumbs down_2.png": "green",
-    "Row 356 Battery.png": "red",
-    "Row 356 Extra Icon.png": "red",
-    "Row 359 Hourglass.png": "green",
-    "Row 360 Parking traffic sign.png": "green",
-    "Row 361 Traffic Light All.png": "red",
-    "Row 361 Traffic Light Green.png": "red",
-    "Row 361 Traffic Light orange.png": "red",
-    "Row 361 Traffic Light Red.png": "red",
-    "Row 362 The planet.png": "blue",
-    "Row 363 Smartphone in hand 1.png": "green",
-    "Row 363 Smartphone in hand 2.png": "green",
-    "Row 364 Hands up in celebration with confetti 1.png": "blue",
-    "Row 368 Green question mark.png": "red",
-    "Row 370 Taking a selfie 1.png": "red",
-    "Row 370 Taking a selfie 2.png": "red",
-    "Row 371 Insurance (Black).png": "green",
-    "Row 380 Scheduled rides Airport.png": "red",
-    "Row 385 Allow location services access.png": "red",
-    "Row 386 Ride Timeout.png": "red",
-    "Row 388 Ride ended automatically.png": "red",
-    "Row 389 Icon 1.png": "blue",
-    "Row 389 Icon 2.png": "red",
-    "Row 389 Icon 3.png": "red",
-    "Row 389 Icon 4.png": "red",
-    "Row 389 Photo License 1.png": "blue",
-    "Row 389 Photo License 2.png": "blue",
-    "Row 393 Headlights (1).png": "red",
-    "Row 393 Headlights.png": "red",
-    "Scooter Charging Dock.png": "red",
-    "Scooter Solo.png": "red",
-    "Side_Starship Robot.png": "red",
-    "Stores.png": "green",
-    "Wrap.png": "red",
-    "0_Bolt Hero Car (Flowers - Woman_s Day) Top.png": "red",
-    "0_Bolt Hero Car Valentine_s Day_Off X.png": "yellow",
-    "0_Dubai Red Roof XL_Off X with Wheelchair.png": "yellow",
-    "0_Dubai XL_Pink Roof_Off X Taxi.png": "yellow",
-    "0_Dubai XL_Red Roof_Off X Taxi.png": "yellow",
-    "0_Earth Day_Car_Off X.png": "yellow",
-    "0_Earth Day_Car_Top.png": "red",
-    "0_Easter Ear_Car_Off X.png": "yellow",
-    "0_Easter Ear_Car_Top.png": "red",
-    "0_Easter Egg_Car_Off X.png": "yellow",
-    "0_Easter Egg_Car_Top.png": "red",
-    "0_Romania_XS_OffX.png": "yellow",
-    "0_Romania_XS_Top.png": "red",
-    "0_Row 7 Premium Car Iso (Silver_Detail).png": "red",
-    "0_Row 7 Premium Car Side (Silver_Detail).png": "blue",
-    "0_Row 24 XXL Iso (New Colour).png": "yellow",
-    "0_Row 24 XXL Off X(New Colour).png": "yellow",
-    "0_Row 24 XXL Side (New Colour).png": "yellow",
-    "0_Row 372 Mini Bus Off X.png": "green",
-    "0_Row 374 Premium + Off X.png": "green",
-    "0_Row 375 VIP Off X 1.png": "green",
-    "0_Row 375 VIP Off X 2.png": "green",
-    "0_Row 376 VIP + 1.png": "green",
-    "0_Row 376 VIP + 2.png": "green",
-    "0_Row 377 VIP XL 1.png": "green",
-    "0_Row 377 VIP XL 2.png": "green",
-    "0_Row 382 Wheelchair Support_Yellow Taxi XL.png": "yellow",
-    "0_Row 382 Wheelchair Support.png": "yellow",
-    "0_Taxi Lexus_Off X.png": "yellow",
-    "0_Taxi Red Roof_Cream_Off X.png": "yellow",
-    "0_XL + Off X.png": "blue",
-    "Beige.png": "red",
-    "Blue.png": "red",
-    "Bolt Comfort Car_RO_OffX.png": "red",
-    "Bolt Comfort Car_RO_Top.png": "red",
-    "Bolt Premium Motorbike Off X.png": "yellow",
-    "Bolt Premium Motorbike Top.png": "red",
-    "Bolt_Aurora_icon_Top.png": "red",
-    "Bolt_Car_Icon_NO_OffX.png": "red",
-    "Bolt_Car_Icon_NO_top.png": "red",
-    "Bolt_Hero_Car_Canaday_Top.png": "red",
-    "Bolt_Hero_Car_Pride_Top.png": "red",
-    "Bolt_Hero_Car_Sauna_Top (1).png": "red",
-    "Bolt_Ramadan_Top.png": "red",
-    "Broom_Top.png": "red",
-    "Chauffeur Signature_1.png": "red",
-    "Chauffeur Signature_2.png": "red",
-    "Chauffeur Signature_Top.png": "red",
-    "Chauffeur SUV_1.png": "red",
-    "Chauffeur SUV_2.png": "red",
-    "Chauffeur SUV_Top.png": "red",
-    "Chauffeur XXL_1.png": "red",
-    "Chauffeur XXL_2.png": "red",
-    "Chauffeur XXL_Top.png": "red",
-    "Christmas_Off X_2.png": "yellow",
-    "Cyprus Intercity Taxi Standard.png": "red",
-    "Cyprus Intercity Taxi XL.png": "red",
-    "Election day.png": "yellow",
-    "French Taxi_OffX.png": "yellow",
-    "French Taxi_Top.png": "red",
-    "French_Taxi_Side.png": "red",
-    "Light Blue.png": "red",
-    "Little Bolt Green .png": "red",
-    "Little Bolt White.png": "red",
-    "Little Bolt Yellow.png": "red",
-    "Little_Bolt_OffX.png": "yellow",
-    "Little_Bolt_TOP.png": "red",
-    "Maroon.png": "red",
-    "Mi Taxi.png": "red",
-    "Moped w glass.png": "green",
-    "Moped.png": "red",
-    "Motorbike.png": "red",
-    "Navy Blue.png": "red",
-    "Normal Car_BikeStorage.png": "red",
-    "Normal Car_Childseat.png": "yellow",
-    "Normal Car_Pets.png": "red",
-    "Off X (PS Guide).png": "red",
-    "Off X Bubbles (PS Guide).png": "red",
-    "Off X Bubbles.png": "yellow",
-    "Off X_Haloween.png": "yellow",
-    "Off X.png": "yellow",
-    "Orange.png": "red",
-    "Pink.png": "red",
-    "Premium MotorBike_Off X_Vietnam (1).png": "yellow",
-    "Premium MotorBike_Off X_Vietnam.png": "red",
-    "Premium MotorBike_Off X.png": "green",
-    "Premium MotorBike_Side.png": "green",
-    "Premium MotorBike_Top_Vietnam (1).png": "red",
-    "Premium MotorBike_Top_Vietnam.png": "red",
-    "Premium MotorBike_Top.png": "green",
-    "Priority Category.png": "red",
-    "Row 1 Bolt Green Back Hero Car Iso.png": "green",
-    "Row 1 Bolt Green Back Hero Car Off X.png": "green",
-    "Row 1 Bolt Green Back Hero Car Side.png": "green",
-    "Row 1 Bolt Green Back Hero Car Top.png": "green",
-    "Row 1 Hero Green Circle Car Iso.png": "green",
-    "Row 1 Hero Green Circle Car Off X.png": "blue",
-    "Row 1 Hero Green Circle Car Top.png": "green",
-    "Row 1 Hero Green Circle Carr Side.png": "red",
-    "Row 5 Bolt Category - Green Back.png": "red",
-    "Row 5 Elecric Category - Circle Top.png": "red",
-    "Row 5 Elecric Category - Full Green Top.png": "red",
-    "Row 5 Electric All Green Car Iso.png": "red",
-    "Row 5 Electric All Green Car Off X.png": "red",
-    "Row 5 Electric All Green Car Side.png": "red",
-    "Row 5 Electric All Green Car Top.png": "red",
-    "Row 5 Various Category - Full White Top.png": "red",
-    "Row 5 Various Category All White Car Iso.png": "red",
-    "Row 5 Various Category All White Car Off X.png": "red",
-    "Row 5 Various Category All White Car Side.png": "red",
-    "Row 5 Various Category All White Car Top.png": "red",
-    "Row 6 Comfort Car Iso.png": "green",
-    "Row 6 Comfort Car Off Axis.png": "red",
-    "Row 6 Comfort Car Side.png": "green",
-    "Row 6 Comfort Car Top.png": "green",
-    "Row 6 Comfort Car.png": "green",
-    "Row 7 Premium Car Iso.png": "green",
-    "Row 7 Premium Car Side.png": "green",
-    "Row 7 Premium Car Top.png": "green",
-    "Row 7 Premium Off X (Silver Detail).png": "yellow",
-    "Row 7 Premium.png": "green",
-    "Row 8 Basic Small Car (New With Roof).png": "yellow",
-    "Row 8 Basic Small Car Iso.png": "green",
-    "Row 8 Basic Small Car Off X.png": "green",
-    "Row 8 Basic Small Car Side.png": "green",
-    "Row 8 Basic Small Car Top.png": "green",
-    "Row 8 Saver.png": "red",
-    "Row 9 Basic Sedan Car Iso.png": "red",
-    "Row 9 Basic Sedan Car Off X.png": "red",
-    "Row 9 Basic Sedan Car Side.png": "red",
-    "Row 9 Basic Sedan Car Top.png": "red",
-    "Row 10 Basic XL Car Iso.png": "green",
-    "Row 10 Basic XL Car Off X.png": "green",
-    "Row 10 Basic XL Car Side.png": "green",
-    "Row 10 Basic XL Car Top.png": "green",
-    "Row 10 Basic XL Car.png": "green",
-    "Row 11 Scooter Iso.png": "green",
-    "Row 11 Scooter Off X.png": "green",
-    "Row 11 Scooter Side.png": "blue",
-    "Row 12 Electric Bike Iso.png": "green",
-    "Row 12 Electric Bike Off X.png": "green",
-    "Row 12 Electric Bike Side.png": "green",
-    "Row 13_ Car rentals.png": "green",
-    "Row 17 Train Off X.png": "green",
-    "Row 17 Train Side.png": "green",
-    "Row 18 Tram Off X.png": "green",
-    "Row 18 Tram Side.png": "green",
-    "Row 19 Bus Off X.png": "green",
-    "Row 19 Bus Side.png": "green",
-    "Row 20 Parcel Delivery (Hero Image).png": "red",
-    "Row 21 Parcel delivery on bike.png": "red",
-    "Row 22 Parcel delivery using car.png": "red",
-    "Row 22_Variation_Experience Category_Confetti.png": "red",
-    "Row 23 Parcel delivery using XL car.png": "red",
-    "Row 24 XXL Car Iso.png": "green",
-    "Row 24 XXL Car Plus.png": "red",
-    "Row 24 XXL Car Side.png": "green",
-    "Row 24 XXL Car.png": "green",
-    "Row 24 XXL Off Axis.png": "yellow",
-    "Row 24_ XXL Car Top.png": "green",
-    "Row 25 Tuk Tuk Iso.png": "green",
-    "Row 25 Tuk Tuk Off X.png": "green",
-    "Row 25 Tuk Tuk Side.png": "green",
-    "Row 25 Tuk-Tuk.png": "green",
-    "Row 25_ Tuk Tuk Top.png": "green",
-    "Row 26 Bajaj Iso.png": "green",
-    "Row 26 Bajaj OffX.png": "red",
-    "Row 26 Bajaj Side.png": "green",
-    "Row 26_ Bajaj Top.png": "green",
-    "Row 27 Motorcycle Iso.png": "green",
-    "Row 27 Motorcycle Off X.png": "green",
-    "Row 27 Motorcycle Side.png": "green",
-    "Row 27_ Motorcycle Top.png": "green",
-    "Row 28 Traffic buster Off X.png": "green",
-    "Row 28 Traffic buster Side.png": "green",
-    "Row 28 Traffic-Buster.png": "green",
-    "Row 28_ Traffic buster Iso.png": "green",
-    "Row 28_ Traffic Buster Top.png": "green",
-    "Row 30 Yellow Taxi Off Axis.png": "red",
-    "Row 30 Yellow Taxi Side.png": "green",
-    "Row 30 Yellow Taxi Top.png": "green",
-    "Row 30 Yellow Taxi.png": "green",
-    "Row 31 XL Yellow Taxi Off Axis.png": "yellow",
-    "Row 31 XL Yellow Taxi Side.png": "green",
-    "Row 31 XL Yellow Taxi Top.png": "green",
-    "Row 31 Yellow XL Taxi.png": "green",
-    "Row 32 XXL Yellow Taxi Off Axis.png": "red",
-    "Row 32 XXL Yellow Taxi Side.png": "green",
-    "Row 32 XXL Yellow Taxi Top.png": "green",
-    "Row 32 Yellow XXL Taxi.png": "green",
-    "Row 33 Comfort Taxi Off X.png": "green",
-    "Row 33 Comfort Taxi Side.png": "green",
-    "Row 33 Comfort Taxi.png": "green",
-    "Row 33_ Comfort Taxi Top.png": "green",
-    "Row 34 Premium Taxi Off X.png": "yellow",
-    "Row 34 Premium Taxi Side.png": "red",
-    "Row 34 Premium Taxi.png": "red",
-    "Row 34_ Premium Taxi Top.png": "red",
-    "Row 35 Paris Taxi Off X.png": "green",
-    "Row 35 Paris Taxi Side.png": "green",
-    "Row 35 Paris Taxi.png": "green",
-    "Row 35_ Paris Taxi Top.png": "green",
-    "Row 36 Generic White Taxi Off X.png": "green",
-    "Row 36 Generic White Taxi Side.png": "green",
-    "Row 36 Generic White Taxi.png": "green",
-    "Row 36_ Generic White Taxi Top.png": "green",
-    "Row 37 Santander.png": "green",
-    "Row 37 Spain Santander Taxi Off X.png": "green",
-    "Row 37 Spain Santander Taxi Side.png": "green",
-    "Row 37_ Spain Santander Taxi Top.png": "green",
-    "Row 38 Madrid.png": "green",
-    "Row 38 Spain - Madrid Taxi Off X.png": "green",
-    "Row 38 Spain Madrid Taxi Side.png": "green",
-    "Row 38_ Spain Madrid Taxi Top.png": "green",
-    "Row 39 Mallorca.png": "green",
-    "Row 39 Spain - Mallorca Taxi Off X.png": "green",
-    "Row 39 Spain Mallorca Taxi Side.png": "green",
-    "Row 39_ Spain Mallorca Taxi Top.png": "green",
-    "Row 40 Seville.png": "green",
-    "Row 40 Spain - Seville Taxi Off X.png": "green",
-    "Row 40 Spain Seville Taxi Side.png": "green",
-    "Row 40_ Spain Seville Taxi Top.png": "green",
-    "Row 41 Malaga.png": "green",
-    "Row 41 Spain - Malaga Taxi Off X.png": "green",
-    "Row 41 Spain Malaga Taxi Side.png": "green",
-    "Row 41_ Spain Malaga Taxi Top.png": "green",
-    "Row 42 Barcelona Taxi Side.png": "green",
-    "Row 42 Barcelona Taxi Top.png": "green",
-    "Row 42 Barcelona.png": "green",
-    "Row 42 Spain - Barcelona Taxi Off X.png": "yellow",
-    "Row 43 London Taxi off X.png": "green",
-    "Row 43 London Taxi Side.png": "green",
-    "Row 43 London Taxi Top.png": "green",
-    "Row 43 London Taxi.png": "green",
-    "Row 44 Lisbon Standard.png": "green",
-    "Row 44 Lisbon Taxi Off X.png": "green",
-    "Row 44 Lisbon Taxi Side.png": "green",
-    "Row 44_ Lisbon Taxi Top.png": "green",
-    "Row 45 Lisbon XL.png": "green",
-    "Row 45 XL Lisbon Taxi Off X.png": "green",
-    "Row 45 XL Lisbon Taxi Side.png": "green",
-    "Row 45_ XL Lisbon Taxi Top.png": "green",
-    "Row 313 Top view Beige.png": "red",
-    "Row 313 Top view Blue.png": "red",
-    "Row 313 Top view Bronze.png": "red",
-    "Row 313 Top view Brown.png": "red",
-    "Row 313 Top view Dark Grey.png": "red",
-    "Row 313 Top view Gold.png": "red",
-    "Row 313 Top view Light blue.png": "red",
-    "Row 313 Top view Maroon.png": "red",
-    "Row 313 Top view Navy blue.png": "red",
-    "Row 313 Top view Orange.png": "red",
-    "Row 313 Top view Pearl White.png": "red",
-    "Row 313 Top view Pearl.png": "red",
-    "Row 313 Top view Pink.png": "red",
-    "Row 313 Top view Purple.png": "red",
-    "Row 313 Top view Red.png": "red",
-    "Row 313 Top view Silver.png": "red",
-    "Row 313 Top view Skyblue.png": "red",
-    "Row 313 Top view Wine.png": "red",
-    "Row 313 Top view WineRed.png": "red",
-    "Row 313 Top view Yellow.png": "red",
-    "Row 365 Moped Iso.png": "green",
-    "Row 365 Moped Off X.png": "green",
-    "Row 365 Moped Side.png": "green",
-    "Row 366 Moped with glass Iso.png": "green",
-    "Row 366 Moped with glass Off X.png": "green",
-    "Row 366 Moped with glass Side.png": "green",
-    "Row 367  Moped WG top view.png": "red",
-    "Row 367 Bike Top View.png": "red",
-    "Row 367 Moped Top View.png": "red",
-    "Row 369 Angled white car.png": "red",
-    "Row 369 Angled white car(1).png": "red",
-    "Row 372 Mini Bus.png": "green",
-    "Row 373 Small Car Off Axis.png": "yellow",
-    "Row 373 Small Car Top View.png": "red",
-    "Row 374 Premium Plus.png": "green",
-    "Row 374 VIP Plus.png": "red",
-    "Row 375 VIP.png": "green",
-    "Row 377 VIP XL.png": "green",
-    "Silver.png": "red",
-    "Taxi Dubai Red.png": "red",
-    "Taxi Dubai White.png": "red",
-    "Taxi XL Dubai Red.png": "red",
-    "Taxi XL Dubai Women.png": "red",
-    "Top (PS Guide).png": "red",
-    "Top_Hat & Beard.png": "red",
-    "Top_Hat.png": "red",
-    "Valentine_s Day.png": "red",
-    "Wine.png": "red",
-    "WineRed.png": "red",
-    "Women_s Day.png": "red",
-    "XL_Van_BikeStorage.png": "red",
-    "XL_Van_Pets.png": "red",
-    "Yellow.png": "red",
-    "Malaysia (Female Driver).png": "red",
-    "Malaysia (Male Driver).png": "red",
-    "Malaysia_Southeast asian_Business.png": "red",
-    "Mother's Day 1.png": "red",
-    "Mother's Day 2.png": "red",
-    "Row 52 & 172 Woman Driver_1.png": "green",
-    "Row 52 & 172 Woman Driver_2.png": "green",
-    "Row 55_ No location, Cant identify rider_s location_ 1.png": "red",
-    "Row 55_ No location, Cant identify rider_s location_ 2.png": "red",
-    "Row 59 All Drivers Busy_1.png": "blue",
-    "Row 59 All Drivers Busy_2.png": "blue",
-    "Row 67 No ongoing rides - empty state_1.png": "blue",
-    "Row 67 No ongoing rides - empty state_2.png": "red",
-    "Row 79_ Warning_1.png": "red",
-    "Row 79_ Warning_2.png": "red",
-    "Row 80_ Speed Limit_1.png": "green",
-    "Row 80_ Speed Limit_2.png": "green",
-    "Row 81_ Banned _ failed_2.png": "red",
-    "Row 81_ Banned _ failed_2(1).png": "red",
-    "Row 82_ Success_2.png": "green",
-    "Row 82_ Sucess_1.png": "red",
-    "Row 83 Ban we_re sorry_1.png": "green",
-    "Row 83 Ban we_re sorry_2.png": "green",
-    "Row 90_ Selfie Failed_1.png": "green",
-    "Row 90_ Selfie Failed_2.png": "green",
-    "Row 92-94 & 171 Driver 1 Solo.png": "green",
-    "Row 92-94 & 171 Driver 2 Solo.png": "green",
-    "Row 95 Passenger Rating_1.png": "green",
-    "Row 95 Passenger Rating_2.png": "blue",
-    "Row 95 Passenger Rating_3.png": "green",
-    "Row 102 Account Deleted_1.png": "blue",
-    "Row 102 Account Deleted_2.png": "blue",
-    "Row 103 Are you ordering a ride for someone else_1.png": "blue",
-    "Row 103 Are you ordering a ride for someone else_2.png": "blue",
-    "Row 103 Are you ordering a ride for someone else_3.png": "blue",
-    "Row 104 App Security_1.png": "green",
-    "Row 104 App Security_2.png": "green",
-    "Row 105 Be safe_1.png": "red",
-    "Row 105 Be safe_2.png": "red",
-    "Row 106 Default illustration for promo_1.png": "green",
-    "Row 106 Default illustration for promo_2.png": "green",
-    "Row 155 Woman On Scooter with confetti_1.png": "red",
-    "Row 155 Woman On Scooter with confetti_2.png": "red",
-    "Row 155 Woman On Scooter_1.png": "green",
-    "Row 155 Woman On Scooter_2.png": "green",
-    "Row 156 Man on Scooter_with helmet_ confetti_1.png": "red",
-    "Row 156 Man on Scooter_with helmet_ confetti_2.png": "red",
-    "Row 156 Man on Scooter_with helmet_1.png": "red",
-    "Row 156 Man on Scooter_with helmet_2.png": "blue",
-    "Row 157 Woman + Bicycle  (with helmet, + variation with confetti) 1.png": "red",
-    "Row 157 Woman + Bicycle  (with helmet, + variation with confetti) 2.png": "red",
-    "Row 157 Woman + Bicycle (with helmet) 1.png": "red",
-    "Row 157 Woman + Bicycle (with helmet) 2.png": "red",
-    "Row 158 Man + Bicycle (with helmet + variation with confetti) 1.png": "red",
-    "Row 158 Man + Bicycle (with helmet + variation with confetti) 2.png": "red",
-    "Row 158 Man + Bicycle (with helmet) 1.png": "blue",
-    "Row 158 Man + Bicycle (with helmet) 2.png": "red",
-    "Row 159 Woman + Car 1 (no windows).png": "blue",
-    "Row 159 Woman + Car 2 (no windows).png": "red",
-    "Row 159 Woman + Car 3 (no windows).png": "blue",
-    "Row 160 Man + Car + window 1 (no window).png": "red",
-    "Row 160 Man + Car + window 2 (no window).png": "red",
-    "Row 160 Man + Car + window 3 (no window).png": "red",
-    "Row 161 Man unlocking Bolt Drive car_key + confetti 1.png": "red",
-    "Row 161 Man unlocking Bolt Drive car_key + confetti 2.png": "red",
-    "Row 161 Man unlocking Bolt Drive car_key 1.png": "red",
-    "Row 161 Man unlocking Bolt Drive car_key 2.png": "red",
-    "Row 161 Man unlocking Bolt Drive car_Phone + confetti 1.png": "red",
-    "Row 161 Man unlocking Bolt Drive car_Phone + confetti 2.png": "red",
-    "Row 161 Man unlocking Bolt Drive car_Phone 1.png": "blue",
-    "Row 161 Man unlocking Bolt Drive car_Phone 2.png": "red",
-    "Row 162 Woman unlocking Bolt Drive car with Key (+ variation with confetti) 1.png": "red",
-    "Row 162 Woman unlocking Bolt Drive car with Key (+ variation with confetti) 2.png": "red",
-    "Row 162 Woman unlocking Bolt Drive car with Key 1.png": "red",
-    "Row 162 Woman unlocking Bolt Drive car with Key 2.png": "red",
-    "Row 162 Woman unlocking Bolt Drive car with Phone (+ variation with confetti) 1.png": "red",
-    "Row 162 Woman unlocking Bolt Drive car with Phone (+ variation with confetti) 2.png": "red",
-    "Row 162 Woman unlocking Bolt Drive car with Phone 1.png": "red",
-    "Row 162 Woman unlocking Bolt Drive car with Phone 2.png": "red",
-    "Row 163 Man and woman + car 1 (confetti).png": "red",
-    "Row 163 Man and woman + car 1 + calendar.png": "red",
-    "Row 163 Man and woman + car 1.png": "red",
-    "Row 163 Man and woman + car 2 + calendar.png": "red",
-    "Row 163 Man and woman + car 2.png": "red",
-    "Row 163 Man and woman + car 3 (confetti).png": "red",
-    "Row 163 Man and woman + car 3 + calendar.png": "red",
-    "Row 163 Man and woman + car 3.png": "red",
-    "Row 163 Man and woman in car 2 confetti.png": "red",
-    "Row 164_ Close up driver Icon_1.png": "red",
-    "Row 164_ Close up driver Icon_2.png": "red",
-    "Row 164_ Close up w_o helmet_2.png": "red",
-    "Row 164_ Close up w_o helmet.png": "blue",
-    "Row 164_ Man on bike full_1.png": "red",
-    "Row 164_ Man on bike full_2.png": "red",
-    "Row 165 Male Courier and car_1.png": "blue",
-    "Row 165 Male Courier and car_2.png": "red",
-    "Row 166 Woman holding hands up 1 with confetti.png": "red",
-    "Row 166 Woman holding hands up 1.png": "red",
-    "Row 166 Woman holding hands up 2 with confetti.png": "blue",
-    "Row 166 Woman holding hands up 2.png": "red",
-    "Row 166 Woman standing 1.png": "green",
-    "Row 166 Woman standing 2.png": "blue",
-    "Row 166 Woman walking 1.png": "green",
-    "Row 166 Woman walking 2.png": "green",
-    "Row 167 Man holding hand(s) up in celebration_with confetti 1.png": "red",
-    "Row 167 Man holding hand(s) up in celebration_with confetti 2.png": "red",
-    "Row 167 Man holding hands up in celebration 1.png": "green",
-    "Row 167 Man holding hands up in celebration 2.png": "green",
-    "Row 167 Man Standing 1.png": "red",
-    "Row 167 Man Standing 2.png": "red",
-    "Row 167 Man walking 1.png": "red",
-    "Row 167 Man walking 2.png": "red",
-    "Row 168 Woman eating 2.png": "green",
-    "Row 168 Woman eating.png": "blue",
-    "Row 169 Man eating 1.png": "blue",
-    "Row 169 Man eating 2.png": "blue",
-    "Row 170 Businessman with suitcase standing 1.png": "red",
-    "Row 170 Businessman with suitcase standing 2.png": "red",
-    "Row 170 Businessman with suitcase walking 1.png": "red",
-    "Row 170 Businessman with suitcase walking 2.png": "red",
-    "Row 323 Family_3.png": "blue",
-    "Row 323 Family_4.png": "blue",
-    "Row 325 Customer support agent_1.png": "blue",
-    "Row 325 Customer support agent_2.png": "green",
-    "Row 340 People Full 1.png": "red",
-    "Row 340 People Full 2.png": "red",
-    "Row 341 People Full 1.png": "red",
-    "Row 341 People Full 2.png": "red",
-    "Row 357 Face with helmet 2.png": "green",
-    "Row 357 Face with helmet.png": "green",
-    "Row 358 Face 1.png": "green",
-    "Row 358 Face 2.png": "green",
-    "Row 389 Eye level selfie 1.png": "red",
-    "Row 389 Eye level selfie 2.png": "red",
-    "Row 389 Eyes Closed face 1.png": "red",
-    "Row 389 Eyes Closed face 2.png": "red",
-    "Row 389 Glasses face 1.png": "red",
-    "Row 389 Glasses face 2.png": "red",
-    "Row 389 Low level selfie 1.png": "red",
-    "Row 389 Low level selfie 2.png": "red",
-    "Row 389 Mask face 1.png": "red",
-    "Row 389 Mask face 2.png": "red",
-    "Row 389 Normal face 1.png": "red",
-    "Row 389 Normal face 2.png": "red",
-    "Thailand (Female Driver).png": "red",
-    "Thailand (Male Driver).png": "red",
-    "Thailand_Southeast asian_Business.png": "red",
-    "Women for Women (Saudi Arabia).png": "red",
-    "0_Row 395 Emoji&Discount.png": "red",
-    "0_Row 395 Hero Emoji.png": "red",
-    "Preparation_Night.png": "blue",
-    "Row 123 Groceries (basket).png": "blue",
-    "Sushi 2.png": "red",
-    "Burger.png": "blue",
-    "Coin Plus 1.png": "red",
-    "Coin Plus 2.png": "red",
-    "Coin Plus 4.png": "red",
-    "Coin Plus 3.png": "red",
-    "Coin Plus 5.png": "red",
-    "0_Row 395 Hero Emoji_Confetti.png": "red",
-    "Breakfast (option).png": "red",
-    "Delivery in progress_1.png": "red",
-    "Row 364 Hands up in celebration with confetti 2.png": "green",
-    "Bolt Tours (1).png": "red",
-    "Price Bidding Category Icon.png": "red",
-    "0_Easter_Eggs in Basket.png": "red",
-    "Row 127_ Convenience products.png": "green",
-    "Row 121 Groceries with bag.png": "red",
-    "0_Pin Dark Pink.png": "yellow",
-    "Azerbaijan Purple.png": "red",
-    "Azerbaijan Red.png": "red",
-    "Bolt_Hero_Car_Canaday_Off_X.png": "red",
-    "Bolt_Aurora_icon.png": "red",
-    "Bolt_Hero_Car_Pride_Off_X.png": "red",
-    "Bolt_Hero_Car_Sauna_OffX.png": "red",
-    "Bolt_Ramadan_Off_X.png": "red",
-    "Bronze.png": "red",
-    "Christmas_Off X.png": "red",
-    "Lime Off X.png": "red",
-    "Haloween_no Basket_3.png": "red",
-    "Ramadan.png": "red",
-    "XL_Van_Childseat.png": "red",
-    "Row 135 Top Rated.png": "blue",
-    "Row 136_ Delivery Discounts.png": "blue",
-    "Row 7 Premium Car Off X.png": "blue",
-    "Arrived 1.png": "blue",
-    "Row 323 Family_1.png": "green",
-    "Row 323 Family_2.png": "green",
-    "0_Bolt Hero Car (Flowers - Woman_s Day) Off X.png": "yellow",
-    "0_Taxi Lexus_Iso.png": "red",
-    "0_Taxi Lexus_Side.png": "red",
-    "0_Taxi Red Roof_Cream_Iso.png": "red",
-    "0_Taxi Red Roof_Cream_Side.png": "red",
-    "Election day (1).png": "red",
-    "Row 392 Speedometer.png": "blue",
-    "Decline Mobile Payments  (Version 1).png": "green",
-    "Row 89_ Bolt plus (Solo).png": "green",
-    "Row 96_ Pass.png": "blue",
-    "ai-chatbot-agent.png": "blue",
-    "earth-planet.png": "blue",
-    "groceries_basket.png": "blue",
-    "pass.png": "blue",
-    "plane-arrived-at-an-airport.png": "blue",
-    "speedometer.png": "blue",
-    "top-rated.png": "blue",
-    "wallet-xl.png": "blue",
-    "add-money.png": "green",
+    "booster-seat.png": "red",
+    "emoji-sticker_front-option.png": "red",
+    "emoji-sticker.png": "red",
+    "loyalty-campaign_front.png": "red",
+    "loyalty-campaign_left.png": "red",
+    "loyalty-campaign_right.png": "red",
+    "arrived_v2.png": "green",
+    "asian-food.png": "blue",
+    "breakfast-2.png": "green",
+    "chinese-flag.png": "red",
+    "confirmation-mobile-payments_v2.png": "blue",
+    "confirmation-mobile-payments_v1.png": "red",
+    "credit-card.png": "red",
+    "decline-mobile-payments_v2.png": "red",
+    "delivery-in-progress_v2.png": "red",
+    "electronics.png": "green",
+    "fast-food.png": "red",
+    "health-and-beauty-2.png": "green",
+    "ice-cream.png": "green",
+    "indian-flag.png": "red",
+    "italian-flag.png": "red",
+    "starship-robot_off-x_closed.png": "red",
+    "starship-robot_off-x_open.png": "red",
+    "pharmacy.png": "red",
+    "pizza.png": "blue",
+    "preparation_day.png": "blue",
+    "processing-payment.png": "blue",
+    "riding-with-pets.png": "red",
+    "car-rentals_key.png": "green",
+    "scheduled-car.png": "red",
+    "car-with-calendar.png": "green",
+    "baggage_solo.png": "green",
+    "baggage.png": "green",
+    "pet-friendly.png": "green",
+    "pet-friendly_cat.png": "green",
     "air-conditioner.png": "green",
-    "alcohol.png": "red",
-    "allow-location-access.png": "red",
+    "child-seat.png": "green",
+    "driver-assistance_v1.png": "green",
+    "driver-assistance_v2.png": "green",
+    "electric-icon.png": "green",
+    "set-pickup-location_v1.png": "blue",
+    "set-pickup-location_v2.png": "green",
+    "location-denied_v1.png": "red",
+    "location-denied_v2.png": "red",
     "app-update.png": "red",
+    "wrong-location.png": "red",
+    "no-internet.png": "red",
+    "general-error.png": "red",
+    "chat-with-driver_solo_v1.png": "green",
+    "chat-with-driver_solo_v2.png": "green",
+    "chat-with-driver.png": "green",
+    "nothing-found.png": "green",
+    "chat-with-support_empty.png": "red",
+    "verification_v1.png": "red",
+    "verification_v2.png": "red",
+    "verification_v3.png": "red",
+    "verification_v4-orange.png": "green",
+    "verification_v4.png": "green",
+    "email-locked.png": "red",
+    "email-done.png": "red",
+    "email-error.png": "red",
     "authentication_v1.png": "green",
     "authentication_v2.png": "green",
     "authentication_v3.png": "green",
-    "baggage_solo.png": "green",
-    "baggage.png": "green",
+    "work-rides.png": "red",
+    "work-profile.png": "green",
+    "work-profile-with-promo.png": "green",
+    "terms-and-conditions_v1.png": "red",
+    "terms-and-conditions_v2.png": "green",
+    "bolt-plus_solo-green.png": "green",
+    "bolt-plus_full-green.png": "red",
+    "bolt-plus_v3.png": "green",
+    "licence_no-icon_v1.png": "red",
+    "licence_no-icon_v2.png": "red",
+    "licence-failed_v1.png": "red",
+    "licence-failed_v2.png": "red",
+    "cancel-ride-icon.png": "red",
+    "driver-busy-icon.png": "red",
+    "driver-accepted-change-icon.png": "blue",
+    "wallet-xl.png": "blue",
+    "payment-failed-wallet.png": "red",
+    "add-money.png": "green",
+    "plane-arrived-at-an-airport.png": "blue",
+    "default-promo_gift-only_v2.png": "green",
+    "default-promo_gift-only_v3.png": "green",
+    "default-promo_gift-only.png": "green",
+    "safety.png": "red",
+    "delivery-bag.png": "green",
+    "delivery-discount.png": "green",
+    "paperbag-with-branding_pickup.png": "red",
+    "food-order.png": "green",
+    "discounts.png": "green",
+    "order-again.png": "red",
+    "grocery-order.png": "red",
+    "food-order_dine-in.png": "green",
+    "service-dine-in_v1.png": "green",
+    "service-dine-in_v2.png": "green",
+    "night-food-options.png": "green",
+    "fast-delivery-with-icon.png": "green",
+    "fast-delivery.png": "green",
+    "breakfast.png": "green",
+    "groceries_no-bag.png": "green",
+    "alcohol.png": "red",
     "bakery.png": "green",
+    "books.png": "red",
+    "flowers.png": "green",
+    "gifts.png": "red",
+    "health-and-beauty.png": "green",
+    "pet-supplies.png": "red",
+    "sweets.png": "green",
+    "toys-and-games.png": "red",
+    "new-merchants.png": "red",
+    "menu-discounts.png": "green",
+    "special-offer-gift.png": "red",
+    "exclusive.png": "red",
+    "search-no-results.png": "red",
+    "failed-general.png": "red",
+    "empty-basket.png": "red",
+    "orders-no-results.png": "red",
+    "cash-info_v1.png": "green",
+    "cash-info_v2.png": "green",
+    "round-tree.png": "red",
+    "heart-tree.png": "red",
+    "cone-tree.png": "red",
+    "oval-tree.png": "red",
+    "snowman-tree.png": "red",
+    "square-tree.png": "red",
+    "cloud_v1.png": "red",
+    "cloud_v2.png": "red",
+    "cloud_v3.png": "red",
+    "location-pin.png": "red",
+    "car-branding_back.png": "red",
+    "car-branding_front.png": "red",
+    "car-branding_left.png": "red",
+    "car-branding_right.png": "red",
+    "car-branding_icon-green.png": "red",
+    "car-branding_icon-red.png": "red",
+    "car-branding_hand_v1.png": "red",
+    "car-branding_hand_v2.png": "red",
+    "electric-charging-stand.png": "green",
+    "petrol-refueling-stand.png": "red",
+    "personal-data-export_step-1.png": "red",
+    "personal-data-export_step-2.png": "red",
+    "personal-data-export_step-3.png": "red",
+    "personal-data-export_step-4.png": "red",
+    "personal-data-export_step-5.png": "red",
+    "personal-data-export_step-6.png": "red",
+    "price-bidding-flow.png": "green",
+    "ai-chatbot-agent.png": "blue",
+    "bolt-business-suitcase.png": "red",
+    "bolt-business-policy.png": "red",
+    "bolt-business-time.png": "red",
+    "bolt-business_voucher-coupon.png": "red",
+    "bolt-business_card-money.png": "red",
+    "error-invoice.png": "red",
+    "success-open-app_v1.png": "green",
+    "success-open-app_v2.png": "green",
+    "download-bolt-app_v1.png": "red",
+    "download-bolt-app_v2.png": "red",
+    "enter-sms-code_v1.png": "red",
+    "enter-sms-code_v2.png": "red",
+    "empty-orders.png": "red",
+    "calendar-icon_base-green.png": "red",
+    "calendar-icon_base-red.png": "red",
+    "calendar-icon_solo-check.png": "red",
+    "calendar-icon_solo-x.png": "red",
+    "coupon.png": "red",
+    "favorite-place_v1.png": "blue",
+    "favorite-place_v2.png": "blue",
+    "credit-card-2.png": "red",
+    "calendar-icon_base-yellow.png": "red",
+    "calendar-icon_clear.png": "red",
+    "calendar-icon_solo-alert.png": "red",
+    "calendar-icon_solo-dash.png": "red",
+    "id-card-icon_v1.png": "red",
+    "id-card-icon_v1b.png": "red",
+    "id-card-icon_v2.png": "red",
+    "id-card-approved_full_v1.png": "green",
+    "id-card-approved_base_v1.png": "green",
+    "id-card-approved_full_v2.png": "green",
+    "id-card-approved_base_v2.png": "green",
+    "id-card-error_full_v1.png": "green",
+    "id-card-error_base_v1.png": "green",
+    "id-card-error_full_v2.png": "green",
+    "id-card-error_base_v2.png": "green",
+    "id-card-expiring_full_v1.png": "green",
+    "id-card-expiring_base_v1.png": "green",
+    "id-card-expiring_full_v2.png": "green",
+    "id-card-expiring_base_v2.png": "green",
+    "extra-icon_dash.png": "red",
+    "extra-icon_alert.png": "red",
+    "work-profile-error_base.png": "green",
+    "work-profile-error_full.png": "green",
+    "work-profile-warning_base.png": "green",
+    "work-profile-warning_full.png": "green",
+    "extra-icon_check.png": "red",
+    "extra-icon_download.png": "red",
+    "invoice-and-tc_clear.png": "blue",
+    "invoice-and-tc_download_full.png": "red",
+    "invoice-and-tc_success_base.png": "red",
+    "invoice-and-tc_success_full.png": "red",
+    "business-payment_added_base.png": "red",
+    "business-payment_added_full.png": "red",
+    "business-payment_failed_base.png": "red",
+    "business-payment_failed_full.png": "red",
+    "business-payment_missing_base.png": "red",
+    "business-payment_missing_full.png": "red",
+    "cashless-wallet.png": "red",
+    "extra-icon_dash-2.png": "red",
+    "extra-icon_x.png": "red",
+    "extra-icon_check-2.png": "red",
+    "thumbs-up_v1.png": "green",
+    "thumbs-up_v2.png": "green",
+    "thumbs-down_v1.png": "green",
+    "thumbs-down_v2.png": "green",
     "battery.png": "red",
+    "extra-icon_warning.png": "red",
+    "hourglass.png": "green",
+    "parking-sign.png": "green",
+    "traffic-light_all.png": "red",
+    "traffic-light_green.png": "red",
+    "traffic-light_orange.png": "red",
+    "traffic-light_red.png": "red",
+    "planet.png": "blue",
+    "smartphone-in-hand_v1.png": "blue",
+    "smartphone-in-hand_v2.png": "blue",
+    "hands-up-confetti_v1.png": "green",
+    "question-mark.png": "red",
+    "taking-selfie_v1.png": "red",
+    "taking-selfie_v2.png": "red",
+    "insurance.png": "green",
+    "scheduled-rides-airport.png": "red",
+    "allow-location-services.png": "red",
+    "ride-timeout.png": "red",
+    "ride-ended-automatically.png": "red",
+    "photo-licence-icon_v1.png": "blue",
+    "photo-licence-icon_v2.png": "red",
+    "photo-licence-icon_v3.png": "red",
+    "photo-licence-icon_v4.png": "red",
+    "photo-licence_v1.png": "blue",
+    "photo-licence_v2.png": "blue",
+    "headlights_v2.png": "red",
+    "headlights_v1.png": "red",
+    "scooter-charging-dock.png": "green",
+    "scooter.png": "red",
+    "starship-robot_side.png": "red",
+    "stores.png": "green",
+    "wrap.png": "red",
+    "bolt-hero-car_top_womens-day.png": "red",
+    "bolt-hero-car_off-x_valentines-day.png": "red",
+    "dubai-taxi-xl-red-roof_off-x_wheelchair.png": "red",
+    "dubai-taxi-xl-pink-roof_off-x.png": "red",
+    "dubai-taxi-xl-red-roof_off-x.png": "red",
+    "bolt-hero-car_off-x_earth-day.png": "red",
+    "bolt-hero-car_top_earth-day.png": "red",
+    "bolt-hero-car_off-x_easter-bunny.png": "red",
+    "bolt-hero-car_top_easter-bunny.png": "red",
+    "bolt-hero-car_off-x_easter-egg.png": "red",
+    "bolt-hero-car_top_easter-egg.png": "red",
+    "romania-xs_off-x.png": "yellow",
+    "romania-xs_top.png": "red",
+    "premium-car_iso_silver.png": "red",
+    "premium-car_side_silver.png": "blue",
+    "xxl-car_iso_new-colour.png": "green",
+    "xxl-car_off-x_new-colour.png": "green",
+    "xxl-car_side_new-colour.png": "green",
+    "mini-bus_off-x.png": "green",
+    "premium-plus_off-x.png": "green",
+    "vip-car_off-x_v1.png": "green",
+    "vip-car_off-x_v2.png": "green",
+    "vip-plus_v1.png": "green",
+    "vip-plus_v2.png": "green",
+    "vip-xl_v1.png": "green",
+    "vip-xl_v2.png": "green",
+    "wheelchair-support_yellow-taxi-xl.png": "yellow",
+    "wheelchair-support.png": "yellow",
+    "taxi-lexus_off-x.png": "red",
+    "taxi-red-roof-cream_off-x.png": "red",
+    "xl-plus_off-x.png": "green",
+    "beige.png": "red",
+    "blue.png": "red",
+    "comfort-car_off-x_romania.png": "green",
+    "comfort-car_top_romania.png": "green",
+    "premium-motorbike_off-x.png": "green",
+    "premium-motorbike_top.png": "green",
+    "bolt-hero-car_top_aurora.png": "green",
+    "bolt-car_off-x_norway.png": "red",
+    "bolt-car_top_norway.png": "green",
+    "bolt-hero-car_top_canada-day.png": "red",
+    "bolt-hero-car_top_pride.png": "green",
+    "bolt-hero-car_top_sauna.png": "green",
+    "bolt-car_top_ramadan.png": "green",
+    "bolt-hero-car_top_halloween-broom.png": "red",
+    "chauffeur-signature_off-x_v1.png": "green",
+    "chauffeur-signature_off-x_v2.png": "green",
+    "chauffeur-signature_top.png": "green",
+    "chauffeur-suv_off-x_v1.png": "green",
+    "chauffeur-suv_off-x_v2.png": "green",
+    "chauffeur-suv_top.png": "green",
+    "chauffeur-xxl_off-x_v1.png": "green",
+    "chauffeur-xxl_off-x_v2.png": "green",
+    "chauffeur-xxl_top.png": "green",
+    "bolt-hero-car_off-x_christmas_v2.png": "red",
+    "cyprus-intercity-taxi_standard.png": "red",
+    "cyprus-intercity-taxi_xl.png": "red",
+    "election-day.png": "red",
+    "french-taxi_off-x.png": "red",
+    "french-taxi_top.png": "red",
+    "french-taxi_side.png": "red",
+    "light-blue.png": "red",
+    "little-bolt-car_green.png": "green",
+    "little-bolt-car_white.png": "green",
+    "little-bolt-car_yellow.png": "red",
+    "little-bolt-car_off-x.png": "red",
+    "little-bolt-car_top.png": "green",
+    "maroon.png": "red",
+    "mi-taxi.png": "red",
+    "moped-with-glass.png": "green",
+    "moped.png": "red",
+    "motorbike.png": "red",
+    "navy-blue.png": "red",
+    "car_off-x_bike-storage.png": "red",
+    "car_off-x_child-seat.png": "green",
+    "car_off-x_pets.png": "red",
+    "shark-car_off-x_ps-guide.png": "red",
+    "shark-car_off-x_bubbles-ps-guide.png": "red",
+    "shark-car_off-x_bubbles.png": "red",
+    "bolt-hero-car_off-x_halloween.png": "red",
+    "shark-car_off-x.png": "red",
+    "orange.png": "red",
+    "pink.png": "red",
+    "premium-motorbike_off-x_vietnam_v2.png": "green",
+    "premium-motorbike_off-x_vietnam.png": "red",
+    "premium-motorbike_off-x_2.png": "green",
+    "premium-motorbike_side.png": "green",
+    "premium-motorbike_top_vietnam_v2.png": "green",
+    "premium-motorbike_top_vietnam.png": "red",
+    "priority-category.png": "red",
+    "bolt-green-hero-car_iso.png": "green",
+    "bolt-green-hero-car_off-x.png": "green",
+    "bolt-green-hero-car_side.png": "green",
+    "bolt-green-hero-car_top.png": "green",
+    "hero-green-circle-car_iso.png": "green",
+    "hero-green-circle-car_off-x.png": "green",
+    "hero-green-circle-car_top.png": "green",
+    "hero-green-circle-car_side.png": "green",
+    "bolt-category_green-back.png": "red",
+    "electric-category_circle-top.png": "red",
+    "electric-category_full-green-top.png": "red",
+    "electric-car_iso.png": "red",
+    "electric-car_off-x.png": "red",
+    "electric-car_side.png": "red",
+    "electric-car_top.png": "red",
+    "various-category_full-white-top.png": "red",
+    "various-category-car_iso.png": "red",
+    "various-category-car_off-x.png": "red",
+    "various-category-car_side.png": "red",
+    "various-category-car_top.png": "red",
+    "comfort-car_iso.png": "green",
+    "comfort-car_off-x.png": "green",
+    "comfort-car_side.png": "green",
+    "comfort-car_top.png": "green",
+    "comfort-car.png": "green",
+    "premium-car_iso.png": "green",
+    "premium-car_side.png": "green",
+    "premium-car_top.png": "green",
+    "premium-car_off-x_silver.png": "yellow",
+    "small-car_new-with-roof.png": "yellow",
+    "small-car_iso.png": "green",
+    "small-car_off-x.png": "red",
+    "small-car_side.png": "green",
+    "small-car_top.png": "red",
+    "saver-car_top.png": "red",
+    "sedan-car_iso.png": "red",
+    "sedan-car_off-x.png": "red",
+    "sedan-car_side.png": "red",
+    "sedan-car_top.png": "red",
+    "xl-car_iso.png": "green",
+    "xl-car_off-x.png": "green",
+    "xl-car_side.png": "green",
+    "xl-car_top.png": "green",
+    "xl-car.png": "green",
+    "scooter_iso.png": "green",
+    "scooter_off-x.png": "green",
+    "scooter_side.png": "green",
+    "electric-bike_iso.png": "green",
+    "electric-bike_off-x.png": "green",
+    "electric-bike_side.png": "green",
+    "car-rentals.png": "green",
+    "train_off-x.png": "green",
+    "train_side.png": "green",
+    "tram_off-x.png": "red",
+    "tram_side.png": "red",
+    "bus_off-x.png": "red",
+    "bus_side.png": "red",
+    "parcel-delivery_hero.png": "green",
+    "parcel-delivery_bike.png": "red",
+    "parcel-delivery_car.png": "red",
+    "parcel-delivery_car_confetti.png": "red",
+    "parcel-delivery_xl-car.png": "red",
+    "xxl-car_iso.png": "green",
+    "xxl-car-plus.png": "red",
+    "xxl-car_side.png": "green",
+    "xxl-car.png": "green",
+    "xxl-car_off-x_old.png": "yellow",
+    "xxl-car_top.png": "green",
+    "tuktuk_iso.png": "green",
+    "tuktuk_off-x.png": "green",
+    "tuktuk_side.png": "green",
+    "tuktuk.png": "green",
+    "tuktuk_top.png": "green",
+    "bajaj_iso.png": "green",
+    "bajaj_off-x.png": "green",
+    "bajaj_side.png": "green",
+    "bajaj_top.png": "green",
+    "motorcycle_iso.png": "green",
+    "motorcycle_off-x.png": "green",
+    "motorcycle_side.png": "green",
+    "motorcycle_top.png": "green",
+    "traffic-buster_off-x.png": "green",
+    "traffic-buster_side.png": "green",
+    "traffic-buster.png": "green",
+    "traffic-buster_iso.png": "green",
+    "traffic-buster_top.png": "green",
+    "yellow-taxi_off-x.png": "green",
+    "yellow-taxi_side.png": "green",
+    "yellow-taxi_top.png": "green",
+    "yellow-taxi.png": "green",
+    "xl-yellow-taxi_off-x.png": "green",
+    "xl-yellow-taxi_side.png": "green",
+    "xl-yellow-taxi_top.png": "green",
+    "xl-yellow-taxi.png": "green",
+    "xxl-yellow-taxi_off-x.png": "green",
+    "xxl-yellow-taxi_side.png": "green",
+    "xxl-yellow-taxi_top.png": "green",
+    "xxl-yellow-taxi.png": "green",
+    "comfort-taxi_off-x.png": "green",
+    "comfort-taxi_side.png": "green",
+    "comfort-taxi.png": "green",
+    "comfort-taxi_top.png": "green",
+    "premium-taxi_off-x.png": "red",
+    "premium-taxi_side.png": "red",
+    "premium-taxi.png": "red",
+    "premium-taxi_top.png": "red",
+    "paris-taxi_off-x.png": "green",
+    "paris-taxi_side.png": "green",
+    "paris-taxi.png": "green",
+    "paris-taxi_top.png": "green",
+    "generic-white-taxi_off-x.png": "green",
+    "generic-white-taxi_side.png": "green",
+    "generic-white-taxi.png": "green",
+    "generic-white-taxi_top.png": "green",
+    "santander-taxi.png": "green",
+    "santander-taxi_off-x.png": "green",
+    "santander-taxi_side.png": "green",
+    "santander-taxi_top.png": "green",
+    "madrid-taxi.png": "green",
+    "madrid-taxi_off-x.png": "green",
+    "madrid-taxi_side.png": "green",
+    "madrid-taxi_top.png": "green",
+    "mallorca-taxi.png": "green",
+    "mallorca-taxi_off-x.png": "green",
+    "mallorca-taxi_side.png": "green",
+    "mallorca-taxi_top.png": "green",
+    "seville-taxi.png": "green",
+    "seville-taxi_off-x.png": "green",
+    "seville-taxi_side.png": "green",
+    "seville-taxi_top.png": "green",
+    "malaga-taxi.png": "green",
+    "malaga-taxi_off-x.png": "green",
+    "malaga-taxi_side.png": "green",
+    "malaga-taxi_top.png": "green",
+    "barcelona-taxi_side.png": "green",
+    "barcelona-taxi_top.png": "green",
+    "barcelona-taxi.png": "green",
+    "barcelona-taxi_off-x.png": "yellow",
+    "london-taxi_off-x.png": "green",
+    "london-taxi_side.png": "green",
+    "london-taxi_top.png": "green",
+    "london-taxi.png": "green",
+    "lisbon-taxi.png": "green",
+    "lisbon-taxi_off-x.png": "red",
+    "lisbon-taxi_side.png": "red",
+    "lisbon-taxi_top.png": "red",
+    "lisbon-xl-taxi.png": "green",
+    "lisbon-xl-taxi_off-x.png": "green",
+    "lisbon-xl-taxi_side.png": "green",
+    "lisbon-xl-taxi_top.png": "green",
+    "car_top_beige.png": "red",
+    "car_top_blue.png": "red",
+    "car_top_bronze.png": "red",
+    "car_top_brown.png": "red",
+    "car_top_dark-grey.png": "red",
+    "car_top_gold.png": "red",
+    "car_top_light-blue.png": "red",
+    "car_top_maroon.png": "red",
+    "car_top_navy-blue.png": "red",
+    "car_top_orange.png": "red",
+    "car_top_pearl-white.png": "green",
+    "car_top_pearl.png": "red",
+    "car_top_pink.png": "red",
+    "car_top_purple.png": "red",
+    "car_top_red.png": "red",
+    "car_top_silver.png": "red",
+    "car_top_sky-blue.png": "red",
+    "car_top_wine.png": "red",
+    "car_top_wine-red.png": "red",
+    "car_top_yellow.png": "red",
+    "moped_iso.png": "green",
+    "moped_off-x.png": "green",
+    "moped_side.png": "green",
+    "moped-with-glass_iso.png": "green",
+    "moped-with-glass_off-x.png": "green",
+    "moped-with-glass_side.png": "green",
+    "moped-with-glass_top.png": "green",
+    "motorcycle_top-view.png": "red",
+    "moped_top.png": "green",
+    "angled-white-car_v1.png": "red",
+    "angled-white-car_v2.png": "red",
+    "mini-bus.png": "green",
+    "small-car_off-axis.png": "yellow",
+    "small-car_top-view.png": "red",
+    "premium-plus.png": "green",
+    "vip-plus.png": "red",
+    "vip-car.png": "green",
+    "vip-xl.png": "green",
+    "silver.png": "red",
+    "dubai-taxi-red.png": "red",
+    "dubai-taxi-white.png": "red",
+    "dubai-taxi-xl-red.png": "red",
+    "dubai-taxi-xl-women.png": "red",
+    "shark-car_top_ps-guide.png": "red",
+    "bolt-hero-car_top_hat-and-beard.png": "red",
+    "bolt-hero-car_top_hat.png": "green",
+    "car_top_valentines-day.png": "red",
+    "wine.png": "red",
+    "wine-red.png": "red",
+    "car_top_womens-day.png": "red",
+    "xl-van_off-x_bike-storage.png": "red",
+    "xl-van_off-x_pets.png": "red",
+    "yellow.png": "red",
+    "malaysia-female-driver.png": "red",
+    "malaysia-male-driver.png": "red",
+    "malaysia-southeast-asian-business.png": "green",
+    "mothers-day_v1.png": "red",
+    "mothers-day_v2.png": "red",
+    "woman-driver_light.png": "green",
+    "woman-driver_dark.png": "green",
+    "no-location-cant-identify-riders-location_light.png": "red",
+    "no-location-cant-identify-riders-location_dark.png": "red",
+    "all-drivers-busy_light.png": "blue",
+    "all-drivers-busy_dark.png": "blue",
+    "no-ongoing-rides_light.png": "green",
+    "no-ongoing-rides_dark.png": "green",
+    "warning_light.png": "red",
+    "warning_dark.png": "red",
+    "speed-limit_light.png": "green",
+    "speed-limit_dark.png": "green",
+    "banned-or-failed_dark.png": "red",
+    "banned-or-failed_dark_v2.png": "red",
+    "success_dark.png": "green",
+    "success_light.png": "green",
+    "ban-were-sorry_light.png": "green",
+    "ban-were-sorry_dark.png": "green",
+    "selfie-failed_light.png": "green",
+    "selfie-failed_dark.png": "green",
+    "driver-solo_light.png": "green",
+    "driver-solo_dark.png": "green",
+    "passenger-rating_light.png": "green",
+    "passenger-rating_dark.png": "green",
+    "passenger-rating_medium.png": "green",
+    "account-deleted_light.png": "blue",
+    "account-deleted_dark.png": "blue",
+    "ride-for-someone-else_light.png": "blue",
+    "ride-for-someone-else_medium.png": "green",
+    "app-security_light.png": "green",
+    "app-security_dark.png": "green",
+    "be-safe_light.png": "red",
+    "be-safe_dark.png": "red",
+    "default-illustration-for-promo_light.png": "green",
+    "default-illustration-for-promo_dark.png": "green",
+    "woman-on-scooter-confetti_medium.png": "green",
+    "woman-on-scooter-confetti_dark.png": "green",
+    "woman-on-scooter_medium.png": "green",
+    "woman-on-scooter_dark.png": "green",
+    "man-on-scooter-confetti_light.png": "green",
+    "man-on-scooter-confetti_dark.png": "green",
+    "man-on-scooter_light.png": "green",
+    "man-on-scooter_dark.png": "green",
+    "woman-on-bike-confetti_light.png": "green",
+    "woman-on-bike-confetti_dark.png": "green",
+    "woman-on-bike_light.png": "green",
+    "woman-on-bike_dark.png": "green",
+    "man-on-bike-confetti_light.png": "green",
+    "man-on-bike-confetti_dark.png": "green",
+    "man-on-bike_light.png": "blue",
+    "man-on-bike_dark.png": "blue",
+    "woman-with-bolt-drive-car_light.png": "blue",
+    "woman-with-bolt-drive-car_medium.png": "green",
+    "woman-with-bolt-drive-car_dark.png": "blue",
+    "man-with-bolt-drive-car_light.png": "blue",
+    "man-with-bolt-drive-car_medium.png": "green",
+    "man-with-bolt-drive-car_dark.png": "blue",
+    "man-unlocking-bolt-drive_key-confetti_light.png": "green",
+    "man-unlocking-bolt-drive_key-confetti_dark.png": "green",
+    "man-unlocking-bolt-drive_key_light.png": "green",
+    "man-unlocking-bolt-drive_key_dark.png": "green",
+    "man-unlocking-bolt-drive_phone-confetti_light.png": "green",
+    "man-unlocking-bolt-drive_phone-confetti_dark.png": "green",
+    "man-unlocking-bolt-drive_phone_light.png": "green",
+    "man-unlocking-bolt-drive_phone_dark.png": "green",
+    "woman-unlocking-bolt-drive_key-confetti_light.png": "green",
+    "woman-unlocking-bolt-drive_key-confetti_dark.png": "green",
+    "woman-unlocking-bolt-drive_key_light.png": "green",
+    "woman-unlocking-bolt-drive_key_dark.png": "green",
+    "woman-unlocking-bolt-drive_phone-confetti_light.png": "green",
+    "woman-unlocking-bolt-drive_phone-confetti_dark.png": "green",
+    "woman-unlocking-bolt-drive_phone_light.png": "green",
+    "woman-unlocking-bolt-drive_phone_dark.png": "green",
+    "couple-in-bolt-drive-car-confetti.png": "green",
+    "couple-with-bolt-drive-car-calendar_mixed.png": "green",
+    "couple-with-bolt-drive-car_mixed.png": "green",
+    "couple-with-bolt-drive-car-calendar_dark.png": "green",
+    "couple-with-bolt-drive-car_dark.png": "green",
+    "couple-with-bolt-drive-car-confetti_dark.png": "green",
+    "couple-with-bolt-drive-car-calendar_mixed_v2.png": "green",
+    "couple-with-bolt-drive-car-confetti_dark_v2.png": "green",
+    "driver-close-up_icon_light.png": "blue",
+    "driver-close-up_icon_dark.png": "blue",
+    "driver-close-up_no-helmet_dark.png": "red",
+    "driver-close-up_no-helmet_light.png": "red",
+    "man-on-bike_full_light.png": "green",
+    "man-on-bike_full_dark.png": "green",
+    "male-courier-with-car_light.png": "green",
+    "male-courier-with-car_dark.png": "green",
+    "woman-hands-up-confetti_light.png": "blue",
+    "woman-hands-up_light.png": "red",
+    "woman-hands-up-confetti_dark.png": "blue",
+    "woman-hands-up_dark.png": "red",
+    "woman-standing_light.png": "green",
+    "woman-standing_dark.png": "green",
+    "woman-walking_light.png": "green",
+    "woman-walking_dark.png": "green",
+    "man-hands-up-confetti_light.png": "red",
+    "man-hands-up-confetti_dark.png": "red",
+    "man-hands-up_light.png": "red",
+    "man-hands-up_dark.png": "red",
+    "man-standing_light.png": "red",
+    "man-standing_dark.png": "red",
+    "man-walking_light.png": "red",
+    "man-walking_dark.png": "red",
+    "woman-eating_dark.png": "green",
+    "woman-eating_light.png": "green",
+    "man-eating_light.png": "green",
+    "man-eating_dark.png": "green",
+    "businessman-with-suitcase_standing_light.png": "red",
+    "businessman-with-suitcase_standing_dark.png": "red",
+    "businessman-with-suitcase_walking_light.png": "red",
+    "businessman-with-suitcase_walking_dark.png": "red",
+    "family_dark.png": "blue",
+    "family_mixed.png": "green",
+    "customer-support-agent_light.png": "blue",
+    "customer-support-agent_dark.png": "blue",
+    "people-group_light.png": "red",
+    "people-group_dark.png": "red",
+    "people-group-alt_light.png": "red",
+    "people-group-alt_dark.png": "red",
+    "face-with-helmet_dark.png": "green",
+    "face-with-helmet_light.png": "green",
+    "face_light.png": "red",
+    "face_dark.png": "red",
+    "selfie_eye-level_light.png": "red",
+    "selfie_eye-level_dark.png": "red",
+    "selfie_eyes-closed_light.png": "red",
+    "selfie_eyes-closed_dark.png": "red",
+    "selfie_glasses_light.png": "red",
+    "selfie_glasses_dark.png": "red",
+    "selfie_low-angle_light.png": "red",
+    "selfie_low-angle_dark.png": "red",
+    "selfie_mask_light.png": "red",
+    "selfie_mask_dark.png": "red",
+    "selfie_normal_light.png": "red",
+    "selfie_normal_dark.png": "red",
+    "thailand-female-driver.png": "red",
+    "thailand-male-driver.png": "red",
+    "thailand-southeast-asian-business.png": "green",
+    "women-for-women_saudi-arabia.png": "red",
+    "emoji-and-discount.png": "red",
+    "hero-emoji.png": "red",
+    "preparation_night.png": "blue",
+    "groceries_basket.png": "blue",
+    "sushi.png": "green",
+    "burger.png": "blue",
+    "coin-plus_v1.png": "red",
+    "coin-plus_v2.png": "red",
+    "coin-plus_v4.png": "red",
+    "coin-plus_v3.png": "red",
+    "coin-plus_v5.png": "red",
+    "hero-emoji_confetti.png": "red",
+    "breakfast-option.png": "red",
+    "delivery-in-progress_v1.png": "red",
+    "hands-up-confetti_v2.png": "green",
+    "bolt-tours.png": "red",
+    "price-bidding-category-icon.png": "red",
+    "easter-eggs-in-basket.png": "red",
+    "convenience-products.png": "green",
+    "groceries-with-bag.png": "red",
+    "location-pin_dark-pink.png": "red",
+    "azerbaijan-taxi_purple.png": "red",
+    "azerbaijan-taxi_red.png": "red",
+    "bolt-hero-car_off-x_canada-day.png": "red",
+    "bolt-hero-car_off-x_aurora.png": "red",
+    "bolt-hero-car_off-x_pride.png": "red",
+    "bolt-hero-car_off-x_sauna.png": "red",
+    "bolt-car_off-x_ramadan.png": "red",
+    "bronze.png": "red",
+    "bolt-hero-car_off-x_christmas_v1.png": "red",
+    "lime_off-x.png": "red",
+    "bolt-hero-car_off-x_halloween_no-basket.png": "red",
+    "ramadan-car.png": "red",
+    "xl-van_off-x_child-seat.png": "green",
+    "top-rated.png": "blue",
+    "delivery-discounts.png": "green",
+    "premium-car_off-x.png": "green",
+    "arrived_v1.png": "blue",
+    "family_light.png": "blue",
+    "family_medium.png": "green",
+    "bolt-hero-car_off-x_womens-day.png": "red",
+    "taxi-lexus_iso.png": "red",
+    "taxi-lexus_side.png": "red",
+    "taxi-red-roof-cream_iso.png": "red",
+    "taxi-red-roof-cream_side.png": "red",
+    "election-day_v2.png": "red",
+    "speedometer.png": "blue",
+    "decline-mobile-payments_v1.png": "green",
+    "bolt-plus_solo.png": "green",
+    "pass.png": "blue",
+    "earth-planet.png": "blue",
+    "allow-location-access.png": "red",
     "biz-payment-added_base.png": "red",
     "biz-payment-added_full.png": "red",
     "biz-payment-failed_base.png": "green",
     "biz-payment-failed_full.png": "green",
     "biz-payment-missing_base.png": "red",
     "biz-payment-missing_full.png": "red",
-    "bolt-business_card-money.png": "red",
-    "bolt-business_voucher-coupon.png": "red",
-    "bolt-business-policy.png": "red",
-    "bolt-business-suitcase.png": "red",
-    "bolt-business-time.png": "red",
-    "bolt-plus_full-green.png": "red",
-    "bolt-plus_solo-green.png": "green",
-    "bolt-plus_solo.png": "green",
-    "bolt-plus_v3.png": "green",
-    "bolt-tours.png": "red",
-    "books.png": "red",
-    "booster-seat.png": "red",
     "breakfast_option.png": "green",
-    "breakfast.png": "green",
     "calendar-icon_base_green.png": "red",
     "calendar-icon_base_red.png": "red",
     "calendar-icon_base_yellow.png": "red",
-    "calendar-icon_clear.png": "red",
     "calendar-icon_solo_check.png": "red",
     "calendar-icon_solo_dash.png": "red",
     "calendar-icon_solo_exclamation.png": "red",
     "calendar-icon_solo_x.png": "red",
     "cancel-ride_icon.png": "red",
-    "car-branding_back.png": "red",
-    "car-branding_front.png": "red",
-    "car-branding_hand_v1.png": "red",
-    "car-branding_hand_v2.png": "red",
-    "car-branding_icon-green.png": "red",
-    "car-branding_icon-red.png": "red",
-    "car-branding_left.png": "red",
-    "car-branding_right.png": "red",
-    "car-rentals_key.png": "green",
-    "car-with-calendar.png": "green",
-    "cash-info_v1.png": "green",
-    "cash-info_v2.png": "green",
-    "cashless-wallet.png": "red",
-    "chat-with-driver_solo_v1.png": "green",
-    "chat-with-driver_solo_v2.png": "green",
-    "chat-with-driver.png": "green",
-    "chat-with-support_empty.png": "red",
-    "child-seat.png": "green",
     "chinese-flag_option.png": "red",
-    "cloud_v1.png": "red",
-    "cloud_v2.png": "red",
-    "cloud_v3.png": "red",
-    "coin-plus_v1.png": "red",
-    "coin-plus_v2.png": "red",
-    "coin-plus_v3.png": "red",
-    "coin-plus_v4.png": "red",
-    "coin-plus_v5.png": "red",
-    "convenience-products.png": "green",
-    "coupon.png": "red",
     "credit-card_v2.png": "red",
-    "credit-card.png": "red",
-    "default-promo_gift-only_v2.png": "green",
-    "default-promo_gift-only_v3.png": "green",
-    "default-promo_gift-only.png": "green",
     "delivery-arrived_dark.png": "green",
     "delivery-arrived_light.png": "green",
-    "delivery-bag.png": "green",
-    "delivery-discount.png": "green",
-    "delivery-discounts.png": "green",
     "delivery-in-progress_dark.png": "red",
     "delivery-in-progress_light.png": "red",
     "delivery-preparation_day.png": "green",
     "delivery-preparation_night.png": "green",
     "delivery-processing-payment.png": "green",
-    "discounts.png": "green",
-    "download-bolt-app_v1.png": "red",
-    "download-bolt-app_v2.png": "red",
     "driver-accepted-change_icon.png": "red",
     "driver-busy_icon.png": "red",
-    "electric-charging-stand.png": "green",
     "electric.png": "green",
-    "email-done.png": "red",
-    "email-error.png": "red",
-    "email-locked.png": "red",
-    "empty-basket.png": "red",
-    "empty-orders.png": "red",
-    "enter-sms-code_v1.png": "red",
-    "enter-sms-code_v2.png": "red",
-    "error-invoice.png": "red",
-    "exclusive.png": "red",
-    "failed-general.png": "red",
-    "fast-delivery-with-icon.png": "green",
-    "fast-delivery.png": "green",
-    "fast-food.png": "red",
-    "favorite-place_v1.png": "blue",
-    "favorite-place_v2.png": "blue",
-    "flowers.png": "green",
-    "food-order_dine-in.png": "green",
-    "food-order.png": "green",
-    "general-error.png": "red",
     "get-assistance-from-driver_v1.png": "green",
     "get-assistance-from-driver_v2.png": "green",
-    "gifts.png": "red",
     "green-question-mark.png": "red",
-    "groceries_no-bag.png": "green",
-    "groceries-with-bag.png": "red",
-    "grocery-order.png": "red",
-    "hands-up-confetti_v1.png": "green",
-    "hands-up-confetti_v2.png": "green",
-    "headlights_v1.png": "red",
-    "headlights_v2.png": "red",
-    "health-and-beauty.png": "green",
-    "hourglass.png": "green",
-    "ice-cream.png": "green",
-    "id-card-approved_base_v1.png": "green",
-    "id-card-approved_base_v2.png": "green",
-    "id-card-approved_full_v1.png": "green",
-    "id-card-approved_full_v2.png": "green",
-    "id-card-error_base_v1.png": "green",
-    "id-card-error_base_v2.png": "green",
-    "id-card-error_full_v1.png": "green",
-    "id-card-error_full_v2.png": "green",
-    "id-card-expiring_base_v1.png": "green",
-    "id-card-expiring_base_v2.png": "green",
-    "id-card-expiring_full_v1.png": "green",
-    "id-card-expiring_full_v2.png": "green",
     "id-card-icon_solo_v1.png": "green",
     "id-card-icon_solo_v1b.png": "green",
     "id-card-icon_solo_v2.png": "green",
@@ -903,7 +784,6 @@
     "license_failed_v2.png": "red",
     "license_no-icon_v1.png": "red",
     "license_no-icon_v2.png": "red",
-    "location-pin.png": "red",
     "loyalty-campaign_emoji-face_front.png": "red",
     "loyalty-campaign_emoji-sticker_outline.png": "red",
     "loyalty-campaign_emoji-with-discount-badge.png": "red",
@@ -912,17 +792,11 @@
     "loyalty-campaign_stamp-card_front.png": "red",
     "loyalty-campaign_stamp-card_left.png": "red",
     "loyalty-campaign_stamp-card_right.png": "red",
-    "menu-discounts.png": "green",
     "mobile-payment-confirmed_dark_v1.png": "red",
     "mobile-payment-confirmed_green_v1.png": "red",
     "mobile-payment-declined_dark_v1.png": "red",
     "mobile-payment-declined_red_v1.png": "red",
-    "new-merchants.png": "red",
-    "night-food-options.png": "green",
     "no-internet_v2.png": "red",
-    "nothing-found.png": "green",
-    "order-again.png": "red",
-    "orders-no-results.png": "red",
     "overlay-icon_battery.png": "red",
     "overlay-icon_check_v2.png": "red",
     "overlay-icon_check.png": "red",
@@ -931,93 +805,33 @@
     "overlay-icon_download.png": "red",
     "overlay-icon_exclamation.png": "red",
     "overlay-icon_x.png": "red",
-    "paperbag-with-branding_pickup.png": "red",
     "parking-traffic-sign.png": "green",
     "payment-failed_wallet.png": "green",
-    "personal-data-export_step-1.png": "red",
-    "personal-data-export_step-2.png": "red",
-    "personal-data-export_step-3.png": "red",
-    "personal-data-export_step-4.png": "red",
-    "personal-data-export_step-5.png": "red",
-    "personal-data-export_step-6.png": "red",
     "pet-friendly-cat.png": "green",
-    "pet-friendly.png": "green",
-    "pet-supplies.png": "red",
-    "petrol-refueling-stand.png": "red",
     "photo-id-icon_v1.png": "red",
     "photo-id-icon_v2.png": "red",
     "photo-id-icon_v3.png": "red",
     "photo-id-icon_v4.png": "red",
     "photo-license_v1.png": "red",
     "photo-license_v2.png": "red",
-    "price-bidding-flow.png": "green",
-    "ride-ended-automatically.png": "red",
-    "ride-timeout.png": "red",
-    "riding-with-pets.png": "red",
-    "safety.png": "red",
-    "scheduled-car.png": "red",
     "scheduled-ride_airport.png": "red",
-    "scooter-charging-dock.png": "green",
     "scooter-solo.png": "green",
-    "search-no-results.png": "red",
-    "service-dine-in_v1.png": "green",
-    "service-dine-in_v2.png": "green",
     "set-location-denied_v1.png": "red",
     "set-location-denied_v2.png": "red",
     "set-pick-up-location_v1.png": "green",
     "set-pick-up-location_v2.png": "green",
-    "smartphone-in-hand_v1.png": "blue",
-    "smartphone-in-hand_v2.png": "blue",
-    "special-offer-gift.png": "red",
-    "starship-robot_off-x_closed.png": "red",
-    "starship-robot_off-x_open.png": "red",
-    "starship-robot_side.png": "red",
-    "success-open-app_v1.png": "green",
-    "success-open-app_v2.png": "green",
-    "sushi.png": "green",
-    "sweets.png": "green",
     "taking-a-selfie_v1.png": "red",
     "taking-a-selfie_v2.png": "red",
     "terms-and-conditions_dark.png": "blue",
     "terms-and-conditions_light.png": "blue",
-    "thumbs-down_v1.png": "green",
-    "thumbs-down_v2.png": "green",
-    "thumbs-up_v1.png": "green",
-    "thumbs-up_v2.png": "green",
-    "toys-and-games.png": "red",
-    "traffic-light_all.png": "red",
-    "traffic-light_green.png": "red",
-    "traffic-light_orange.png": "red",
-    "traffic-light_red.png": "red",
     "tree_cone.png": "red",
     "tree_heart.png": "red",
     "tree_oval.png": "red",
     "tree_round.png": "red",
     "tree_snowman.png": "green",
     "tree_square.png": "green",
-    "verification_v1.png": "red",
-    "verification_v2.png": "red",
-    "verification_v3.png": "red",
-    "verification_v4-orange.png": "green",
-    "verification_v4.png": "green",
-    "work-profile-error_base.png": "green",
-    "work-profile-error_full.png": "green",
-    "work-profile-warning_base.png": "green",
-    "work-profile-warning_full.png": "green",
-    "work-profile-with-promo.png": "green",
-    "work-profile.png": "green",
-    "work-rides.png": "red",
-    "wrong-location.png": "red",
-    "angled-white-car_v1.png": "red",
-    "angled-white-car_v2.png": "red",
     "azerbaijan-purple_top.png": "red",
     "azerbaijan-red_top.png": "red",
-    "bajaj_iso.png": "green",
-    "bajaj_off-x.png": "green",
-    "bajaj_side.png": "green",
-    "bajaj_top.png": "green",
-    "barcelona-taxi_side.png": "green",
-    "barcelona-taxi_top.png": "green",
     "basic-sedan-car_iso.png": "green",
     "basic-sedan-car_off-x.png": "green",
     "basic-sedan-car_side.png": "green",
@@ -1032,43 +846,15 @@
     "basic-xl-car_side.png": "green",
     "basic-xl-car_top.png": "green",
     "bike_top.png": "green",
-    "bolt-car_off-x_norway.png": "red",
-    "bolt-car_off-x_ramadan.png": "red",
-    "bolt-car_top_norway.png": "green",
-    "bolt-car_top_ramadan.png": "green",
     "bolt-car-pink_off-x.png": "red",
     "bolt-category-green-back_top.png": "red",
     "bolt-green-back-hero-car_iso.png": "green",
     "bolt-green-back-hero-car_off-x.png": "green",
     "bolt-green-back-hero-car_side.png": "green",
     "bolt-green-back-hero-car_top.png": "green",
-    "bolt-hero-car_off-x_aurora.png": "red",
-    "bolt-hero-car_off-x_canada-day.png": "red",
-    "bolt-hero-car_off-x_christmas_v1.png": "red",
-    "bolt-hero-car_off-x_christmas_v2.png": "red",
-    "bolt-hero-car_off-x_earth-day.png": "red",
-    "bolt-hero-car_off-x_easter-bunny.png": "red",
-    "bolt-hero-car_off-x_easter-egg.png": "red",
-    "bolt-hero-car_off-x_halloween_no-basket.png": "red",
-    "bolt-hero-car_off-x_halloween.png": "red",
     "bolt-hero-car_off-x_kings-day.png": "red",
-    "bolt-hero-car_off-x_pride.png": "red",
-    "bolt-hero-car_off-x_sauna.png": "red",
-    "bolt-hero-car_off-x_valentines-day.png": "red",
-    "bolt-hero-car_off-x_womens-day.png": "red",
     "bolt-hero-car_side_kings-day.png": "red",
-    "bolt-hero-car_top_aurora.png": "green",
-    "bolt-hero-car_top_canada-day.png": "red",
-    "bolt-hero-car_top_earth-day.png": "red",
-    "bolt-hero-car_top_easter-bunny.png": "red",
-    "bolt-hero-car_top_easter-egg.png": "red",
-    "bolt-hero-car_top_halloween-broom.png": "red",
-    "bolt-hero-car_top_hat-and-beard.png": "red",
-    "bolt-hero-car_top_hat.png": "green",
     "bolt-hero-car_top_kings-day.png": "red",
-    "bolt-hero-car_top_pride.png": "green",
-    "bolt-hero-car_top_sauna.png": "green",
-    "bolt-hero-car_top_womens-day.png": "red",
     "bolt-premium-motorbike_off-x.png": "green",
     "bolt-premium-motorbike_top.png": "green",
     "bolt-send_categories.png": "red",
@@ -1080,169 +866,46 @@
     "bolt-send_received_v2.png": "red",
     "bolt-send_send.png": "red",
     "bolt-send_small.png": "red",
-    "bus_off-x.png": "red",
-    "bus_side.png": "red",
-    "car_off-x_bike-storage.png": "red",
-    "car_off-x_child-seat.png": "green",
-    "car_off-x_pets.png": "red",
-    "car_top_beige.png": "red",
-    "car_top_blue.png": "red",
-    "car_top_bronze.png": "red",
-    "car_top_brown.png": "red",
-    "car_top_dark-grey.png": "red",
-    "car_top_gold.png": "red",
-    "car_top_light-blue.png": "red",
-    "car_top_maroon.png": "red",
-    "car_top_navy-blue.png": "red",
-    "car_top_orange.png": "red",
-    "car_top_pearl-white.png": "green",
-    "car_top_pearl.png": "red",
-    "car_top_pink.png": "red",
-    "car_top_purple.png": "red",
     "car_top_ramadan.png": "red",
-    "car_top_red.png": "red",
-    "car_top_silver.png": "red",
-    "car_top_sky-blue.png": "red",
-    "car_top_valentines-day.png": "red",
-    "car_top_wine-red.png": "red",
-    "car_top_wine.png": "red",
-    "car_top_womens-day.png": "red",
-    "car_top_yellow.png": "red",
-    "car-rentals.png": "green",
-    "chauffeur-signature_off-x_v1.png": "green",
-    "chauffeur-signature_off-x_v2.png": "green",
-    "chauffeur-signature_top.png": "green",
-    "chauffeur-suv_off-x_v1.png": "green",
-    "chauffeur-suv_off-x_v2.png": "green",
-    "chauffeur-suv_top.png": "green",
-    "chauffeur-xxl_off-x_v1.png": "green",
-    "chauffeur-xxl_off-x_v2.png": "green",
-    "chauffeur-xxl_top.png": "green",
-    "comfort-car_iso.png": "green",
-    "comfort-car_off-x_romania.png": "green",
-    "comfort-car_off-x.png": "green",
-    "comfort-car_side.png": "green",
-    "comfort-car_top_romania.png": "green",
-    "comfort-car_top.png": "green",
-    "comfort-taxi_off-x.png": "green",
-    "comfort-taxi_side.png": "green",
-    "comfort-taxi_top.png": "green",
     "cyprus-intercity-taxi-standard_top.png": "red",
     "cyprus-intercity-taxi-xl_top.png": "red",
     "dubai-taxi-red_top.png": "red",
     "dubai-taxi-white_top.png": "red",
-    "dubai-taxi-xl-pink-roof_off-x.png": "red",
     "dubai-taxi-xl-red_top.png": "red",
-    "dubai-taxi-xl-red-roof_off-x_wheelchair.png": "red",
-    "dubai-taxi-xl-red-roof_off-x.png": "red",
     "dubai-taxi-xl-women_top.png": "red",
-    "easter-eggs-in-basket.png": "red",
-    "election-day.png": "red",
     "electric-all-green-car_iso.png": "green",
     "electric-all-green-car_off-x.png": "green",
     "electric-all-green-car_side.png": "green",
     "electric-all-green-car_top.png": "green",
-    "electric-bike_iso.png": "green",
-    "electric-bike_off-x.png": "green",
-    "electric-bike_side.png": "green",
     "electric-category-circle_top.png": "green",
     "electric-category-full-green_top.png": "green",
     "european-day-car_off-x.png": "red",
     "european-day-car_side.png": "red",
     "european-day-car_top_v1.png": "red",
     "european-day-car_top_v2.png": "red",
-    "french-taxi_off-x.png": "red",
-    "french-taxi_side.png": "red",
-    "french-taxi_top.png": "red",
-    "generic-white-taxi_off-x.png": "green",
-    "generic-white-taxi_side.png": "green",
-    "generic-white-taxi_top.png": "green",
-    "hero-green-circle-car_iso.png": "green",
-    "hero-green-circle-car_off-x.png": "green",
-    "hero-green-circle-car_side.png": "green",
-    "hero-green-circle-car_top.png": "green",
     "kings-day_giftbox.png": "red",
-    "light-blue.png": "red",
     "lime-scooter_off-x.png": "green",
-    "lisbon-taxi_off-x.png": "red",
-    "lisbon-taxi_side.png": "red",
-    "lisbon-taxi_top.png": "red",
     "lisbon-taxi-xl_top.png": "red",
-    "little-bolt-car_green.png": "green",
-    "little-bolt-car_off-x.png": "red",
-    "little-bolt-car_top.png": "green",
-    "little-bolt-car_white.png": "green",
-    "little-bolt-car_yellow.png": "red",
-    "location-pin_dark-pink.png": "red",
-    "london-taxi_off-x.png": "green",
-    "london-taxi_side.png": "green",
-    "london-taxi_top.png": "green",
-    "madrid-taxi_top.png": "green",
-    "malaga-taxi_top.png": "green",
-    "mallorca-taxi_top.png": "green",
     "mi-taxi_top.png": "red",
     "minibus_off-x.png": "green",
     "minibus_top.png": "green",
-    "moped_iso.png": "green",
-    "moped_off-x.png": "green",
-    "moped_side.png": "green",
-    "moped_top.png": "green",
-    "moped-with-glass_iso.png": "green",
-    "moped-with-glass_off-x.png": "green",
-    "moped-with-glass_side.png": "green",
-    "moped-with-glass_top.png": "green",
     "motorbike_off-x_thailand-new-year.png": "red",
     "motorbike_top_thailand-new-year.png": "red",
     "motorbike_top.png": "red",
-    "motorcycle_iso.png": "green",
-    "motorcycle_off-x.png": "green",
-    "motorcycle_side.png": "green",
-    "motorcycle_top.png": "green",
-    "navy-blue.png": "red",
-    "parcel-delivery_hero.png": "green",
     "parcel-delivery-car_confetti.png": "red",
     "parcel-delivery-on-bike.png": "red",
     "parcel-delivery-using-car.png": "red",
     "parcel-delivery-using-xl-car.png": "red",
-    "paris-taxi_off-x.png": "green",
-    "paris-taxi_side.png": "green",
-    "paris-taxi_top.png": "green",
     "premium-car_iso_silver-detail.png": "green",
-    "premium-car_iso.png": "green",
     "premium-car_off-x_silver-detail.png": "green",
-    "premium-car_off-x.png": "green",
     "premium-car_side_silver-detail.png": "green",
-    "premium-car_side.png": "green",
-    "premium-car_top.png": "green",
     "premium-motorbike_off-x_vietnam_v1.png": "green",
-    "premium-motorbike_off-x_vietnam_v2.png": "green",
-    "premium-motorbike_off-x.png": "green",
-    "premium-motorbike_side.png": "green",
     "premium-motorbike_top_vietnam_v1.png": "green",
-    "premium-motorbike_top_vietnam_v2.png": "green",
-    "premium-motorbike_top.png": "green",
-    "premium-plus_off-x.png": "green",
     "premium-plus_top.png": "green",
-    "premium-taxi_off-x.png": "red",
-    "premium-taxi_side.png": "red",
-    "premium-taxi_top.png": "red",
     "price-bidding.png": "green",
     "priority.png": "green",
     "romania-xs-taxi_off-x.png": "red",
     "romania-xs-taxi_top.png": "red",
-    "santander-taxi_top.png": "green",
-    "saver-car_top.png": "red",
-    "scooter_iso.png": "green",
-    "scooter_off-x.png": "green",
-    "scooter_side.png": "green",
-    "seville-taxi_top.png": "green",
-    "shark-car_off-x_bubbles-ps-guide.png": "red",
-    "shark-car_off-x_bubbles.png": "red",
-    "shark-car_off-x_ps-guide.png": "red",
-    "shark-car_off-x.png": "red",
-    "shark-car_top_ps-guide.png": "red",
-    "small-car_off-x.png": "red",
-    "small-car_top.png": "red",
     "spain-barcelona-taxi_off-x.png": "green",
     "spain-madrid-taxi_off-x.png": "green",
     "spain-madrid-taxi_side.png": "green",
@@ -1259,20 +922,6 @@
     "spain-seville-taxi_off-x.png": "green",
     "spain-seville-taxi_side.png": "green",
     "spain-seville-taxi_top.png": "green",
-    "taxi-lexus_iso.png": "red",
-    "taxi-lexus_off-x.png": "red",
-    "taxi-lexus_side.png": "red",
-    "taxi-red-roof-cream_iso.png": "red",
-    "taxi-red-roof-cream_off-x.png": "red",
-    "taxi-red-roof-cream_side.png": "red",
-    "traffic-buster_iso.png": "green",
-    "traffic-buster_off-x.png": "green",
-    "traffic-buster_side.png": "green",
-    "traffic-buster_top.png": "green",
-    "train_off-x.png": "green",
-    "train_side.png": "green",
-    "tram_off-x.png": "red",
-    "tram_side.png": "red",
     "tuk-tuk_iso.png": "green",
     "tuk-tuk_off-x.png": "green",
     "tuk-tuk_side.png": "green",
@@ -1292,231 +941,60 @@
     "vip_off-x_v2.png": "red",
     "vip_top.png": "red",
     "vip-plus_top.png": "green",
-    "vip-plus_v1.png": "green",
-    "vip-plus_v2.png": "green",
     "vip-xl_top.png": "green",
-    "vip-xl_v1.png": "green",
-    "vip-xl_v2.png": "green",
     "wheelchair-support_off-x.png": "red",
     "wheelchair-support_yellow-xl_off-x.png": "red",
-    "wine-red.png": "red",
     "xl-lisbon-taxi_off-x.png": "red",
     "xl-lisbon-taxi_side.png": "red",
     "xl-lisbon-taxi_top.png": "red",
-    "xl-plus_off-x.png": "green",
-    "xl-van_off-x_bike-storage.png": "red",
-    "xl-van_off-x_child-seat.png": "green",
-    "xl-van_off-x_pets.png": "red",
-    "xl-yellow-taxi_off-x.png": "green",
-    "xl-yellow-taxi_side.png": "green",
-    "xl-yellow-taxi_top.png": "green",
     "xxl_off-x.png": "red",
-    "xxl-car_iso_new-colour.png": "green",
-    "xxl-car_iso.png": "green",
-    "xxl-car_off-x_new-colour.png": "green",
-    "xxl-car_side_new-colour.png": "green",
-    "xxl-car_side.png": "green",
-    "xxl-car_top.png": "green",
     "xxl-car-plus_top.png": "green",
-    "xxl-yellow-taxi_off-x.png": "green",
-    "xxl-yellow-taxi_side.png": "green",
-    "xxl-yellow-taxi_top.png": "green",
-    "yellow-taxi_off-x.png": "green",
-    "yellow-taxi_side.png": "green",
-    "yellow-taxi_top.png": "green",
-    "account-deleted_dark.png": "blue",
-    "account-deleted_light.png": "blue",
-    "all-drivers-busy_dark.png": "blue",
-    "all-drivers-busy_light.png": "blue",
-    "app-security_dark.png": "green",
-    "app-security_light.png": "green",
-    "ban-were-sorry_dark.png": "green",
-    "ban-were-sorry_light.png": "green",
-    "banned-or-failed_dark_v2.png": "red",
-    "banned-or-failed_dark.png": "red",
-    "be-safe_dark.png": "red",
-    "be-safe_light.png": "red",
-    "businessman-with-suitcase_standing_dark.png": "red",
-    "businessman-with-suitcase_standing_light.png": "red",
-    "businessman-with-suitcase_walking_dark.png": "red",
-    "businessman-with-suitcase_walking_light.png": "red",
-    "couple-in-bolt-drive-car-confetti.png": "green",
-    "couple-with-bolt-drive-car_dark.png": "green",
-    "couple-with-bolt-drive-car_mixed.png": "green",
-    "couple-with-bolt-drive-car-calendar_dark.png": "green",
-    "couple-with-bolt-drive-car-calendar_mixed_v2.png": "green",
-    "couple-with-bolt-drive-car-calendar_mixed.png": "green",
-    "couple-with-bolt-drive-car-confetti_dark_v2.png": "green",
-    "couple-with-bolt-drive-car-confetti_dark.png": "green",
-    "customer-support-agent_dark.png": "blue",
-    "customer-support-agent_light.png": "blue",
-    "default-illustration-for-promo_dark.png": "green",
-    "default-illustration-for-promo_light.png": "green",
-    "driver-close-up_icon_dark.png": "blue",
-    "driver-close-up_icon_light.png": "blue",
-    "driver-close-up_no-helmet_dark.png": "red",
-    "driver-close-up_no-helmet_light.png": "red",
-    "driver-solo_dark.png": "green",
-    "driver-solo_light.png": "green",
-    "face_dark.png": "red",
-    "face_light.png": "red",
-    "face-with-helmet_dark.png": "green",
-    "face-with-helmet_light.png": "green",
-    "family_dark.png": "blue",
-    "family_light.png": "blue",
-    "family_medium.png": "green",
-    "family_mixed.png": "green",
-    "malaysia-female-driver.png": "red",
-    "malaysia-male-driver.png": "red",
-    "malaysia-southeast-asian-business.png": "green",
-    "male-courier-with-car_dark.png": "green",
-    "male-courier-with-car_light.png": "green",
     "man-and-woman-taxi_v1.png": "red",
     "man-and-woman-taxi_v2.png": "red",
-    "man-eating_dark.png": "green",
-    "man-eating_light.png": "green",
-    "man-hands-up_dark.png": "red",
-    "man-hands-up_light.png": "red",
-    "man-hands-up-confetti_dark.png": "red",
-    "man-hands-up-confetti_light.png": "red",
-    "man-on-bike_dark.png": "blue",
-    "man-on-bike_full_dark.png": "green",
-    "man-on-bike_full_light.png": "green",
-    "man-on-bike_light.png": "blue",
-    "man-on-bike-confetti_dark.png": "green",
-    "man-on-bike-confetti_light.png": "green",
-    "man-on-scooter_dark.png": "green",
-    "man-on-scooter_light.png": "green",
-    "man-on-scooter-confetti_dark.png": "green",
-    "man-on-scooter-confetti_light.png": "green",
-    "man-standing_dark.png": "red",
-    "man-standing_light.png": "red",
-    "man-unlocking-bolt-drive_key_dark.png": "green",
-    "man-unlocking-bolt-drive_key_light.png": "green",
-    "man-unlocking-bolt-drive_key-confetti_dark.png": "green",
-    "man-unlocking-bolt-drive_key-confetti_light.png": "green",
-    "man-unlocking-bolt-drive_phone_dark.png": "green",
-    "man-unlocking-bolt-drive_phone_light.png": "green",
-    "man-unlocking-bolt-drive_phone-confetti_dark.png": "green",
-    "man-unlocking-bolt-drive_phone-confetti_light.png": "green",
-    "man-walking_dark.png": "red",
-    "man-walking_light.png": "red",
-    "man-with-bolt-drive-car_dark.png": "blue",
-    "man-with-bolt-drive-car_light.png": "blue",
-    "man-with-bolt-drive-car_medium.png": "green",
-    "mothers-day_v1.png": "red",
-    "mothers-day_v2.png": "red",
-    "no-location-cant-identify-riders-location_dark.png": "red",
-    "no-location-cant-identify-riders-location_light.png": "red",
-    "no-ongoing-rides_dark.png": "green",
-    "no-ongoing-rides_light.png": "green",
-    "passenger-rating_dark.png": "green",
-    "passenger-rating_light.png": "green",
-    "passenger-rating_medium.png": "green",
-    "people-group_dark.png": "red",
-    "people-group_light.png": "red",
-    "people-group-alt_dark.png": "red",
-    "people-group-alt_light.png": "red",
-    "ride-for-someone-else_dark.png": "blue",
-    "ride-for-someone-else_medium.png": "green",
-    "selfie_eye-level_dark.png": "red",
-    "selfie_eye-level_light.png": "red",
-    "selfie_eyes-closed_dark.png": "red",
-    "selfie_eyes-closed_light.png": "red",
-    "selfie_glasses_dark.png": "red",
-    "selfie_glasses_light.png": "red",
-    "selfie_low-angle_dark.png": "red",
-    "selfie_low-angle_light.png": "red",
-    "selfie_mask_dark.png": "red",
-    "selfie_mask_light.png": "red",
-    "selfie_normal_dark.png": "red",
-    "selfie_normal_light.png": "red",
-    "selfie-failed_dark.png": "green",
-    "selfie-failed_light.png": "green",
-    "speed-limit_dark.png": "green",
-    "speed-limit_light.png": "green",
-    "success_dark.png": "green",
-    "success_light.png": "green",
-    "thailand-female-driver.png": "red",
-    "thailand-male-driver.png": "red",
-    "thailand-southeast-asian-business.png": "green",
-    "warning_dark.png": "red",
-    "warning_light.png": "red",
-    "woman-driver_dark.png": "green",
-    "woman-driver_light.png": "green",
-    "woman-eating_dark.png": "green",
-    "woman-eating_light.png": "green",
-    "woman-hands-up_dark.png": "red",
-    "woman-hands-up_light.png": "red",
-    "woman-hands-up-confetti_dark.png": "blue",
-    "woman-hands-up-confetti_light.png": "blue",
-    "woman-on-bike_dark.png": "green",
-    "woman-on-bike_light.png": "green",
-    "woman-on-bike-confetti_dark.png": "green",
-    "woman-on-bike-confetti_light.png": "green",
-    "woman-on-scooter_dark.png": "green",
-    "woman-on-scooter_medium.png": "green",
-    "woman-on-scooter-confetti_dark.png": "green",
-    "woman-on-scooter-confetti_medium.png": "green",
-    "woman-standing_dark.png": "green",
-    "woman-standing_light.png": "green",
-    "woman-unlocking-bolt-drive_key_dark.png": "green",
-    "woman-unlocking-bolt-drive_key_light.png": "green",
-    "woman-unlocking-bolt-drive_key-confetti_dark.png": "green",
-    "woman-unlocking-bolt-drive_key-confetti_light.png": "green",
-    "woman-unlocking-bolt-drive_phone_dark.png": "green",
-    "woman-unlocking-bolt-drive_phone_light.png": "green",
-    "woman-unlocking-bolt-drive_phone-confetti_dark.png": "green",
-    "woman-unlocking-bolt-drive_phone-confetti_light.png": "green",
-    "woman-walking_dark.png": "green",
-    "woman-walking_light.png": "green",
-    "woman-with-bolt-drive-car_dark.png": "blue",
-    "woman-with-bolt-drive-car_light.png": "blue",
-    "woman-with-bolt-drive-car_medium.png": "green",
-    "women-for-women_saudi-arabia.png": "red"
+    "ride-for-someone-else_dark.png": "blue"
   },
   "tags": {
-    "Row 123 Groceries (basket).png": [
+    "groceries_basket.png": [
       "food",
       "banana",
       "milk",
       "basket"
     ],
-    "Pizza.png": [
+    "pizza.png": [
       "food",
       "pizza"
     ],
-    "Row 116_ Food Order (Dine-in_ No Delivery) .png": [
+    "food-order_dine-in.png": [
       "food",
       "takeaway",
       "burger",
       "cup",
       "drink"
     ],
-    "Row 125_ Bakery.png": [
+    "bakery.png": [
       "food",
       "bread",
       "muffin",
       "cupcake",
       "croissant"
     ],
-    "Row 120_ Breakfast.png": [
+    "breakfast.png": [
       "food",
       "cup",
       "croissant"
     ],
-    "Row 127_ Convenience products.png": [
+    "convenience-products.png": [
       "food",
       "sandwich",
       "can",
       "drink"
     ],
-    "Row 112_ Food Order.png": [
+    "food-order.png": [
       "food",
       "burger",
       "bag"
     ],
-    "Row 121 Groceries with bag.png": [
+    "groceries-with-bag.png": [
       "food",
       "groceries",
       "banana",
@@ -1524,7 +1002,7 @@
       "bag",
       "broccoli"
     ],
-    "Row 122 Groceries (without bag, delivery).png": [
+    "groceries_no-bag.png": [
       "food",
       "groceries",
       "broccoli",
@@ -1532,46 +1010,46 @@
       "drink",
       "milk"
     ],
-    "Row 124_ Alcohol.png": [
+    "alcohol.png": [
       "food",
       "drink",
       "alcohol",
       "bottle",
       "glass"
     ],
-    "Wrap.png": [
+    "wrap.png": [
       "food",
       "wrap"
     ],
-    "Sushi 2.png": [
+    "sushi.png": [
       "food",
       "sushi",
       "delivery"
     ],
-    "Row 132_ Sweets.png": [
+    "sweets.png": [
       "food",
       "cupcake",
       "macaroons"
     ],
-    "Row 144 Search no results.png": [
+    "search-no-results.png": [
       "food",
       "noodles",
       "search"
     ],
-    "Row 115_ Grocery order.png": [
+    "grocery-order.png": [
       "food",
       "delivery",
       "bag",
       "paper",
       "apple"
     ],
-    "Asian.png": [
+    "asian-food.png": [
       "food",
       "asian",
       "noodles",
       "takeaway"
     ],
-    "Breakfast (option).png": [
+    "breakfast-option.png": [
       "food",
       "bacon",
       "eggs",
@@ -1580,241 +1058,227 @@
       "plate",
       "breakfast"
     ],
-    "Breakfast.png": [
+    "breakfast-2.png": [
       "food",
       "eggs",
       "bread"
     ],
-    "Burger.png": [
+    "burger.png": [
       "food",
       "burger"
     ],
-    "Icecream.png": [
+    "ice-cream.png": [
       "food"
     ],
-    "0_Row 395 Emoji Sticker_Front_Option.png": [
+    "emoji-sticker_front-option.png": [
       "emoji",
       "smile"
     ],
-    "0_Row 395 Emoji_Sticker.png": [
+    "emoji-sticker.png": [
       "emoji",
       "sticker"
     ],
-    "0_Row 395 Emoji&Discount.png": [
+    "emoji-and-discount.png": [
       "discount",
       "emoji"
     ],
-    "0_Row 395 Hero Emoji_Confetti.png": [
-      "discount",
-      "emoji",
-      "sticker"
-    ],
-    "0_Row 395 Hero Emoji.png": [
+    "hero-emoji_confetti.png": [
       "discount",
       "emoji",
       "sticker"
     ],
-    "0_Row 395 Loyalty Campaign_Front.png": [
+    "hero-emoji.png": [
+      "discount",
+      "emoji",
+      "sticker"
+    ],
+    "loyalty-campaign_front.png": [
       "emoji"
     ],
-    "0_Row 395 Loyalty Campaign_L.png": [
+    "loyalty-campaign_left.png": [
       "emoji"
     ],
-    "0_Row 395 Loyalty Campaign_R.png": [
+    "loyalty-campaign_right.png": [
       "emoji"
     ],
-    "Arrived 1.png": [
+    "arrived_v1.png": [
       "man",
       "male",
       "courier",
       "wave"
     ],
-    "Arrived 2.png": [
+    "arrived_v2.png": [
       "man",
       "male",
       "courier",
       "wave"
     ],
-    "Booster Seat (1).png": [
+    "booster-seat.png": [
       "seat",
       "ride",
       "child"
     ],
-    "Chinese Flag (option).png": [
+    "chinese-flag.png": [
       "flag",
       "china"
     ],
-    "Coin Plus 1.png": [
+    "coin-plus_v1.png": [
       "coin",
       "plus",
       "money"
     ],
-    "Coin Plus 2.png": [
+    "coin-plus_v2.png": [
       "coin",
       "plus",
       "money"
     ],
-    "Coin Plus 3.png": [
+    "coin-plus_v3.png": [
       "coin",
       "plus",
       "money"
     ],
-    "Coin Plus 4.png": [
+    "coin-plus_v4.png": [
       "coin",
       "plus",
       "money"
     ],
-    "Coin Plus 5.png": [
+    "coin-plus_v5.png": [
       "coin",
       "plus",
       "money"
     ],
-    "Confirmation Mobile Payments  (Version 2).png": [
+    "confirmation-mobile-payments_v2.png": [
       "phone",
       "coins",
       "money",
       "payment",
       "success"
     ],
-    "Confirmation Mobile Payments (Version 1).png": [
+    "confirmation-mobile-payments_v1.png": [
       "phone",
       "coins",
       "money",
       "payment",
       "success"
     ],
-    "Credit card.png": [
+    "credit-card.png": [
       "card",
       "credit",
       "payment",
       "money"
     ],
-    "Decline Mobile Payments  (Version 1).png": [
+    "decline-mobile-payments_v1.png": [
       "phone",
       "coins",
       "payment",
       "money",
       "warning"
     ],
-    "Decline Mobile Payments (Version 2).png": [
+    "decline-mobile-payments_v2.png": [
       "phone",
       "money",
       "coins",
       "payment",
       "warning"
     ],
-    "Decline Mobile Payments 2.png": [
-      "phones",
-      "coins",
-      "money",
-      "payment",
-      "warning"
-    ],
-    "Confirmation Mobile Payments 2.png": [
-      "money",
-      "payment",
-      "coins",
-      "phone",
-      "success"
-    ],
-    "Delivery in progress_1.png": [
+    "delivery-in-progress_v1.png": [
       "courier",
       "man",
       "male",
       "moped",
       "delivery"
     ],
-    "Delivery in progress_2.png": [
+    "delivery-in-progress_v2.png": [
       "courier",
       "man",
       "male",
       "moped",
       "delivery"
     ],
-    "Fast Food.png": [
+    "fast-food.png": [
       "fries",
       "food",
       "takeaway"
     ],
-    "Indian Flag (option).png": [
+    "indian-flag.png": [
       "flag"
     ],
-    "Italian Flag (option).png": [
+    "italian-flag.png": [
       "flag"
     ],
-    "Off X_Closed_Starship Robot.png": [
+    "starship-robot_off-x_closed.png": [
       "robot",
       "delivery"
     ],
-    "Off X_Open_Starship Robot.png": [
+    "starship-robot_off-x_open.png": [
       "robot",
       "delivery"
     ],
-    "Pharmacy.png": [
+    "pharmacy.png": [
       "drugs"
     ],
-    "Riding with Pets.png": [
+    "riding-with-pets.png": [
       "animals",
       "dog",
       "cat",
       "pets",
       "ride"
     ],
-    "Row 14_ Car Rentals v2 (Key).png": [
+    "car-rentals_key.png": [
       "car",
       "keys",
       "rental",
       "ride"
     ],
-    "Row 47 Baggages (Solo).png": [
+    "baggage_solo.png": [
       "travel",
       "baggage"
     ],
-    "Row 57 Set Location denied_1.png": [
+    "location-denied_v1.png": [
       "location",
       "map",
       "pin",
       "hand",
       "error"
     ],
-    "Row 57 Set Location denied_2.png": [
+    "location-denied_v2.png": [
       "location",
       "map",
       "pin",
       "hand",
       "error"
     ],
-    "Row 58_ App update.png": [
+    "app-update.png": [
       "balloons",
       "app",
       "update"
     ],
-    "Row 60_ Wrong Location.png": [
+    "wrong-location.png": [
       "pin",
       "map",
       "location",
       "error"
     ],
-    "Row 61 No Internet 2.png": [
+    "no-internet.png": [
       "satellite",
       "internet",
       "connection",
       "disconnected",
       "error"
     ],
-    "Row 62_ General Error.png": [
+    "general-error.png": [
       "error",
       "cup",
       "coffee"
     ],
-    "Row 66_ Chat with Support - empty state.png": [
+    "chat-with-support_empty.png": [
       "chat",
       "support",
       "bubbles",
       "contact",
       "help"
     ],
-    "Row 68_ Verification_1.png": [
+    "verification_v1.png": [
       "security",
       "verification",
       "shield",
@@ -1822,435 +1286,435 @@
       "lock",
       "privacy"
     ],
-    "Row 69_ Verification_2.png": [
+    "verification_v2.png": [
       "security",
       "verification",
       "shield",
       "privacy"
     ],
-    "Row 70_ Verification_3.png": [
+    "verification_v3.png": [
       "security",
       "verification",
       "shield",
       "privacy"
     ],
-    "Row 71 Verification 4 orange.png": [
+    "verification_v4-orange.png": [
       "security",
       "verification",
       "shield",
       "privacy"
     ],
-    "Row 72_ Email-Locked.png": [
+    "email-locked.png": [
       "email",
       "lock",
       "locked",
       "security",
       "contact"
     ],
-    "Row 73_ Email Done.png": [
+    "email-done.png": [
       "success",
       "email",
       "contact"
     ],
-    "Row 74_ Email Error.png": [
+    "email-error.png": [
       "warning",
       "email",
       "contact"
     ],
-    "Row 89 Bolt Plus full (Green).png": [
+    "bolt-plus_full-green.png": [
       "plus",
       "car",
       "ride"
     ],
-    "Row 91_ License (No Icon)_1.png": [
+    "licence_no-icon_v1.png": [
       "drive",
       "licence",
       "id"
     ],
-    "Row 91_ License (No Icon)_2.png": [
+    "licence_no-icon_v2.png": [
       "drive",
       "id",
       "licence"
     ],
-    "Row 91_ License Failed_1.png": [
+    "licence-failed_v1.png": [
       "drive",
       "id",
       "licence",
       "error"
     ],
-    "Row 91_ License Failed_2.png": [
+    "licence-failed_v2.png": [
       "drive",
       "id",
       "licence",
       "error"
     ],
-    "Row 92_ Cancel Ride Icon.png": [
+    "cancel-ride-icon.png": [
       "error",
       "cancel"
     ],
-    "Row 93_ Driver busy Icon.png": [
+    "driver-busy-icon.png": [
       "busy",
       "time",
       "icon"
     ],
-    "Row 94_ Driver accepted change request Icon.png": [
+    "driver-accepted-change-icon.png": [
       "success",
       "icon"
     ],
-    "Row 107 Illustration for Safety.png": [
+    "safety.png": [
       "safety",
       "phone",
       "security"
     ],
-    "Row 111_ Paperbag with branding (pickup order).png": [
+    "paperbag-with-branding_pickup.png": [
       "delivery",
       "food",
       "bag",
       "paper"
     ],
-    "Row 114_ Order again.png": [
+    "order-again.png": [
       "delivery",
       "food",
       "bag",
       "paper"
     ],
-    "Row 119 Fast Delivery with icon.png": [
+    "fast-delivery-with-icon.png": [
       "time",
       "moped",
       "delivery",
       "bag"
     ],
-    "Row 126_ Books.png": [
+    "books.png": [
       "books"
     ],
-    "Row 129_ Gifts.png": [
+    "gifts.png": [
       "gifts"
     ],
-    "Row 130_ Health and beauty.png": [
+    "health-and-beauty.png": [
       "soap",
       "toothbrush"
     ],
-    "Row 131_ Pet supplies.png": [
+    "pet-supplies.png": [
       "dog",
       "house"
     ],
-    "Row 364 Hands up in celebration with confetti 2.png": [
+    "hands-up-confetti_v2.png": [
       "hands",
       "confetti"
     ],
-    "Row 364 Hands up in celebration with confetti 1.png": [
+    "hands-up-confetti_v1.png": [
       "hands",
       "confetti"
     ],
-    "Preparation_Day.png": [
+    "preparation_day.png": [
       "house",
       "shop",
       "cafe"
     ],
-    "Preparation_Night.png": [
+    "preparation_night.png": [
       "house",
       "shop",
       "cafe"
     ],
-    "Processing payment.png": [
+    "processing-payment.png": [
       "payment"
     ],
-    "Row 15 Scheduling a car.png": [
+    "scheduled-car.png": [
       "schedule",
       "calendar",
       "time"
     ],
-    "Row 16 Car with calendar.png": [
+    "car-with-calendar.png": [
       "schedule",
       "ride",
       "calendar",
       "time",
       "car"
     ],
-    "Row 47 Baggages.png": [
+    "baggage.png": [
       "travel",
       "baggage",
       "bag",
       "purse"
     ],
-    "Row 48 Pet Friendly.png": [
+    "pet-friendly.png": [
       "animals",
       "dog",
       "pets"
     ],
-    "Row 65 Nothing found.png": [
+    "nothing-found.png": [
       "phone",
       "zoom",
       "magnifying glass",
       "location"
     ],
-    "Row 48_ Pet-friendly (Cat).png": [
+    "pet-friendly_cat.png": [
       "animals",
       "cat",
       "pets"
     ],
-    "Row 49_ Air-conditioner.png": [
+    "air-conditioner.png": [
       "ride",
       "icon",
       "temperature"
     ],
-    "Row 50_ Child Seat.png": [
+    "child-seat.png": [
       "ride",
       "child",
       "seat"
     ],
-    "Row 51_ Get assistance from driver_1.png": [
+    "driver-assistance_v1.png": [
       "hands",
       "assistance"
     ],
-    "Row 51_ Get assistance from driver_2.png": [
+    "driver-assistance_v2.png": [
       "hands",
       "assistance"
     ],
-    "Row 53_ Electric.png": [
+    "electric-icon.png": [
       "icon",
       "electricity",
       "lightning"
     ],
-    "Row 56 Set pick-up Location_1.png": [
+    "set-pickup-location_v1.png": [
       "location",
       "map",
       "hand",
       "hands"
     ],
-    "Row 56 Set pick-up Location_2.png": [
+    "set-pickup-location_v2.png": [
       "location",
       "hand",
       "hands",
       "map"
     ],
-    "Row 64 Chat with driver_Solo 1.png": [
+    "chat-with-driver_solo_v1.png": [
       "support",
       "contact",
       "chat",
       "help",
       "bubbles"
     ],
-    "Row 64 Chat with driver_Solo 2.png": [
+    "chat-with-driver_solo_v2.png": [
       "support",
       "contact",
       "chat",
       "help",
       "bubbles"
     ],
-    "Row 64_ Chat with driver.png": [
+    "chat-with-driver.png": [
       "chat",
       "support",
       "contact",
       "help",
       "bubbles"
     ],
-    "Row 71_ Verification_4.png": [
+    "verification_v4.png": [
       "security",
       "shield",
       "privacy",
       "verification"
     ],
-    "Row 76_ Authentication_1.png": [
+    "authentication_v1.png": [
       "key",
       "lock",
       "security",
       "privacy"
     ],
-    "Row 77 Authentication_2.png": [
+    "authentication_v2.png": [
       "key",
       "lock",
       "security",
       "privacy"
     ],
-    "Row 78_ Authentication_3.png": [
+    "authentication_v3.png": [
       "lock",
       "security",
       "privacy",
       "warning"
     ],
-    "Row 84 Work Rides.png": [
+    "work-rides.png": [
       "ride",
       "car",
       "bag",
       "business"
     ],
-    "Row 85_ Work Profile.png": [
+    "work-profile.png": [
       "bag",
       "business",
       "success"
     ],
-    "Row 86_ Work Profile with Promo.png": [
+    "work-profile-with-promo.png": [
       "bag",
       "business"
     ],
-    "Row 87_ T&C_1.png": [
+    "terms-and-conditions_v1.png": [
       "paper",
       "shield",
       "documents"
     ],
-    "Row 88_ T&C_2.png": [
+    "terms-and-conditions_v2.png": [
       "paper",
       "t&c",
       "success",
       "receipt"
     ],
-    "Row 89 Bolt Plus (Solo Green).png": [
+    "bolt-plus_solo-green.png": [
       "plus",
       "icon"
     ],
-    "Row 89_ Bolt plus (Solo).png": [
+    "bolt-plus_solo.png": [
       "plus",
       "icon"
     ],
-    "Row 89_ Bolt Plus_3.png": [
+    "bolt-plus_v3.png": [
       "plus",
       "car",
       "ride"
     ],
-    "Row 97 Wallet XL.png": [
+    "wallet-xl.png": [
       "wallet",
       "coins",
       "payment",
       "money"
     ],
-    "Row 100 Add Money.png": [
+    "add-money.png": [
       "wallet",
       "coins",
       "payment",
       "money"
     ],
-    "Row 106 Default Illustration for promo_Gift only 2.png": [
+    "default-promo_gift-only_v2.png": [
       "gift",
       "confetti"
     ],
-    "Row 106 Default Illustration for promo_Gift only.png": [
+    "default-promo_gift-only.png": [
       "gift",
       "confetti"
     ],
-    "Row 109_ Delivery Bag.png": [
+    "delivery-bag.png": [
       "courier",
       "bag",
       "delivery"
     ],
-    "Bolt Tours (1).png": [
+    "bolt-tours.png": [
       "travel",
       "baggage"
     ],
-    "Row 96_ Pass.png": [
+    "pass.png": [
       "ticket",
       "pass",
       "star",
       "icon"
     ],
-    "Row 99 Payment Failed - Wallet.png": [
+    "payment-failed-wallet.png": [
       "wallet",
       "payment",
       "money",
       "warning"
     ],
-    "Row 101_ Plane arrived at an airport.png": [
+    "plane-arrived-at-an-airport.png": [
       "plane",
       "travel"
     ],
-    "Row 106 Default Illustration for promo_Gift only 3.png": [
+    "default-promo_gift-only_v3.png": [
       "gift",
       "confetti"
     ],
-    "Row 110_ Delivery Discount.png": [
+    "delivery-discount.png": [
       "delivery",
       "bag",
       "discount"
     ],
-    "Row 117_ Service (Dine-In)_2.png": [
+    "service-dine-in_v2.png": [
       "cloche",
       "food"
     ],
-    "Row 128_ Flowers.png": [
+    "flowers.png": [
       "flowers"
     ],
-    "Row 134_ New merchants.png": [
+    "new-merchants.png": [
       "tag",
       "icon"
     ],
-    "Row 136_ Delivery Discounts.png": [
+    "delivery-discounts.png": [
       "bag",
       "delivery"
     ],
-    "Row 138 Special offer, gift.png": [
+    "special-offer-gift.png": [
       "gift"
     ],
-    "Row 149 Empty Basket.png": [
+    "empty-basket.png": [
       "cat",
       "pets",
       "animals",
       "basket"
     ],
-    "Row 151_ Cash Info_1.png": [
+    "cash-info_v1.png": [
       "coin",
       "hands",
       "payment",
       "money"
     ],
-    "Row 173_ Tree 1, round tree.png": [
+    "round-tree.png": [
       "tree",
       "environment"
     ],
-    "Row 173_ Tree 3, topless cone tree.png": [
+    "cone-tree.png": [
       "tree",
       "environment"
     ],
-    "Row 173_ Tree 5, snowman tree.png": [
+    "snowman-tree.png": [
       "tree",
       "environment"
     ],
-    "Row 174_ Cloud 1.png": [
+    "cloud_v1.png": [
       "cloud",
       "environment",
       "clouds"
     ],
-    "Row 174_ Cloud 3.png": [
+    "cloud_v3.png": [
       "environment",
       "clouds",
       "cloud"
     ],
-    "Row 314-319 Car Branding_Back_Solo.png": [
+    "car-branding_back.png": [
       "car"
     ],
-    "Row 314-319 Car Branding_Left_Solo.png": [
+    "car-branding_left.png": [
       "car"
     ],
-    "Row 314-319_ Car Branding_Green Icon_Solo.png": [
+    "car-branding_icon-green.png": [
       "icon",
       "success"
     ],
-    "Row 314, 317_ Car Branding_Hand_1.png": [
+    "car-branding_hand_v1.png": [
       "hand",
       "phone",
       "camera",
       "photo"
     ],
-    "Row 320 Electric charging stand.png": [
+    "electric-charging-stand.png": [
       "charger",
       "car"
     ],
-    "Row 322 Personal Data Export flow 1.png": [
+    "personal-data-export_step-1.png": [
       "envelope",
       "contact"
     ],
-    "Row 322 Personal Data Export flow 2.png": [
+    "personal-data-export_step-2.png": [
       "contact",
       "envelope"
     ],
-    "Row 322 Personal Data Export flow 4.png": [
+    "personal-data-export_step-4.png": [
       "paper",
       "documents"
     ],
-    "Row 322 Personal Data Export flow 6.png": [
+    "personal-data-export_step-6.png": [
       "paper",
       "documents"
     ],
-    "Row 326 AI chatbot agent.png": [
+    "ai-chatbot-agent.png": [
       "robot",
       "droid",
       "ai",
@@ -2258,301 +1722,301 @@
       "support",
       "contact"
     ],
-    "Row 328 Bolt Business policy.png": [
+    "bolt-business-policy.png": [
       "business",
       "bag",
       "shield"
     ],
-    "Row 330 Bolt Business voucher_coupon.png": [
+    "bolt-business_voucher-coupon.png": [
       "business",
       "bag",
       "coupon",
       "voucher"
     ],
-    "Row 333 Error invoice.png": [
+    "error-invoice.png": [
       "paper",
       "recepit",
       "error",
       "invoice"
     ],
-    "Row 334 Success app (open app) 2.png": [
+    "success-open-app_v2.png": [
       "phone",
       "hand",
       "success"
     ],
-    "Row 335 Download the bolt app 2.png": [
+    "download-bolt-app_v2.png": [
       "phone",
       "hand",
       "download"
     ],
-    "Row 336 Enter the SMS code - shown during sign up 2.png": [
+    "enter-sms-code_v2.png": [
       "phone",
       "hand",
       "sms",
       "chat"
     ],
-    "Row 338 & 348 Calendar Icon_ Base Green.png": [
+    "calendar-icon_base-green.png": [
       "calendar",
       "schedule",
       "time"
     ],
-    "Row 342 Coupon.png": [
+    "coupon.png": [
       "ticket",
       "coupon",
       "voucher",
       "car"
     ],
-    "Row 344 Favorite place 2.png": [
+    "favorite-place_v2.png": [
       "hand",
       "heart",
       "icon"
     ],
-    "Row 348 Calendar Icon_ Base Yellow.png": [
+    "calendar-icon_base-yellow.png": [
       "calendar",
       "schecule",
       "time"
     ],
-    "Row 349 ID Card Approved 1_Base.png": [
+    "id-card-approved_base_v1.png": [
       "licence",
       "id",
       "identification"
     ],
-    "Row 349 ID Card Approved 2_Base.png": [
+    "id-card-approved_base_v2.png": [
       "licence",
       "id",
       "identification"
     ],
-    "Row 349 ID Card Error 1_Base.png": [
+    "id-card-error_base_v1.png": [
       "licence",
       "id",
       "identification"
     ],
-    "Row 349 ID Card Error 2_Base.png": [
+    "id-card-error_base_v2.png": [
       "licence",
       "id",
       "identification"
     ],
-    "Row 349 ID Card expiring 1_Base.png": [
+    "id-card-expiring_base_v1.png": [
       "licence",
       "id",
       "identification"
     ],
-    "Row 349 ID Card expiring 2_Base.png": [
+    "id-card-expiring_base_v2.png": [
       "licence",
       "id",
       "identification"
     ],
-    "Row 117_ Service (Dine-In)_1.png": [
+    "service-dine-in_v1.png": [
       "cloche",
       "food"
     ],
-    "Row 118_ Night (24_7 or late night food options).png": [
+    "night-food-options.png": [
       "moon",
       "stars",
       "environment"
     ],
-    "Row 119 Fast Delivery.png": [
+    "fast-delivery.png": [
       "moped",
       "delivery"
     ],
-    "Row 133_ Toys and Games.png": [
+    "toys-and-games.png": [
       "teddy",
       "bear",
       "chess"
     ],
-    "Row 135 Top Rated.png": [
+    "top-rated.png": [
       "icon",
       "badge",
       "star",
       "rating"
     ],
-    "Row 137_ Menu Discounts.png": [
+    "menu-discounts.png": [
       "discount",
       "badge",
       "icon"
     ],
-    "Row 139_ Exclusive.png": [
+    "exclusive.png": [
       "success",
       "icon",
       "badge"
     ],
-    "Row 146_ Failed General.png": [
+    "failed-general.png": [
       "bag",
       "error"
     ],
-    "Row 150_ Orders no results.png": [
+    "orders-no-results.png": [
       "paper",
       "invoice",
       "receipt"
     ],
-    "Row 151_ Cash Info_2.png": [
+    "cash-info_v2.png": [
       "coin",
       "payment",
       "money",
       "hands"
     ],
-    "Row 173_ Tree 2, two tier heart tree.png": [
+    "heart-tree.png": [
       "tree",
       "environment"
     ],
-    "Row 173_ Tree 4, oval tree.png": [
+    "oval-tree.png": [
       "tree",
       "environment"
     ],
-    "Row 173_ Tree 6, square tree.png": [
+    "square-tree.png": [
       "tree",
       "environment"
     ],
-    "Row 174_ Cloud 2.png": [
+    "cloud_v2.png": [
       "cloud",
       "environment"
     ],
-    "Row 175_ Location pin (based on the letter O and dot under it in Bolt logo).png": [
+    "location-pin.png": [
       "icon",
       "logo",
       "location"
     ],
-    "Row 314-319 Car Branding_Front_Solo.png": [
+    "car-branding_front.png": [
       "car"
     ],
-    "Row 314-319 Car Branding_Right_Solo.png": [
+    "car-branding_right.png": [
       "car"
     ],
-    "Row 314-319_ Car Branding_Red Icon_Solo.png": [
+    "car-branding_icon-red.png": [
       "error",
       "icon"
     ],
-    "Row 314, 317_ Car Branding_Hand_2.png": [
+    "car-branding_hand_v2.png": [
       "hand",
       "phone",
       "photo",
       "camera"
     ],
-    "Row 321 Petrol refueling stand.png": [
+    "petrol-refueling-stand.png": [
       "petrol",
       "fuel"
     ],
-    "Row 338 & Row 348 Calendar Icon_ Solo Icon 3 (check).png": [
+    "calendar-icon_solo-check.png": [
       "check",
       "icon"
     ],
-    "Row 348 Calendar Icon_ Solo Icon 1 (!).png": [
+    "calendar-icon_solo-alert.png": [
       "icon"
     ],
-    "Row 349 Icon 1_Solo.png": [
+    "id-card-icon_v1.png": [
       "icon"
     ],
-    "Row 349 Icon 2_Solo.png": [
+    "id-card-icon_v2.png": [
       "icon"
     ],
-    "Row 350 Extra Icon (!).png": [
+    "extra-icon_alert.png": [
       "icon"
     ],
-    "Row 350 Work Profile Error_full.png": [
+    "work-profile-error_full.png": [
       "briefcase",
       "business",
       "bag"
     ],
-    "Row 350 Work Profile warning_full.png": [
+    "work-profile-warning_full.png": [
       "briefcase",
       "business",
       "bag"
     ],
-    "Row 351 Extra Icon Download.png": [
+    "extra-icon_download.png": [
       "icon"
     ],
-    "Row 351 Invoice and T&Cs download_full.png": [
+    "invoice-and-tc_download_full.png": [
       "papere",
       "invoice",
       "download"
     ],
-    "Row 351 Invoice and T&Cs success_full.png": [
+    "invoice-and-tc_success_full.png": [
       "paper",
       "invoice",
       "success"
     ],
-    "Row 352 Business payment method added_full.png": [
+    "business-payment_added_full.png": [
       "wallet",
       "money",
       "success",
       "payment"
     ],
-    "Row 352 Business payment method failed.png": [
+    "business-payment_failed_full.png": [
       "wallet",
       "money",
       "error",
       "payment"
     ],
-    "Row 352 Business payment method missing.png": [
+    "business-payment_missing_full.png": [
       "wallet",
       "payment"
     ],
-    "Row 352 Extra Icon (_).png": [
+    "extra-icon_dash-2.png": [
       "icon"
     ],
-    "Row 352 Extra Icon check .png": [
+    "extra-icon_check-2.png": [
       "icon"
     ],
-    "Row 354 Thumbs up_2.png": [
+    "thumbs-up_v2.png": [
       "hand",
       "icon"
     ],
-    "Row 355 Thumbs down_2.png": [
+    "thumbs-down_v2.png": [
       "hand",
       "icon"
     ],
-    "Row 356 Extra Icon.png": [
+    "extra-icon_warning.png": [
       "warning",
       "error",
       "icon"
     ],
-    "Row 360 Parking traffic sign.png": [
+    "parking-sign.png": [
       "parking",
       "environment"
     ],
-    "Row 361 Traffic Light Green.png": [
+    "traffic-light_green.png": [
       "traffic",
       "light",
       "environment"
     ],
-    "Row 361 Traffic Light Red.png": [
+    "traffic-light_red.png": [
       "traffic",
       "light",
       "environment"
     ],
-    "Row 363 Smartphone in hand 1.png": [
+    "smartphone-in-hand_v1.png": [
       "hand",
       "phone"
     ],
-    "Row 368 Green question mark.png": [
+    "question-mark.png": [
       "icon"
     ],
-    "Row 370 Taking a selfie 2.png": [
+    "taking-selfie_v2.png": [
       "hand",
       "phone",
       "photo",
       "camera",
       "selfie"
     ],
-    "Row 380 Scheduled rides Airport.png": [
+    "scheduled-rides-airport.png": [
       "airport",
       "schedule",
       "travel",
       "ride"
     ],
-    "Row 386 Ride Timeout.png": [
+    "ride-timeout.png": [
       "time",
       "hourglass"
     ],
-    "Row 389 Icon 1.png": [
+    "photo-licence-icon_v1.png": [
       "icon",
       "success"
     ],
-    "Row 389 Icon 3.png": [
+    "photo-licence-icon_v3.png": [
       "icon",
       "number"
     ],
-    "Row 389 Photo License 1.png": [
+    "photo-licence_v1.png": [
       "hand",
       "phone",
       "id",
@@ -2560,17 +2024,17 @@
       "verification",
       "licence"
     ],
-    "Row 392 Speedometer.png": [
+    "speedometer.png": [
       "gauge",
       "measure"
     ],
-    "Row 393 Headlights.png": [
+    "headlights_v1.png": [
       "car"
     ],
-    "Scooter Solo.png": [
+    "scooter.png": [
       "scooter"
     ],
-    "Stores.png": [
+    "stores.png": [
       "basket",
       "shopping",
       "shop",
@@ -2579,217 +2043,217 @@
       "soap",
       "perfume"
     ],
-    "0_Bolt Hero Car (Flowers - Woman_s Day) Top.png": [
+    "bolt-hero-car_top_womens-day.png": [
       "car",
       "flowers",
       "womens day"
     ],
-    "0_Dubai Red Roof XL_Off X with Wheelchair.png": [
+    "dubai-taxi-xl-red-roof_off-x_wheelchair.png": [
       "wheelchair",
       "accessibility",
       "xl",
       "car"
     ],
-    "0_Dubai XL_Red Roof_Off X Taxi.png": [
+    "dubai-taxi-xl-red-roof_off-x.png": [
       "xl",
       "car"
     ],
-    "0_Earth Day_Car_Top.png": [
+    "bolt-hero-car_top_earth-day.png": [
       "leaves",
       "earth day",
       "car"
     ],
-    "0_Easter Ear_Car_Top.png": [
+    "bolt-hero-car_top_easter-bunny.png": [
       "easter",
       "car",
       "bunny"
     ],
-    "0_Easter Egg_Car_Top.png": [
+    "bolt-hero-car_top_easter-egg.png": [
       "egg",
       "easter",
       "car"
     ],
-    "0_Pin Dark Pink.png": [
+    "location-pin_dark-pink.png": [
       "heart",
       "valentine"
     ],
-    "0_Romania_XS_Top.png": [
+    "romania-xs_top.png": [
       "car",
       "xs"
     ],
-    "0_Row 7 Premium Car Side (Silver_Detail).png": [
+    "premium-car_side_silver.png": [
       "car",
       "premium"
     ],
-    "0_Row 24 XXL Off X(New Colour).png": [
+    "xxl-car_off-x_new-colour.png": [
       "xxl",
       "car"
     ],
-    "0_Row 372 Mini Bus Off X.png": [
+    "mini-bus_off-x.png": [
       "minibus",
       "car"
     ],
-    "0_Row 375 VIP Off X 1.png": [
+    "vip-car_off-x_v1.png": [
       "car",
       "vip",
       "premium",
       "chauffeur"
     ],
-    "0_Row 376 VIP + 1.png": [
+    "vip-plus_v1.png": [
       "car",
       "vip",
       "premium",
       "chauffeur"
     ],
-    "0_Row 377 VIP XL 1.png": [
+    "vip-xl_v1.png": [
       "car",
       "vip",
       "xl",
       "premium",
       "chauffeur"
     ],
-    "0_Row 382 Wheelchair Support_Yellow Taxi XL.png": [
+    "wheelchair-support_yellow-taxi-xl.png": [
       "wheelchair",
       "accessibility",
       "car"
     ],
-    "0_Taxi Lexus_Iso.png": [
+    "taxi-lexus_iso.png": [
       "car"
     ],
-    "0_Taxi Lexus_Side.png": [
+    "taxi-lexus_side.png": [
       "car"
     ],
-    "0_Taxi Red Roof_Cream_Off X.png": [
+    "taxi-red-roof-cream_off-x.png": [
       "car"
     ],
-    "0_XL + Off X.png": [
+    "xl-plus_off-x.png": [
       "car",
       "xl"
     ],
-    "Azerbaijan Red.png": [
+    "azerbaijan-taxi_red.png": [
       "car"
     ],
-    "Blue.png": [
+    "blue.png": [
       "car"
     ],
-    "Bolt Comfort Car_RO_Top.png": [
+    "comfort-car_top_romania.png": [
       "car"
     ],
-    "Bolt_Aurora_icon.png": [
+    "bolt-hero-car_off-x_aurora.png": [
       "car"
     ],
-    "Bolt_Car_Icon_NO_top.png": [
+    "bolt-car_top_norway.png": [
       "car"
     ],
-    "Bolt_Hero_Car_Canaday_Top.png": [
+    "bolt-hero-car_top_canada-day.png": [
       "car"
     ],
-    "Bolt_Hero_Car_Pride_Top.png": [
+    "bolt-hero-car_top_pride.png": [
       "car"
     ],
-    "Bolt_Hero_Car_Sauna_Top (1).png": [
+    "bolt-hero-car_top_sauna.png": [
       "car"
     ],
-    "Bolt_Ramadan_Top.png": [
+    "bolt-car_top_ramadan.png": [
       "car"
     ],
-    "Broom_Top.png": [
+    "bolt-hero-car_top_halloween-broom.png": [
       "halloween"
     ],
-    "Chauffeur Signature_2.png": [
+    "chauffeur-signature_off-x_v2.png": [
       "car",
       "premium",
       "chauffeur"
     ],
-    "Chauffeur SUV_1.png": [
+    "chauffeur-suv_off-x_v1.png": [
       "chauffeur",
       "suv",
       "car"
     ],
-    "Chauffeur SUV_Top.png": [
+    "chauffeur-suv_top.png": [
       "suv",
       "car"
     ],
-    "Chauffeur XXL_2.png": [
+    "chauffeur-xxl_off-x_v2.png": [
       "chauffeur",
       "xxl"
     ],
-    "Christmas_Off X_2.png": [
+    "bolt-hero-car_off-x_christmas_v2.png": [
       "car",
       "christmas"
     ],
-    "Cyprus Intercity Taxi Standard.png": [
+    "cyprus-intercity-taxi_standard.png": [
       "car"
     ],
-    "Election day (1).png": [
+    "election-day_v2.png": [
       "car",
       "elections"
     ],
-    "French Taxi_OffX.png": [
+    "french-taxi_off-x.png": [
       "car"
     ],
-    "French_Taxi_Side.png": [
+    "french-taxi_side.png": [
       "car"
     ],
-    "Light Blue.png": [
+    "light-blue.png": [
       "car"
     ],
-    "Little Bolt Green .png": [
+    "little-bolt-car_green.png": [
       "car",
       "xs"
     ],
-    "Little Bolt Yellow.png": [
+    "little-bolt-car_yellow.png": [
       "xs",
       "car"
     ],
-    "Little_Bolt_TOP.png": [
+    "little-bolt-car_top.png": [
       "xs",
       "car"
     ],
-    "Mi Taxi.png": [
+    "mi-taxi.png": [
       "car"
     ],
-    "Moped.png": [
+    "moped.png": [
       "moped"
     ],
-    "Bolt Premium Motorbike Top.png": [
+    "premium-motorbike_top.png": [
       "motorbike",
       "motorcycle"
     ],
-    "Navy Blue.png": [
+    "navy-blue.png": [
       "car"
     ],
-    "Normal Car_Childseat.png": [
+    "car_off-x_child-seat.png": [
       "car",
       "kids",
       "child",
       "seat"
     ],
-    "Off X (PS Guide).png": [
+    "shark-car_off-x_ps-guide.png": [
       "car"
     ],
-    "Off X Bubbles.png": [
+    "shark-car_off-x_bubbles.png": [
       "car"
     ],
-    "Off X.png": [
+    "shark-car_off-x.png": [
       "car"
     ],
-    "Pink.png": [
+    "pink.png": [
       "car"
     ],
-    "Premium MotorBike_Off X_Vietnam.png": [
+    "premium-motorbike_off-x_vietnam.png": [
       "motorbike",
       "motorcycle"
     ],
-    "Premium MotorBike_Side.png": [
+    "premium-motorbike_side.png": [
       "motorbike",
       "motorcycle"
     ],
-    "Premium MotorBike_Top_Vietnam.png": [
+    "premium-motorbike_top_vietnam.png": [
       "motorbike",
       "motorcycle"
     ],
-    "Price Bidding Category Icon.png": [
+    "price-bidding-category-icon.png": [
       "chat",
       "support",
       "bubbles",
@@ -2797,389 +2261,389 @@
       "price",
       "money"
     ],
-    "Ramadan.png": [
+    "ramadan-car.png": [
       "car"
     ],
-    "Row 1 Bolt Green Back Hero Car Off X.png": [
+    "bolt-green-hero-car_off-x.png": [
       "car"
     ],
-    "Row 1 Bolt Green Back Hero Car Top.png": [
+    "bolt-green-hero-car_top.png": [
       "car"
     ],
-    "Row 1 Hero Green Circle Car Off X.png": [
+    "hero-green-circle-car_off-x.png": [
       "car"
     ],
-    "Row 1 Hero Green Circle Carr Side.png": [
+    "hero-green-circle-car_side.png": [
       "car"
     ],
-    "Row 5 Elecric Category - Circle Top.png": [
+    "electric-category_circle-top.png": [
       "car"
     ],
-    "Row 5 Electric All Green Car Iso.png": [
+    "electric-car_iso.png": [
       "car"
     ],
-    "Row 5 Electric All Green Car Side.png": [
+    "electric-car_side.png": [
       "car"
     ],
-    "Row 5 Various Category - Full White Top.png": [
+    "various-category_full-white-top.png": [
       "car"
     ],
-    "Row 5 Various Category All White Car Off X.png": [
+    "various-category-car_off-x.png": [
       "car"
     ],
-    "Row 5 Various Category All White Car Top.png": [
+    "various-category-car_top.png": [
       "car"
     ],
-    "Row 6 Comfort Car Off Axis.png": [
+    "comfort-car_off-x.png": [
       "car",
       "comfort"
     ],
-    "Row 6 Comfort Car Top.png": [
+    "comfort-car_top.png": [
       "car",
       "comfort"
     ],
-    "Row 7 Premium Car Iso.png": [
+    "premium-car_iso.png": [
       "car",
       "premium"
     ],
-    "Row 7 Premium Car Side.png": [
+    "premium-car_side.png": [
       "premium",
       "car"
     ],
-    "Row 7 Premium Off X (Silver Detail).png": [
+    "premium-car_off-x_silver.png": [
       "premium",
       "car"
     ],
-    "Row 8 Basic Small Car (New With Roof).png": [
+    "small-car_new-with-roof.png": [
       "car",
       "xs"
     ],
-    "Row 8 Basic Small Car Off X.png": [
+    "small-car_off-x.png": [
       "car",
       "xs"
     ],
-    "Row 8 Basic Small Car Top.png": [
+    "small-car_top.png": [
       "car",
       "xs"
     ],
-    "Row 9 Basic Sedan Car Iso.png": [
+    "sedan-car_iso.png": [
       "car"
     ],
-    "Row 9 Basic Sedan Car Side.png": [
+    "sedan-car_side.png": [
       "car"
     ],
-    "Row 10 Basic XL Car Iso.png": [
+    "xl-car_iso.png": [
       "car",
       "xl"
     ],
-    "Row 10 Basic XL Car Side.png": [
+    "xl-car_side.png": [
       "xl",
       "car"
     ],
-    "Row 10 Basic XL Car.png": [
+    "xl-car.png": [
       "car",
       "xl"
     ],
-    "Row 11 Scooter Off X.png": [
+    "scooter_off-x.png": [
       "scootere"
     ],
-    "Row 12 Electric Bike Iso.png": [
+    "electric-bike_iso.png": [
       "bike",
       "bicycle"
     ],
-    "Row 12 Electric Bike Side.png": [
+    "electric-bike_side.png": [
       "bike",
       "bicycle"
     ],
-    "Row 17 Train Side.png": [
+    "train_side.png": [
       "train"
     ],
-    "Row 18 Tram Side.png": [
+    "tram_side.png": [
       "tram"
     ],
-    "Row 19 Bus Side.png": [
+    "bus_side.png": [
       "bus"
     ],
-    "Row 21 Parcel delivery on bike.png": [
+    "parcel-delivery_bike.png": [
       "package",
       "parcel",
       "motorbike",
       "motorcycle"
     ],
-    "Row 22_Variation_Experience Category_Confetti.png": [
+    "parcel-delivery_car_confetti.png": [
       "package",
       "parcel",
       "confetti",
       "car"
     ],
-    "Row 24 XXL Car Iso.png": [
+    "xxl-car_iso.png": [
       "xxl",
       "car"
     ],
-    "Row 24 XXL Car Side.png": [
+    "xxl-car_side.png": [
       "xxl",
       "car"
     ],
-    "Row 24 XXL Off Axis.png": [
+    "xxl-car_off-x_old.png": [
       "xxl",
       "car"
     ],
-    "Row 25 Tuk Tuk Iso.png": [
+    "tuktuk_iso.png": [
       "tuktuk"
     ],
-    "Row 25 Tuk Tuk Side.png": [
+    "tuktuk_side.png": [
       "tuktuk"
     ],
-    "Row 25_ Tuk Tuk Top.png": [
+    "tuktuk_top.png": [
       "tuktuk"
     ],
-    "Row 26 Bajaj OffX.png": [
+    "bajaj_off-x.png": [
       "car",
       "xs"
     ],
-    "Row 26_ Bajaj Top.png": [
+    "bajaj_top.png": [
       "car",
       "xs"
     ],
-    "Row 27 Motorcycle Off X.png": [
+    "motorcycle_off-x.png": [
       "motorbike",
       "motorcycle"
     ],
-    "Row 27_ Motorcycle Top.png": [
+    "motorcycle_top.png": [
       "motorbike",
       "motorcycle"
     ],
-    "Row 28 Traffic buster Side.png": [
+    "traffic-buster_side.png": [
       "car",
       "motorbike",
       "motorcycle"
     ],
-    "Row 28_ Traffic buster Iso.png": [
+    "traffic-buster_iso.png": [
       "car",
       "motorbike",
       "motorcycle"
     ],
-    "Row 30 Yellow Taxi Off Axis.png": [
+    "yellow-taxi_off-x.png": [
       "car"
     ],
-    "Row 30 Yellow Taxi Top.png": [
+    "yellow-taxi_top.png": [
       "car"
     ],
-    "Row 31 XL Yellow Taxi Off Axis.png": [
+    "xl-yellow-taxi_off-x.png": [
       "car",
       "xl"
     ],
-    "Row 31 XL Yellow Taxi Top.png": [
+    "xl-yellow-taxi_top.png": [
       "car",
       "xl"
     ],
-    "Row 32 XXL Yellow Taxi Off Axis.png": [
+    "xxl-yellow-taxi_off-x.png": [
       "car",
       "xxl"
     ],
-    "Row 32 XXL Yellow Taxi Top.png": [
+    "xxl-yellow-taxi_top.png": [
       "car",
       "xxl"
     ],
-    "Row 33 Comfort Taxi Off X.png": [
+    "comfort-taxi_off-x.png": [
       "comfort",
       "car",
       "taxi"
     ],
-    "Row 33 Comfort Taxi.png": [
+    "comfort-taxi.png": [
       "comfort",
       "car",
       "taxi"
     ],
-    "Row 34 Premium Taxi Off X.png": [
+    "premium-taxi_off-x.png": [
       "taxi",
       "premium",
       "car"
     ],
-    "Row 34 Premium Taxi.png": [
+    "premium-taxi.png": [
       "car",
       "premium",
       "taxi"
     ],
-    "Row 35 Paris Taxi Off X.png": [
+    "paris-taxi_off-x.png": [
       "car",
       "taxi"
     ],
-    "Row 35 Paris Taxi.png": [
+    "paris-taxi.png": [
       "car",
       "taxi"
     ],
-    "Row 36 Generic White Taxi Off X.png": [
+    "generic-white-taxi_off-x.png": [
       "car",
       "taxi"
     ],
-    "Row 36 Generic White Taxi.png": [
+    "generic-white-taxi.png": [
       "car",
       "taxi"
     ],
-    "Row 37 Santander.png": [
+    "santander-taxi.png": [
       "car",
       "taxi"
     ],
-    "Row 37 Spain Santander Taxi Side.png": [
+    "santander-taxi_side.png": [
       "car",
       "taxi"
     ],
-    "Row 38 Madrid.png": [
+    "madrid-taxi.png": [
       "car",
       "taxi"
     ],
-    "Row 38 Spain Madrid Taxi Side.png": [
+    "madrid-taxi_side.png": [
       "car",
       "taxi"
     ],
-    "Row 39 Mallorca.png": [
+    "mallorca-taxi.png": [
       "car",
       "taxi"
     ],
-    "Row 39 Spain Mallorca Taxi Side.png": [
+    "mallorca-taxi_side.png": [
       "car",
       "taxi"
     ],
-    "Row 40 Seville.png": [
+    "seville-taxi.png": [
       "car",
       "taxi"
     ],
-    "Row 40 Spain Seville Taxi Side.png": [
+    "seville-taxi_side.png": [
       "car",
       "taxi"
     ],
-    "Row 41 Malaga.png": [
+    "malaga-taxi.png": [
       "car",
       "taxi"
     ],
-    "Row 41 Spain Malaga Taxi Side.png": [
+    "malaga-taxi_side.png": [
       "car",
       "taxi"
     ],
-    "Row 42 Barcelona Taxi Side.png": [
+    "barcelona-taxi_side.png": [
       "car",
       "taxi"
     ],
-    "Row 42 Barcelona.png": [
+    "barcelona-taxi.png": [
       "car",
       "taxi"
     ],
-    "Row 43 London Taxi off X.png": [
+    "london-taxi_off-x.png": [
       "car",
       "taxi"
     ],
-    "Row 43 London Taxi Top.png": [
+    "london-taxi_top.png": [
       "car",
       "taxi"
     ],
-    "Row 44 Lisbon Standard.png": [
+    "lisbon-taxi.png": [
       "car",
       "taxi"
     ],
-    "Row 44 Lisbon Taxi Side.png": [
+    "lisbon-taxi_side.png": [
       "car",
       "taxi"
     ],
-    "Row 45 Lisbon XL.png": [
+    "lisbon-xl-taxi.png": [
       "car",
       "xl",
       "taxi"
     ],
-    "Row 45 XL Lisbon Taxi Side.png": [
+    "lisbon-xl-taxi_side.png": [
       "car",
       "taxi",
       "xl"
     ],
-    "Row 313 Top view Beige.png": [
+    "car_top_beige.png": [
       "car"
     ],
-    "Row 313 Top view Bronze.png": [
+    "car_top_bronze.png": [
       "car"
     ],
-    "Row 313 Top view Dark Grey.png": [
+    "car_top_dark-grey.png": [
       "car"
     ],
-    "Row 313 Top view Light blue.png": [
+    "car_top_light-blue.png": [
       "car"
     ],
-    "Row 313 Top view Navy blue.png": [
+    "car_top_navy-blue.png": [
       "car"
     ],
-    "Row 313 Top view Pearl White.png": [
+    "car_top_pearl-white.png": [
       "car"
     ],
-    "Row 313 Top view Pink.png": [
+    "car_top_pink.png": [
       "car"
     ],
-    "Row 313 Top view Red.png": [
+    "car_top_red.png": [
       "car"
     ],
-    "Row 313 Top view Skyblue.png": [
+    "car_top_sky-blue.png": [
       "car"
     ],
-    "Row 313 Top view WineRed.png": [
+    "car_top_wine-red.png": [
       "car"
     ],
-    "Row 365 Moped Iso.png": [
+    "moped_iso.png": [
       "moped"
     ],
-    "Row 365 Moped Side.png": [
+    "moped_side.png": [
       "moped"
     ],
-    "Row 366 Moped with glass Off X.png": [
+    "moped-with-glass_off-x.png": [
       "moped"
     ],
-    "Row 367  Moped WG top view.png": [
+    "moped-with-glass_top.png": [
       "moped"
     ],
-    "Row 367 Moped Top View.png": [
+    "moped_top.png": [
       "moped"
     ],
-    "Row 369 Angled white car(1).png": [
+    "angled-white-car_v2.png": [
       "car"
     ],
-    "Row 373 Small Car Off Axis.png": [
+    "small-car_off-axis.png": [
       "car",
       "xs"
     ],
-    "Row 374 Premium Plus.png": [
+    "premium-plus.png": [
       "car",
       "premium"
     ],
-    "Row 375 VIP.png": [
+    "vip-car.png": [
       "car",
       "vip"
     ],
-    "Silver.png": [
+    "silver.png": [
       "car"
     ],
-    "Taxi Dubai White.png": [
+    "dubai-taxi-white.png": [
       "car",
       "taxi"
     ],
-    "Taxi XL Dubai Women.png": [
+    "dubai-taxi-xl-women.png": [
       "taxi",
       "car"
     ],
-    "Top_Hat & Beard.png": [
+    "bolt-hero-car_top_hat-and-beard.png": [
       "car",
       "christmas"
     ],
-    "Valentine_s Day.png": [
+    "car_top_valentines-day.png": [
       "car",
       "valentine"
     ],
-    "WineRed.png": [
+    "wine-red.png": [
       "car"
     ],
-    "XL_Van_BikeStorage.png": [
+    "xl-van_off-x_bike-storage.png": [
       "xl",
       "bike",
       "bicycle",
       "car"
     ],
-    "XL_Van_Pets.png": [
+    "xl-van_off-x_pets.png": [
       "xl",
       "car",
       "cog",
@@ -3187,225 +2651,218 @@
       "animals",
       "pets"
     ],
-    "Malaysia (Female Driver).png": [
+    "malaysia-female-driver.png": [
       "driver",
       "woman",
       "human"
     ],
-    "Malaysia_Southeast asian_Business.png": [
+    "malaysia-southeast-asian-business.png": [
       "woman",
       "man",
       "human"
     ],
-    "Mother's Day 2.png": [
+    "mothers-day_v2.png": [
       "girl",
       "woman",
       "human",
       "mothers day",
       "flowers"
     ],
-    "Row 52 & 172 Woman Driver_2.png": [
+    "woman-driver_dark.png": [
       "driver",
       "woman",
       "human"
     ],
-    "Row 55_ No location, Cant identify rider_s location_ 2.png": [
+    "no-location-cant-identify-riders-location_dark.png": [
       "woman",
       "human",
       "location",
       "island",
       "palm"
     ],
-    "Row 59 All Drivers Busy_2.png": [
+    "all-drivers-busy_dark.png": [
       "woman",
       "search",
       "binoculars",
       "human"
     ],
-    "Row 67 No ongoing rides - empty state_2.png": [
+    "no-ongoing-rides_dark.png": [
       "woman",
       "human"
     ],
-    "Row 79_ Warning_2.png": [
+    "warning_dark.png": [
       "woman",
       "human"
     ],
-    "Row 80_ Speed Limit_2.png": [
+    "speed-limit_dark.png": [
       "woman",
       "human"
     ],
-    "Row 81_ Banned _ failed_2(1).png": [
+    "banned-or-failed_dark_v2.png": [
       "woman",
       "human",
       "error"
     ],
-    "Row 82_ Sucess_1.png": [
+    "success_light.png": [
       "woman",
       "human",
       "success"
     ],
-    "Row 83 Ban we_re sorry_2.png": [
+    "ban-were-sorry_dark.png": [
       "man",
       "human"
     ],
-    "Row 90_ Selfie Failed_2.png": [
+    "selfie-failed_dark.png": [
       "man",
       "error",
       "head"
     ],
-    "Row 92-94 & 171 Driver 2 Solo.png": [
+    "driver-solo_dark.png": [
       "driver",
       "man",
       "human"
     ],
-    "Row 95 Passenger Rating_2.png": [
+    "passenger-rating_dark.png": [
       "woman",
       "rating"
     ],
-    "Row 102 Account Deleted_1.png": [
+    "account-deleted_light.png": [
       "woman",
       "baggage",
       "travel"
     ],
-    "Row 103 Are you ordering a ride for someone else_1.png": [
+    "ride-for-someone-else_light.png": [
       "man",
       "woman",
       "human",
       "wave",
       "phone"
     ],
-    "Row 103 Are you ordering a ride for someone else_3.png": [
-      "man",
-      "woman",
-      "human",
-      "wave",
-      "phone"
-    ],
-    "Row 104 App Security_2.png": [
+    "app-security_dark.png": [
       "lock",
       "security",
       "privacy"
     ],
-    "Row 104 App Security_1.png": [
+    "app-security_light.png": [
       "lock",
       "security",
       "woman"
     ],
-    "Row 105 Be safe_1.png": [
+    "be-safe_light.png": [
       "man",
       "security",
       "rescue"
     ],
-    "Row 106 Default illustration for promo_1.png": [
+    "default-illustration-for-promo_light.png": [
       "woman",
       "gift",
       "confetti"
     ],
-    "Row 155 Woman On Scooter with confetti_1.png": [
+    "woman-on-scooter-confetti_medium.png": [
       "woman",
       "scooter",
       "confetti"
     ],
-    "Row 155 Woman On Scooter_1.png": [
+    "woman-on-scooter_medium.png": [
       "woman",
       "scooter",
       "confetti"
     ],
-    "Row 156 Man on Scooter_with helmet_ confetti_1.png": [
+    "man-on-scooter-confetti_light.png": [
       "man",
       "scooter",
       "confetti"
     ],
-    "Row 156 Man on Scooter_with helmet_1.png": [
+    "man-on-scooter_light.png": [
       "man",
       "scooter",
       "confetti"
     ],
-    "Row 157 Woman + Bicycle  (with helmet, + variation with confetti) 1.png": [
+    "woman-on-bike-confetti_light.png": [
       "bike",
       "bicycle",
       "woman",
       "confetti",
       "flowers"
     ],
-    "Row 157 Woman + Bicycle (with helmet) 1.png": [
+    "woman-on-bike_light.png": [
       "woman",
       "bike",
       "bicycle",
       "flowers"
     ],
-    "Row 158 Man + Bicycle (with helmet) 1.png": [
+    "man-on-bike_light.png": [
       "man",
       "bike",
       "bicycle"
     ],
-    "Row 159 Woman + Car 1 (no windows).png": [
+    "woman-with-bolt-drive-car_light.png": [
       "woman",
       "man",
       "car"
     ],
-    "Row 159 Woman + Car 3 (no windows).png": [
+    "woman-with-bolt-drive-car_dark.png": [
       "woman",
       "man",
       "car"
     ],
-    "Row 160 Man + Car + window 2 (no window).png": [
+    "man-with-bolt-drive-car_medium.png": [
       "man",
       "car"
     ],
-    "Row 161 Man unlocking Bolt Drive car_key + confetti 1.png": [
+    "man-unlocking-bolt-drive_key-confetti_light.png": [
       "confetti",
       "man",
       "car"
     ],
-    "Row 161 Man unlocking Bolt Drive car_key 1.png": [
+    "man-unlocking-bolt-drive_key_light.png": [
       "car",
       "man"
     ],
-    "Row 161 Man unlocking Bolt Drive car_Phone + confetti 1.png": [
+    "man-unlocking-bolt-drive_phone-confetti_light.png": [
       "car",
       "man",
       "confetti"
     ],
-    "Row 161 Man unlocking Bolt Drive car_Phone 1.png": [
+    "man-unlocking-bolt-drive_phone_light.png": [
       "car",
       "man"
     ],
-    "Row 162 Woman unlocking Bolt Drive car with Key (+ variation with confetti) 1.png": [
+    "woman-unlocking-bolt-drive_key-confetti_light.png": [
       "woman",
       "car",
       "confetti"
     ],
-    "Row 162 Woman unlocking Bolt Drive car with Key 1.png": [
+    "woman-unlocking-bolt-drive_key_light.png": [
       "woman",
       "car"
     ],
-    "Row 162 Woman unlocking Bolt Drive car with Phone (+ variation with confetti) 1.png": [
+    "woman-unlocking-bolt-drive_phone-confetti_light.png": [
       "woman",
       "car",
       "confetti"
     ],
-    "Row 162 Woman unlocking Bolt Drive car with Phone 1.png": [
+    "woman-unlocking-bolt-drive_phone_light.png": [
       "woman",
       "car"
     ],
-    "Row 163 Man and woman + car 1 (confetti).png": [
+    "couple-in-bolt-drive-car-confetti.png": [
       "man",
       "woman",
       "car",
       "confetti"
     ],
-    "Row 163 Man and woman + car 1.png": [
+    "couple-with-bolt-drive-car_mixed.png": [
       "woman",
       "man",
       "car"
     ],
-    "Row 163 Man and woman + car 2.png": [
+    "couple-with-bolt-drive-car_dark.png": [
       "woman",
       "man",
       "car"
     ],
-    "Row 163 Man and woman + car 3 + calendar.png": [
+    "couple-with-bolt-drive-car-calendar_mixed_v2.png": [
       "calendar",
       "time",
       "schedule",
@@ -3413,92 +2870,92 @@
       "man",
       "car"
     ],
-    "Row 163 Man and woman in car 2 confetti.png": [
+    "couple-with-bolt-drive-car-confetti_dark_v2.png": [
       "car",
       "woman",
       "man",
       "confetti"
     ],
-    "Row 164_ Close up driver Icon_2.png": [
+    "driver-close-up_icon_dark.png": [
       "courier",
       "man",
       "bag",
       "delivery"
     ],
-    "Row 164_ Close up w_o helmet.png": [
+    "driver-close-up_no-helmet_light.png": [
       "courier",
       "bag",
       "man",
       "delivery",
       "bike"
     ],
-    "Row 164_ Man on bike full_2.png": [
+    "man-on-bike_full_dark.png": [
       "courier",
       "bag",
       "man",
       "delivery",
       "bike"
     ],
-    "Row 165 Male Courier and car_2.png": [
+    "male-courier-with-car_dark.png": [
       "courier",
       "bag",
       "man",
       "car",
       "delivery"
     ],
-    "Row 166 Woman holding hands up 1.png": [
+    "woman-hands-up_light.png": [
       "woman"
     ],
-    "Row 166 Woman holding hands up 2.png": [
+    "woman-hands-up_dark.png": [
       "woman"
     ],
-    "Row 166 Woman standing 2.png": [
+    "woman-standing_dark.png": [
       "woman",
       "phone",
       "purse"
     ],
-    "Row 166 Woman walking 2.png": [
+    "woman-walking_dark.png": [
       "woman"
     ],
-    "Row 167 Man holding hand(s) up in celebration_with confetti 2.png": [
+    "man-hands-up-confetti_dark.png": [
       "man",
       "confetti"
     ],
-    "Row 167 Man holding hands up in celebration 2.png": [
+    "man-hands-up_dark.png": [
       "man"
     ],
-    "Row 167 Man Standing 2.png": [
+    "man-standing_dark.png": [
       "man",
       "briefcase"
     ],
-    "Row 167 Man walking 2.png": [
+    "man-walking_dark.png": [
       "man"
     ],
-    "Row 168 Woman eating.png": [
+    "woman-eating_light.png": [
       "woman",
       "food",
       "noodles"
     ],
-    "Row 169 Man eating 2.png": [
+    "man-eating_dark.png": [
       "man",
       "pizza",
       "food"
     ],
-    "Row 170 Businessman with suitcase standing 2.png": [
+    "businessman-with-suitcase_standing_dark.png": [
       "man",
       "business",
       "suitcase",
       "travel",
       "coffee"
     ],
-    "Row 170 Businessman with suitcase walking 2.png": [
+    "businessman-with-suitcase_walking_dark.png": [
       "suitcase",
       "man",
       "business",
       "phone",
       "travel"
     ],
-    "Row 323 Family_2.png": [
+    "family_medium.png": [
       "family",
       "man",
       "woman",
@@ -3507,7 +2964,7 @@
       "son",
       "daughter"
     ],
-    "Row 323 Family_4.png": [
+    "family_mixed.png": [
       "family",
       "man",
       "woman",
@@ -3517,14 +2974,14 @@
       "dog",
       "cat"
     ],
-    "Row 325 Customer support agent_2.png": [
+    "customer-support-agent_dark.png": [
       "man",
       "support",
       "heaphones",
       "laptop",
       "computer"
     ],
-    "Row 340 People Full 2.png": [
+    "people-group_dark.png": [
       "man",
       "woman",
       "suitcase",
@@ -3533,7 +2990,7 @@
       "business",
       "travel"
     ],
-    "Row 341 People Full 2.png": [
+    "people-group-alt_dark.png": [
       "man",
       "car",
       "woman",
@@ -3541,87 +2998,87 @@
       "suitcase",
       "travel"
     ],
-    "Row 357 Face with helmet.png": [
+    "face-with-helmet_light.png": [
       "head",
       "man",
       "helmet"
     ],
-    "Row 358 Face 2.png": [
+    "face_dark.png": [
       "head",
       "man"
     ],
-    "Row 389 Eye level selfie 2.png": [
+    "selfie_eye-level_dark.png": [
       "man",
       "phone"
     ],
-    "Row 389 Eyes Closed face 2.png": [
+    "selfie_eyes-closed_dark.png": [
       "man",
       "head"
     ],
-    "Row 389 Glasses face 2.png": [
+    "selfie_glasses_dark.png": [
       "man",
       "head",
       "hat",
       "glasses"
     ],
-    "Row 389 Low level selfie 2.png": [
+    "selfie_low-angle_dark.png": [
       "man",
       "phone"
     ],
-    "Row 389 Mask face 2.png": [
+    "selfie_mask_dark.png": [
       "man",
       "head",
       "mask"
     ],
-    "Row 389 Normal face 2.png": [
+    "selfie_normal_dark.png": [
       "man",
       "head"
     ],
-    "Thailand (Male Driver).png": [
+    "thailand-male-driver.png": [
       "man",
       "driver",
       "steering wheel"
     ],
-    "Women for Women (Saudi Arabia).png": [
+    "women-for-women_saudi-arabia.png": [
       "woman",
       "driver",
       "steering wheel"
     ],
-    "Health & Beauty.png": [
+    "health-and-beauty-2.png": [
       "perfume",
       "lipstick",
       "soap"
     ],
-    "Row 322 Personal Data Export flow 3.png": [
+    "personal-data-export_step-3.png": [
       "paper",
       "success",
       "documents"
     ],
-    "Row 322 Personal Data Export flow 5.png": [
+    "personal-data-export_step-5.png": [
       "paper",
       "lock",
       "documents",
       "security"
     ],
-    "Row 324 Price bidding flow (Bolt Negotiate).png": [
+    "price-bidding-flow.png": [
       "car",
       "coins",
       "money",
       "payment",
       "price"
     ],
-    "Row 327 Suitcase Bolt business.png": [
+    "bolt-business-suitcase.png": [
       "business",
       "briefcase",
       "bag"
     ],
-    "Row 329 Bolt Business time.png": [
+    "bolt-business-time.png": [
       "business",
       "briefcase",
       "time",
       "bag"
     ],
-    "Row 331 Bolt Business card_money 1.png": [
+    "bolt-business_card-money.png": [
       "business",
       "briefcase",
       "bag",
@@ -3629,871 +3086,863 @@
       "card",
       "payment"
     ],
-    "Row 334 Success app (open app) 1.png": [
+    "success-open-app_v1.png": [
       "phone",
       "hand",
       "success"
     ],
-    "Row 335 Download the bolt app 1.png": [
+    "download-bolt-app_v1.png": [
       "phone",
       "hand",
       "download"
     ],
-    "Row 336 Enter the SMS code - shown during sign up 1.png": [
+    "enter-sms-code_v1.png": [
       "phone",
       "hand",
       "sms"
     ],
-    "Row 337 Empty orders.png": [
+    "empty-orders.png": [
       "paper",
       "invoice",
       "receipt"
     ],
-    "Row 338 & Row 348 Calendar Icon_ Base Red.png": [
+    "calendar-icon_base-red.png": [
       "calendar",
       "schedule",
       "time"
     ],
-    "Row 338 & Row 348 Calendar Icon_ Solo Icon 4 (X).png": [
+    "calendar-icon_solo-x.png": [
       "icon"
     ],
-    "Row 344 Favorite place 1.png": [
+    "favorite-place_v1.png": [
       "hand",
       "heart"
     ],
-    "Row 347 Credit card.png": [
+    "credit-card-2.png": [
       "card",
       "money",
       "payment"
     ],
-    "Row 348 Calendar Icon_ Clear.png": [
+    "calendar-icon_clear.png": [
       "calendar",
       "time",
       "schedule"
     ],
-    "Row 348 Calendar Icon_ Solo Icon 2 (_).png": [
+    "calendar-icon_solo-dash.png": [
       "icon"
     ],
-    "Row 349 Icon 1_Solo(1).png": [
+    "id-card-icon_v1b.png": [
       "icon"
     ],
-    "Row 349 ID Card Approved 1 full.png": [
+    "id-card-approved_full_v1.png": [
       "id",
       "identification",
       "licence"
     ],
-    "Row 349 ID Card Approved 2 full.png": [
+    "id-card-approved_full_v2.png": [
       "id",
       "identification",
       "licence"
     ],
-    "Row 349 ID Card Error 1 full.png": [
+    "id-card-error_full_v1.png": [
       "id",
       "identification",
       "licence"
     ],
-    "Row 349 ID Card Error 2 full.png": [
+    "id-card-error_full_v2.png": [
       "id",
       "identification",
       "licence"
     ],
-    "Row 349 ID Card Expiring 1 full.png": [
+    "id-card-expiring_full_v1.png": [
       "id",
       "identification",
       "licence"
     ],
-    "Row 349 ID Card Expiring 2 full.png": [
+    "id-card-expiring_full_v2.png": [
       "id",
       "identification",
       "licence"
     ],
-    "Row 350 Extra Icon (_).png": [
+    "extra-icon_dash.png": [
       "icon"
     ],
-    "Row 350 Work Profile Error Base.png": [
+    "work-profile-error_base.png": [
       "business",
       "briefcase",
       "error",
       "bag"
     ],
-    "Row 350 Work Profile warning Base.png": [
+    "work-profile-warning_base.png": [
       "business",
       "briefcase",
       "bag"
     ],
-    "Row 351 Extra Icon Check.png": [
+    "extra-icon_check.png": [
       "icon"
     ],
-    "Row 351 Invoice and T&C clear.png": [
+    "invoice-and-tc_clear.png": [
       "paper",
       "invoice",
       "receipt"
     ],
-    "Row 351 Invoice and T&Cs success base.png": [
+    "invoice-and-tc_success_base.png": [
       "paper",
       "invoice",
       "receipt",
       "success"
     ],
-    "Row 352 Business payment method added base.png": [
+    "business-payment_added_base.png": [
       "wallet",
       "payment",
       "money"
     ],
-    "Row 352 Business payment method failed base.png": [
+    "business-payment_failed_base.png": [
       "wallet",
       "payment",
       "money"
     ],
-    "Row 352 Business payment method missing base.png": [
+    "business-payment_missing_base.png": [
       "wallet",
       "payment",
       "money"
     ],
-    "Row 352 Cashless wallet.png": [
+    "cashless-wallet.png": [
       "wallet"
     ],
-    "Row 352 Extra Icon (X).png": [
+    "extra-icon_x.png": [
       "icon"
     ],
-    "Row 354 Thumbs up_1.png": [
+    "thumbs-up_v1.png": [
       "thumb",
       "hand",
       "icon"
     ],
-    "Row 355 Thumbs down_1.png": [
+    "thumbs-down_v1.png": [
       "thumb",
       "hand",
       "icon"
     ],
-    "Row 356 Battery.png": [
+    "battery.png": [
       "battery",
       "low"
     ],
-    "Row 359 Hourglass.png": [
+    "hourglass.png": [
       "hourglass",
       "time"
     ],
-    "Row 361 Traffic Light All.png": [
+    "traffic-light_all.png": [
       "traffic",
       "light"
     ],
-    "Row 361 Traffic Light orange.png": [
+    "traffic-light_orange.png": [
       "traffic",
       "light"
     ],
-    "Row 362 The planet.png": [
+    "planet.png": [
       "earth",
       "icon"
     ],
-    "Row 363 Smartphone in hand 2.png": [
+    "smartphone-in-hand_v2.png": [
       "phone",
       "hand"
     ],
-    "Row 370 Taking a selfie 1.png": [
+    "taking-selfie_v1.png": [
       "hand",
       "phone",
       "camera",
       "selfie",
       "photo"
     ],
-    "Row 371 Insurance (Black).png": [
+    "insurance.png": [
       "shield",
       "security"
     ],
-    "Row 385 Allow location services access.png": [
+    "allow-location-services.png": [
       "map",
       "location"
     ],
-    "Row 388 Ride ended automatically.png": [
+    "ride-ended-automatically.png": [
       "card",
       "error",
       "payment",
       "money"
     ],
-    "Row 389 Icon 2.png": [
+    "photo-licence-icon_v2.png": [
       "error",
       "icon"
     ],
-    "Row 389 Icon 4.png": [
+    "photo-licence-icon_v4.png": [
       "icon",
       "number"
     ],
-    "Row 389 Photo License 2.png": [
+    "photo-licence_v2.png": [
       "phone",
       "licence",
       "verification",
       "hand"
     ],
-    "Row 393 Headlights (1).png": [
+    "headlights_v2.png": [
       "car"
     ],
-    "Scooter Charging Dock.png": [
+    "scooter-charging-dock.png": [
       "scooter"
     ],
-    "Side_Starship Robot.png": [
+    "starship-robot_side.png": [
       "starship",
       "delivery",
       "robot"
     ],
-    "0_Bolt Hero Car (Flowers - Woman_s Day) Off X.png": [
+    "bolt-hero-car_off-x_womens-day.png": [
       "car",
       "flowers",
       "womens day"
     ],
-    "0_Bolt Hero Car Valentine_s Day_Off X.png": [
+    "bolt-hero-car_off-x_valentines-day.png": [
       "car",
       "valentine"
     ],
-    "0_Dubai XL_Pink Roof_Off X Taxi.png": [
+    "dubai-taxi-xl-pink-roof_off-x.png": [
       "car",
       "xl"
     ],
-    "0_Earth Day_Car_Off X.png": [
+    "bolt-hero-car_off-x_earth-day.png": [
       "car",
       "leaves"
     ],
-    "0_Easter Ear_Car_Off X.png": [
+    "bolt-hero-car_off-x_easter-bunny.png": [
       "car",
       "bunny",
       "easter"
     ],
-    "0_Easter Egg_Car_Off X.png": [
+    "bolt-hero-car_off-x_easter-egg.png": [
       "car",
       "egg",
       "easter"
     ],
-    "0_Easter_Eggs in Basket.png": [
+    "easter-eggs-in-basket.png": [
       "basket",
       "easter",
       "eggs"
     ],
-    "0_Romania_XS_OffX.png": [
+    "romania-xs_off-x.png": [
       "car",
       "xs"
     ],
-    "0_Row 7 Premium Car Iso (Silver_Detail).png": [
+    "premium-car_iso_silver.png": [
       "car",
       "premium"
     ],
-    "0_Row 24 XXL Iso (New Colour).png": [
+    "xxl-car_iso_new-colour.png": [
       "car",
       "xxl"
     ],
-    "0_Row 24 XXL Side (New Colour).png": [
+    "xxl-car_side_new-colour.png": [
       "car",
       "xxl"
     ],
-    "0_Row 374 Premium + Off X.png": [
+    "premium-plus_off-x.png": [
       "car",
       "premium"
     ],
-    "0_Row 375 VIP Off X 2.png": [
+    "vip-car_off-x_v2.png": [
       "car",
       "vip"
     ],
-    "0_Row 376 VIP + 2.png": [
+    "vip-plus_v2.png": [
       "car",
       "vip"
     ],
-    "0_Row 377 VIP XL 2.png": [
+    "vip-xl_v2.png": [
       "car",
       "vip"
     ],
-    "0_Row 382 Wheelchair Support.png": [
+    "wheelchair-support.png": [
       "car",
       "wheelchair",
       "accessibility"
     ],
-    "0_Taxi Lexus_Off X.png": [
+    "taxi-lexus_off-x.png": [
       "car"
     ],
-    "0_Taxi Red Roof_Cream_Iso.png": [
+    "taxi-red-roof-cream_iso.png": [
       "car",
       "taxi"
     ],
-    "0_Taxi Red Roof_Cream_Side.png": [
+    "taxi-red-roof-cream_side.png": [
       "car",
       "taxi"
     ],
-    "Azerbaijan Purple.png": [
+    "azerbaijan-taxi_purple.png": [
       "car",
       "taxi"
     ],
-    "Beige.png": [
+    "beige.png": [
       "car"
     ],
-    "Bolt Comfort Car_RO_OffX.png": [
+    "comfort-car_off-x_romania.png": [
       "car",
       "comfort"
     ],
-    "Bolt Premium Motorbike Off X.png": [
+    "premium-motorbike_off-x.png": [
       "motorbike",
       "motorcycle"
     ],
-    "Bolt_Aurora_icon_Top.png": [
+    "bolt-hero-car_top_aurora.png": [
       "car"
     ],
-    "Bolt_Car_Icon_NO_OffX.png": [
+    "bolt-car_off-x_norway.png": [
       "car"
     ],
-    "Bolt_Hero_Car_Canaday_Off_X.png": [
+    "bolt-hero-car_off-x_canada-day.png": [
       "car"
     ],
-    "Bolt_Hero_Car_Pride_Off_X.png": [
+    "bolt-hero-car_off-x_pride.png": [
       "car"
     ],
-    "Bolt_Hero_Car_Sauna_OffX.png": [
+    "bolt-hero-car_off-x_sauna.png": [
       "car"
     ],
-    "Bolt_Ramadan_Off_X.png": [
+    "bolt-car_off-x_ramadan.png": [
       "car"
     ],
-    "Bronze.png": [
+    "bronze.png": [
       "car"
     ],
-    "Chauffeur Signature_1.png": [
+    "chauffeur-signature_off-x_v1.png": [
       "car",
       "chauffeur"
     ],
-    "Chauffeur Signature_Top.png": [
+    "chauffeur-signature_top.png": [
       "car",
       "chauffeur"
     ],
-    "Chauffeur SUV_2.png": [
+    "chauffeur-suv_off-x_v2.png": [
       "car",
       "suv",
       "chauffeur"
     ],
-    "Chauffeur XXL_1.png": [
+    "chauffeur-xxl_off-x_v1.png": [
       "car",
       "xxl",
       "chauffeur"
     ],
-    "Chauffeur XXL_Top.png": [
+    "chauffeur-xxl_top.png": [
       "car",
       "chauffeur"
     ],
-    "Christmas_Off X.png": [
+    "bolt-hero-car_off-x_christmas_v1.png": [
       "car",
       "christmas"
     ],
-    "Cyprus Intercity Taxi XL.png": [
+    "cyprus-intercity-taxi_xl.png": [
       "car"
     ],
-    "Election day.png": [
+    "election-day.png": [
       "car",
       "elections"
     ],
-    "French Taxi_Top.png": [
+    "french-taxi_top.png": [
       "car",
       "taxi"
     ],
-    "Haloween_no Basket_3.png": [
+    "bolt-hero-car_off-x_halloween_no-basket.png": [
       "halloween"
     ],
-    "Lime Off X.png": [
+    "lime_off-x.png": [
       "car",
       "xs"
     ],
-    "Little Bolt White.png": [
+    "little-bolt-car_white.png": [
       "car",
       "xs"
     ],
-    "Little_Bolt_OffX.png": [
+    "little-bolt-car_off-x.png": [
       "car",
       "xs"
     ],
-    "Maroon.png": [
+    "maroon.png": [
       "car"
     ],
-    "Moped w glass.png": [
+    "moped-with-glass.png": [
       "moped"
     ],
-    "Motorbike.png": [
+    "motorbike.png": [
       "motorbike",
       "motorcycle"
     ],
-    "Normal Car_BikeStorage.png": [
+    "car_off-x_bike-storage.png": [
       "car",
       "bike"
     ],
-    "Normal Car_Pets.png": [
+    "car_off-x_pets.png": [
       "car",
       "pets",
       "animals",
       "dog",
       "cat"
     ],
-    "Off X Bubbles (PS Guide).png": [
+    "shark-car_off-x_bubbles-ps-guide.png": [
       "car"
     ],
-    "Off X_Haloween.png": [
+    "bolt-hero-car_off-x_halloween.png": [
       "halloween"
     ],
-    "Orange.png": [
+    "orange.png": [
       "car"
     ],
-    "Premium MotorBike_Off X_Vietnam (1).png": [
+    "premium-motorbike_off-x_vietnam_v2.png": [
       "motorbike",
       "motorcycle"
     ],
-    "Premium MotorBike_Off X.png": [
+    "premium-motorbike_off-x_2.png": [
       "motorcycle",
       "premium",
       "motorbike"
     ],
-    "Premium MotorBike_Top_Vietnam (1).png": [
+    "premium-motorbike_top_vietnam_v2.png": [
       "motorbike",
       "motorcycle"
     ],
-    "Premium MotorBike_Top.png": [
-      "motorbike",
-      "motorcycle"
-    ],
-    "Priority Category.png": [
+    "priority-category.png": [
       "time",
       "car",
       "priority"
     ],
-    "Row 1 Bolt Green Back Hero Car Iso.png": [
+    "bolt-green-hero-car_iso.png": [
       "car"
     ],
-    "Row 1 Bolt Green Back Hero Car Side.png": [
+    "bolt-green-hero-car_side.png": [
       "car"
     ],
-    "Row 1 Hero Green Circle Car Iso.png": [
+    "hero-green-circle-car_iso.png": [
       "car"
     ],
-    "Row 1 Hero Green Circle Car Top.png": [
+    "hero-green-circle-car_top.png": [
       "car"
     ],
-    "Row 5 Bolt Category - Green Back.png": [
+    "bolt-category_green-back.png": [
       "car"
     ],
-    "Row 5 Elecric Category - Full Green Top.png": [
+    "electric-category_full-green-top.png": [
       "car",
       "electric"
     ],
-    "Row 5 Electric All Green Car Off X.png": [
+    "electric-car_off-x.png": [
       "car",
       "electric"
     ],
-    "Row 5 Electric All Green Car Top.png": [
+    "electric-car_top.png": [
       "car",
       "electric"
     ],
-    "Row 5 Various Category All White Car Iso.png": [
+    "various-category-car_iso.png": [
       "car"
     ],
-    "Row 5 Various Category All White Car Side.png": [
+    "various-category-car_side.png": [
       "car"
     ],
-    "Row 6 Comfort Car Iso.png": [
+    "comfort-car_iso.png": [
       "car",
       "comfort"
     ],
-    "Row 6 Comfort Car Side.png": [
+    "comfort-car_side.png": [
       "car",
       "comfort"
     ],
-    "Row 6 Comfort Car.png": [
+    "comfort-car.png": [
       "car",
       "comfort"
     ],
-    "Row 7 Premium Car Off X.png": [
+    "premium-car_off-x.png": [
       "car",
       "premium"
     ],
-    "Row 7 Premium Car Top.png": [
+    "premium-car_top.png": [
       "car",
       "premium"
     ],
-    "Row 7 Premium.png": [
-      "car",
-      "premium"
-    ],
-    "Row 8 Basic Small Car Iso.png": [
+    "small-car_iso.png": [
       "car",
       "s"
     ],
-    "Row 8 Basic Small Car Side.png": [
+    "small-car_side.png": [
       "car",
       "s"
     ],
-    "Row 8 Saver.png": [
+    "saver-car_top.png": [
       "car"
     ],
-    "Row 9 Basic Sedan Car Off X.png": [
+    "sedan-car_off-x.png": [
       "car"
     ],
-    "Row 9 Basic Sedan Car Top.png": [
+    "sedan-car_top.png": [
       "car"
     ],
-    "Row 10 Basic XL Car Off X.png": [
+    "xl-car_off-x.png": [
       "car",
       "xl"
     ],
-    "Row 10 Basic XL Car Top.png": [
+    "xl-car_top.png": [
       "car",
       "xl"
     ],
-    "Row 11 Scooter Iso.png": [
+    "scooter_iso.png": [
       "scooter"
     ],
-    "Row 11 Scooter Side.png": [
+    "scooter_side.png": [
       "scooter"
     ],
-    "Row 12 Electric Bike Off X.png": [
+    "electric-bike_off-x.png": [
       "bike",
       "bicycle"
     ],
-    "Row 13_ Car rentals.png": [
+    "car-rentals.png": [
       "steering wheel"
     ],
-    "Row 17 Train Off X.png": [
+    "train_off-x.png": [
       "train"
     ],
-    "Row 18 Tram Off X.png": [
+    "tram_off-x.png": [
       "tram"
     ],
-    "Row 19 Bus Off X.png": [
+    "bus_off-x.png": [
       "bus"
     ],
-    "Row 20 Parcel Delivery (Hero Image).png": [
+    "parcel-delivery_hero.png": [
       "parcel",
       "package"
     ],
-    "Row 22 Parcel delivery using car.png": [
+    "parcel-delivery_car.png": [
       "package",
       "parcel",
       "car"
     ],
-    "Row 23 Parcel delivery using XL car.png": [
+    "parcel-delivery_xl-car.png": [
       "parcel",
       "package",
       "car",
       "xl"
     ],
-    "Row 24 XXL Car Plus.png": [
+    "xxl-car-plus.png": [
       "car",
       "xxl"
     ],
-    "Row 24 XXL Car.png": [
+    "xxl-car.png": [
       "car",
       "xxl"
     ],
-    "Row 24_ XXL Car Top.png": [
+    "xxl-car_top.png": [
       "car",
       "xxl"
     ],
-    "Row 25 Tuk Tuk Off X.png": [
+    "tuktuk_off-x.png": [
       "tuk tuk"
     ],
-    "Row 25 Tuk-Tuk.png": [
+    "tuktuk.png": [
       "tuk tuk"
     ],
-    "Row 26 Bajaj Iso.png": [
+    "bajaj_iso.png": [
       "car",
       "xs"
     ],
-    "Row 26 Bajaj Side.png": [
+    "bajaj_side.png": [
       "car",
       "xs"
     ],
-    "Row 27 Motorcycle Iso.png": [
+    "motorcycle_iso.png": [
       "motorcycle",
       "motorbike"
     ],
-    "Row 27 Motorcycle Side.png": [
+    "motorcycle_side.png": [
       "motorcycle",
       "motorbike"
     ],
-    "Row 28 Traffic buster Off X.png": [
+    "traffic-buster_off-x.png": [
       "car",
       "xs",
       "motorbike",
       "motorcycle"
     ],
-    "Row 28 Traffic-Buster.png": [
+    "traffic-buster.png": [
       "car",
       "xs",
       "motorbike",
       "motorcycle"
     ],
-    "Row 28_ Traffic Buster Top.png": [
+    "traffic-buster_top.png": [
       "car",
       "xs",
       "motorbike",
       "motorcycle"
     ],
-    "Row 30 Yellow Taxi Side.png": [
+    "yellow-taxi_side.png": [
       "car",
       "taxi"
     ],
-    "Row 30 Yellow Taxi.png": [
+    "yellow-taxi.png": [
       "car",
       "taxi"
     ],
-    "Row 31 XL Yellow Taxi Side.png": [
+    "xl-yellow-taxi_side.png": [
       "car",
       "taxi",
       "xl"
     ],
-    "Row 31 Yellow XL Taxi.png": [
+    "xl-yellow-taxi.png": [
       "car",
       "xl",
       "taxi"
     ],
-    "Row 32 XXL Yellow Taxi Side.png": [
+    "xxl-yellow-taxi_side.png": [
       "car",
       "xxl",
       "taxi"
     ],
-    "Row 32 Yellow XXL Taxi.png": [
+    "xxl-yellow-taxi.png": [
       "car",
       "xxl",
       "taxi"
     ],
-    "Row 33 Comfort Taxi Side.png": [
+    "comfort-taxi_side.png": [
       "car",
       "taxi",
       "comfort"
     ],
-    "Row 33_ Comfort Taxi Top.png": [
+    "comfort-taxi_top.png": [
       "car",
       "taxi",
       "comfort"
     ],
-    "Row 35 Paris Taxi Side.png": [
+    "paris-taxi_side.png": [
       "car",
       "taxi"
     ],
-    "Row 35_ Paris Taxi Top.png": [
+    "paris-taxi_top.png": [
       "car",
       "taxi"
     ],
-    "Row 36 Generic White Taxi Side.png": [
+    "generic-white-taxi_side.png": [
       "car",
       "taxi"
     ],
-    "Row 36_ Generic White Taxi Top.png": [
+    "generic-white-taxi_top.png": [
       "car",
       "taxi"
     ],
-    "Row 37 Spain Santander Taxi Off X.png": [
+    "santander-taxi_off-x.png": [
       "car",
       "taxi"
     ],
-    "Row 37_ Spain Santander Taxi Top.png": [
+    "santander-taxi_top.png": [
       "car",
       "taxi"
     ],
-    "Row 38 Spain - Madrid Taxi Off X.png": [
+    "madrid-taxi_off-x.png": [
       "car",
       "taxi"
     ],
-    "Row 38_ Spain Madrid Taxi Top.png": [
+    "madrid-taxi_top.png": [
       "car",
       "taxi"
     ],
-    "Row 39 Spain - Mallorca Taxi Off X.png": [
+    "mallorca-taxi_off-x.png": [
       "car",
       "taxi"
     ],
-    "Row 39_ Spain Mallorca Taxi Top.png": [
+    "mallorca-taxi_top.png": [
       "car",
       "taxi"
     ],
-    "Row 40 Spain - Seville Taxi Off X.png": [
+    "seville-taxi_off-x.png": [
       "car",
       "taxi"
     ],
-    "Row 40_ Spain Seville Taxi Top.png": [
+    "seville-taxi_top.png": [
       "car",
       "taxi"
     ],
-    "Row 41 Spain - Malaga Taxi Off X.png": [
+    "malaga-taxi_off-x.png": [
       "car",
       "taxi"
     ],
-    "Row 41_ Spain Malaga Taxi Top.png": [
+    "malaga-taxi_top.png": [
       "car",
       "taxi"
     ],
-    "Row 42 Barcelona Taxi Top.png": [
+    "barcelona-taxi_top.png": [
       "car",
       "taxi"
     ],
-    "Row 42 Spain - Barcelona Taxi Off X.png": [
+    "barcelona-taxi_off-x.png": [
       "car",
       "taxi"
     ],
-    "Row 43 London Taxi Side.png": [
+    "london-taxi_side.png": [
       "car",
       "taxi"
     ],
-    "Row 43 London Taxi.png": [
+    "london-taxi.png": [
       "car",
       "taxi"
     ],
-    "Row 44 Lisbon Taxi Off X.png": [
+    "lisbon-taxi_off-x.png": [
       "car",
       "taxi"
     ],
-    "Row 44_ Lisbon Taxi Top.png": [
+    "lisbon-taxi_top.png": [
       "car",
       "taxi"
     ],
-    "Row 45 XL Lisbon Taxi Off X.png": [
+    "lisbon-xl-taxi_off-x.png": [
       "car",
       "taxi",
       "xl"
     ],
-    "Row 113_ Discounts.png": [
+    "discounts.png": [
       "paper",
       "bag",
       "discount"
     ],
-    "Row 105 Be safe_2.png": [
+    "be-safe_dark.png": [
       "support",
       "man",
       "human"
     ],
-    "Row 106 Default illustration for promo_2.png": [
+    "default-illustration-for-promo_dark.png": [
       "gift",
       "woman",
       "confetti"
     ],
-    "Row 155 Woman On Scooter with confetti_2.png": [
+    "woman-on-scooter-confetti_dark.png": [
       "confetti",
       "scooter",
       "woman",
       "ride"
     ],
-    "Row 158 Man + Bicycle (with helmet + variation with confetti) 1.png": [
+    "man-on-bike-confetti_light.png": [
       "confetti",
       "man",
       "bike",
       "bicycle"
     ],
-    "Row 34 Premium Taxi Side.png": [
+    "premium-taxi_side.png": [
       "car",
       "taxi",
       "premium"
     ],
-    "Row 34_ Premium Taxi Top.png": [
+    "premium-taxi_top.png": [
       "car",
       "taxi",
       "premium"
     ],
-    "Row 45_ XL Lisbon Taxi Top.png": [
+    "lisbon-xl-taxi_top.png": [
       "car",
       "taxi",
       "xl"
     ],
-    "Row 313 Top view Blue.png": [
+    "car_top_blue.png": [
       "car"
     ],
-    "Row 313 Top view Brown.png": [
+    "car_top_brown.png": [
       "car"
     ],
-    "Row 313 Top view Gold.png": [
+    "car_top_gold.png": [
       "car"
     ],
-    "Row 313 Top view Maroon.png": [
+    "car_top_maroon.png": [
       "car"
     ],
-    "Row 313 Top view Orange.png": [
+    "car_top_orange.png": [
       "car"
     ],
-    "Row 313 Top view Pearl.png": [
+    "car_top_pearl.png": [
       "car"
     ],
-    "Row 313 Top view Purple.png": [
+    "car_top_purple.png": [
       "car"
     ],
-    "Row 313 Top view Silver.png": [
+    "car_top_silver.png": [
       "car"
     ],
-    "Row 313 Top view Wine.png": [
+    "car_top_wine.png": [
       "car"
     ],
-    "Row 313 Top view Yellow.png": [
+    "car_top_yellow.png": [
       "car"
     ],
-    "Row 365 Moped Off X.png": [
+    "moped_off-x.png": [
       "moped"
     ],
-    "Row 366 Moped with glass Iso.png": [
+    "moped-with-glass_iso.png": [
       "moped"
     ],
-    "Row 366 Moped with glass Side.png": [
+    "moped-with-glass_side.png": [
       "moped"
     ],
-    "Row 367 Bike Top View.png": [
+    "motorcycle_top-view.png": [
       "motorbike",
       "motorcycle"
     ],
-    "Row 369 Angled white car.png": [
+    "angled-white-car_v1.png": [
       "car"
     ],
-    "Row 372 Mini Bus.png": [
+    "mini-bus.png": [
       "car",
       "minibus"
     ],
-    "Row 373 Small Car Top View.png": [
+    "small-car_top-view.png": [
       "car",
       "xs"
     ],
-    "Row 374 VIP Plus.png": [
+    "vip-plus.png": [
       "car",
       "vip"
     ],
-    "Row 377 VIP XL.png": [
+    "vip-xl.png": [
       "car",
       "vip",
       "xl"
     ],
-    "Taxi Dubai Red.png": [
+    "dubai-taxi-red.png": [
       "car",
       "taxi"
     ],
-    "Taxi XL Dubai Red.png": [
+    "dubai-taxi-xl-red.png": [
       "car",
       "taxi"
     ],
-    "Top (PS Guide).png": [
+    "shark-car_top_ps-guide.png": [
       "car"
     ],
-    "Top_Hat.png": [
+    "bolt-hero-car_top_hat.png": [
       "car",
       "christmas"
     ],
-    "Wine.png": [
+    "wine.png": [
       "car"
     ],
-    "Women_s Day.png": [
+    "car_top_womens-day.png": [
       "car",
       "womens day",
       "flowers"
     ],
-    "XL_Van_Childseat.png": [
+    "xl-van_off-x_child-seat.png": [
       "car",
       "xl",
       "child",
       "kid",
       "seat"
     ],
-    "Yellow.png": [
+    "yellow.png": [
       "car"
     ],
-    "Malaysia (Male Driver).png": [
+    "malaysia-male-driver.png": [
       "man",
       "driver",
       "steering wheel"
     ],
-    "Mother's Day 1.png": [
+    "mothers-day_v1.png": [
       "mothers day",
       "flowers",
       "girl",
@@ -4501,92 +3950,92 @@
       "dog",
       "woman"
     ],
-    "Row 52 & 172 Woman Driver_1.png": [
+    "woman-driver_light.png": [
       "woman",
       "driver",
       "steering wheel"
     ],
-    "Row 55_ No location, Cant identify rider_s location_ 1.png": [
+    "no-location-cant-identify-riders-location_light.png": [
       "woman",
       "island",
       "location",
       "palm",
       "searching"
     ],
-    "Row 59 All Drivers Busy_1.png": [
+    "all-drivers-busy_light.png": [
       "searching",
       "woman",
       "binoculars"
     ],
-    "Row 67 No ongoing rides - empty state_1.png": [
+    "no-ongoing-rides_light.png": [
       "woman",
       "shrug"
     ],
-    "Row 79_ Warning_1.png": [
+    "warning_light.png": [
       "woman"
     ],
-    "Row 80_ Speed Limit_1.png": [
+    "speed-limit_light.png": [
       "woman"
     ],
-    "Row 81_ Banned _ failed_2.png": [
+    "banned-or-failed_dark.png": [
       "woman"
     ],
-    "Row 82_ Success_2.png": [
+    "success_dark.png": [
       "woman"
     ],
-    "Row 83 Ban we_re sorry_1.png": [
+    "ban-were-sorry_light.png": [
       "man",
       "shrug"
     ],
-    "Row 90_ Selfie Failed_1.png": [
+    "selfie-failed_light.png": [
       "man",
       "head",
       "error",
       "sad"
     ],
-    "Row 92-94 & 171 Driver 1 Solo.png": [
+    "driver-solo_light.png": [
       "man",
       "driver",
       "steering wheel"
     ],
-    "Row 95 Passenger Rating_1.png": [
+    "passenger-rating_light.png": [
       "woman",
       "rating",
       "phone"
     ],
-    "Row 95 Passenger Rating_3.png": [
+    "passenger-rating_medium.png": [
       "woman",
       "rating",
       "phone"
     ],
-    "Row 102 Account Deleted_2.png": [
+    "account-deleted_dark.png": [
       "woman",
       "suitcase",
       "travel"
     ],
-    "Row 103 Are you ordering a ride for someone else_2.png": [
+    "ride-for-someone-else_medium.png": [
       "woman",
       "man",
       "wave",
       "phone"
     ],
-    "Row 169 Man eating 1.png": [
+    "man-eating_light.png": [
       "man",
       "pizza",
       "eating",
       "food"
     ],
-    "Row 156 Man on Scooter_with helmet_2.png": [
+    "man-on-scooter_dark.png": [
       "scooter",
       "man",
       "ride"
     ],
-    "Row 155 Woman On Scooter_2.png": [
+    "woman-on-scooter_dark.png": [
       "scooter",
       "woman",
       "ride"
     ],
-    "Row 156 Man on Scooter_with helmet_ confetti_2.png": [
+    "man-on-scooter-confetti_dark.png": [
       "scooter",
       "man",
       "ride",
@@ -4594,9 +4043,9 @@
     ]
   },
   "videoLinks": {
-    "Row 168 Woman eating.png": " Woman eating noodles - Row 168.mp4",
-    "Row 135 Top Rated.png": "Badge Star - Row 135 Top Rated.mp4",
-    "Row 136_ Delivery Discounts.png": [
+    "woman-eating_light.png": " Woman eating noodles - Row 168.mp4",
+    "top-rated.png": "Badge Star - Row 135 Top Rated.mp4",
+    "delivery-discounts.png": [
       "Bag_1.mp4",
       "Bag_2.mp4",
       "Bag_3.mp4",
@@ -4604,7 +4053,7 @@
       "Bag_with_offer_v2.mp4",
       "Delivery_bag_with_offer.mp4"
     ],
-    "Row 110_ Delivery Discount.png": [
+    "delivery-discount.png": [
       "Bag_1.mp4",
       "Bag_2.mp4",
       "Bag_3.mp4",
@@ -4612,7 +4061,7 @@
       "Bag_with_offer_v2.mp4",
       "Delivery_bag_with_offer.mp4"
     ],
-    "Row 109_ Delivery Bag.png": [
+    "delivery-bag.png": [
       "Bag_1.mp4",
       "Bag_2.mp4",
       "Bag_3.mp4",
@@ -4620,192 +4069,189 @@
       "Bag_with_offer_v2.mp4",
       "Delivery_bag_with_offer.mp4"
     ],
-    "Row 59 All Drivers Busy_1.png": [
+    "all-drivers-busy_light.png": [
       "Binoculars.mp4",
       "Woman With Binoculars - Row 59 All Drivers Busy.mp4"
     ],
-    "Row 59 All Drivers Busy_2.png": [
+    "all-drivers-busy_dark.png": [
       "Binoculars.mp4",
       "Woman With Binoculars - Row 59 All Drivers Busy.mp4"
     ],
-    "Row 1 Hero Green Circle Car Off X.png": [
+    "hero-green-circle-car_off-x.png": [
       "Bolt Car Switching.mp4"
     ],
-    "Row 7 Premium Car Off X.png": [
+    "premium-car_off-x.png": [
       "Bolt Car Switching.mp4"
     ],
-    "0_XL + Off X.png": [
+    "xl-plus_off-x.png": [
       "Bolt Car Switching.mp4"
     ],
-    "Row 116_ Food Order (Dine-in_ No Delivery) .png": [
+    "food-order_dine-in.png": [
       "Burger_2.mp4"
     ],
-    "0_Row 7 Premium Car Side (Silver_Detail).png": [
+    "premium-car_side_silver.png": [
       "Car Premium Driving.mp4"
     ],
-    "Row 94_ Driver accepted change request Icon.png": [
+    "driver-accepted-change-icon.png": [
       "Check mark.mp4"
     ],
-    "Row 389 Icon 1.png": [
+    "photo-licence-icon_v1.png": [
       "Check mark.mp4"
     ],
-    "Row 314-319_ Car Branding_Green Icon_Solo.png": [
+    "car-branding_icon-green.png": [
       "Check mark.mp4"
     ],
-    "Row 165 Male Courier and car_1.png": [
+    "male-courier-with-car_light.png": [
       "Courier_1.mp4"
     ],
-    "Arrived 1.png": [
+    "arrived_v1.png": [
       "Courier_waving_loop.mp4"
     ],
-    "Row 325 Customer support agent_1.png": [
+    "customer-support-agent_light.png": [
       "Customer Support.mp4",
       "Customer_support_looped.mp4"
     ],
-    "Row 95 Passenger Rating_2.png": [
+    "passenger-rating_dark.png": [
       "Driver Rating.mp4"
     ],
-    "Row 323 Family_4.png": [
+    "family_mixed.png": [
       "Family With Pets - Row 323.mp4"
     ],
-    "Row 323 Family_3.png": [
+    "family_dark.png": [
       "Family With Pets - Row 323.mp4"
     ],
-    "Row 119 Fast Delivery.png": [
+    "fast-delivery.png": [
       "Fast delivery_3.mp4"
     ],
-    "Row 106 Default Illustration for promo_Gift only 2.png": [
+    "default-promo_gift-only_v2.png": [
       "GIFT_1.mp4"
     ],
-    "Row 362 The planet.png": [
+    "planet.png": [
       "GLOBE.mp4"
     ],
-    "Row 123 Groceries (basket).png": [
+    "groceries_basket.png": [
       "GROCERIES - BASKET.mp4"
     ],
-    "Row 344 Favorite place 2.png": [
+    "favorite-place_v2.png": [
       "Hand Pressing Heart - Row 344 Favorite place.mp4"
     ],
-    "Row 151_ Cash Info_2.png": [
+    "cash-info_v2.png": [
       "Hands Exchangning Coin - Row 151_ Cash Info Dark.mp4"
     ],
-    "Row 151_ Cash Info_1.png": [
+    "cash-info_v1.png": [
       "Hands Exchangning Coin - Row 151_ Cash Info.mp4"
     ],
-    "Row 364 Hands up in celebration with confetti 1.png": [
+    "hands-up-confetti_v1.png": [
       "Hands_horizontal.mp4"
     ],
-    "Row 77 Authentication_2.png": [
+    "authentication_v2.png": [
       "lock.mp4"
     ],
-    "Row 164_ Close up w_o helmet.png": [
+    "driver-close-up_no-helmet_light.png": [
       "Male Bike Courier - Row 164_ Close up.mp4",
       "Male Courier and Woman Row 164.mp4"
     ],
-    "Row 103 Are you ordering a ride for someone else_1.png": [
+    "ride-for-someone-else_light.png": [
       "Man and Woman standing - Row 103 Are you ordering a ride for someone else.mp4",
       "Man_Waving_Woman_Standing 3.mp4"
     ],
-    "Row 159 Woman + Car 1 (no windows).png": [
+    "woman-with-bolt-drive-car_light.png": [
       "Man Driving Window - Row 159.mp4"
     ],
-    "Row 169 Man eating 1.png": [
+    "man-eating_light.png": [
       "Man_eating_1.mp4",
       "Man_eating_pizza_ver_1.mp4"
     ],
-    "Row 169 Man eating 2.png": [
+    "man-eating_dark.png": [
       "Man_eating_pizza_dark_ver_1_dark_skin.mp4"
     ],
-    "Row 158 Man + Bicycle (with helmet) 1.png": [
+    "man-on-bike_light.png": [
       "Man_on_bike.mp4"
     ],
-    "Row 161 Man unlocking Bolt Drive car_Phone 1.png": [
+    "man-unlocking-bolt-drive_phone_light.png": [
       "Man_with_car.mp4"
     ],
-    "Row 156 Man on Scooter_with helmet_2.png": [
+    "man-on-scooter_dark.png": [
       "Man_with_scooter_waving.mp4",
       "Scooter.mp4"
     ],
-    "Row 56 Set pick-up Location_1.png": [
+    "set-pickup-location_v1.png": [
       "Map.mp4"
     ],
-    "Asian.png": [
+    "asian-food.png": [
       "Noodles.mp4"
     ],
-    "Row 113_ Discounts.png": [
+    "discounts.png": [
       "PAPER BAG + OFFER.mp4"
     ],
-    "Row 389 Photo License 2.png": [
+    "photo-licence_v2.png": [
       "PHONE TAPPING.mp4"
     ],
-    "Confirmation Mobile Payments  (Version 2).png": [
+    "confirmation-mobile-payments_v2.png": [
       "Phone_coins.mp4"
     ],
-    "Confirmation Mobile Payments 2.png": [
-      "Phone_coins.mp4"
-    ],
-    "Row 389 Photo License 1.png": [
+    "photo-licence_v1.png": [
       "PHOTO LICENCE.mp4"
     ],
-    "Pizza.png": [
+    "pizza.png": [
       "Pizza 2.mp4"
     ],
-    "Row 326 AI chatbot agent.png": [
+    "ai-chatbot-agent.png": [
       "Robot - Row 326.mp4"
     ],
-    "Row 11 Scooter Side.png": [
+    "scooter_side.png": [
       "Scooter_empty.mp4",
       "SCOOTER+GIFT.mp4"
     ],
-    "Row 71_ Verification_4.png": [
+    "verification_v4.png": [
       "Shield - Row 71_ Verification Safety_alert.mp4"
     ],
-    "Row 70_ Verification_3.png": [
+    "verification_v3.png": [
       "Shield - Row 71_ Verification Shield_Check.mp4"
     ],
-    "Row 334 Success app (open app) 1.png": [
+    "success-open-app_v1.png": [
       "Smartphone In Hand - Row 363.mp4"
     ],
-    "Row 392 Speedometer.png": [
+    "speedometer.png": [
       "Speedometer - Row 392.mp4"
     ],
-    "Row 351 Invoice and T&C clear.png": [
+    "invoice-and-tc_clear.png": [
       "T&C.mp4"
     ],
-    "Row 96_ Pass.png": [
+    "pass.png": [
       "Ticket- Row 96_ Pass.mp4"
     ],
-    "Row 97 Wallet XL.png": [
+    "wallet-xl.png": [
       "Wallet - Row 97 Wallet XL.mp4"
     ],
-    "Row 159 Woman + Car 3 (no windows).png": [
+    "woman-with-bolt-drive-car_dark.png": [
       "Woman and Man Driving Windows - Row 159.mp4",
       "Woman Riding Window Row 159.mp4"
     ],
-    "Row 166 Woman holding hands up 2 with confetti.png": [
+    "woman-hands-up-confetti_dark.png": [
       "Woman Holding Hands Up Confetti - Row 166.mp4"
     ],
-    "Row 67 No ongoing rides - empty state_1.png": [
+    "no-ongoing-rides_light.png": [
       "Woman Shrugging - Row 67 No ongoing rides Woman_Shrugging.mp4"
     ],
-    "Row 166 Woman standing 2.png": [
+    "woman-standing_dark.png": [
       "Woman Standing 1 - Row 166.mp4",
       "Woman Standing 2 - Row 166 Woman standing.mp4",
       "Woman Standing Close up - Row 166.mp4"
     ],
-    "Row 102 Account Deleted_1.png": [
+    "account-deleted_light.png": [
       "Woman Standing 2 - Row 166 Woman standing.mp4"
     ],
-    "Row 15 Scheduling a car.png": [
+    "scheduled-car.png": [
       "Calendar.mp4"
     ],
-    "Row 89 Bolt Plus (Solo Green).png": [
+    "bolt-plus_solo-green.png": [
       "Plus_spin.mp4"
     ],
-    "Row 101_ Plane arrived at an airport.png": [
+    "plane-arrived-at-an-airport.png": [
       "Plane_Float.mp4"
     ],
-    "Row 344 Favorite place 1.png": [
+    "favorite-place_v1.png": [
       "Hand Pressing Heart - Row 344 Favorite place.mp4"
     ]
   }

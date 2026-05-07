@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asset Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@600;800&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="topbar">
+  <h1>Illustration Tracker</h1>
+  <div class="divider"></div>
+  <div id="search-wrap">
+    <input type="text" style="display:none" aria-hidden="true">
+    <span class="si">⌕</span>
+    <input type="text" id="search-input" placeholder="Search files or tags…" autocomplete="off">
+    <button id="search-clear" title="Clear">×</button>
+  </div>
+  <div class="divider"></div>
+  <div id="status-bar"><div class="dot"></div><span id="status-text">Loading…</span></div>
+  <div class="spacer"></div>
+  <button class="tb-btn" id="btn-sync" onclick="syncImages()">🔄 Sync</button>
+  <button class="tb-btn" id="btn-scan" onclick="autoScanWorkFiles()">🤖 Auto-Scan</button>
+  <button class="tb-btn" id="btn-images" onclick="linkImgFolder()">🖼 Link Images</button>
+  <button class="tb-btn" id="btn-videos" onclick="linkVideoFolder()">🎬 Link Videos</button>
+  <button class="tb-btn" onclick="exportData()">📥 Export</button>
+  <button class="tb-btn" id="btn-edit" onclick="toggleEditMode()">🔒 Edit Mode</button>
+  <button class="tb-btn danger" onclick="clearAll()">↺ Reset</button>
+</div>
+
+<div id="layout">
+  <div id="sidebar">
+    <div class="ss" id="theme-section">
+      <div class="sl">Theme</div>
+      <div class="theme-btns">
+        <button class="theme-btn active" id="th-dark"  onclick="setTheme('dark')"  title="Dark">🌙</button>
+        <button class="theme-btn"        id="th-light" onclick="setTheme('light')" title="Light">☀️</button>
+        <button class="theme-btn"        id="th-bolt"  onclick="setTheme('bolt')"  title="Bolt Green">🌿</button>
+      </div>
+    </div>
+    <div class="ss">
+      <div class="sl">Status</div>
+      <button class="filter-btn active" id="f-all"    onclick="setFilter(null)"><span class="fb-dot" style="background:var(--muted)"></span>All<span class="fb-count" id="fc-all">0</span></button>
+      <button class="filter-btn"        id="f-green"  onclick="setFilter('green')"><span class="fb-dot" style="background:var(--green)"></span>Have files<span class="fb-count" id="fc-green">0</span></button>
+      <button class="filter-btn"        id="f-red"    onclick="setFilter('red')"><span class="fb-dot" style="background:var(--red)"></span>Missing<span class="fb-count" id="fc-red">0</span></button>
+      <button class="filter-btn"        id="f-yellow" onclick="setFilter('yellow')"><span class="fb-dot" style="background:var(--yellow)"></span>Need to request<span class="fb-count" id="fc-yellow">0</span></button>
+      <button class="filter-btn"        id="f-blue"   onclick="setFilter('blue')"><span class="fb-dot" style="background:var(--blue)"></span>Animated<span class="fb-count" id="fc-blue">0</span></button>
+    </div>
+    <div class="ss" id="tag-filter-section" style="display:none">
+      <div class="sl" style="display:flex;align-items:center;justify-content:space-between;">Tags<button id="tag-expand-btn" onclick="toggleTagExpand()" style="background:none;border:none;color:var(--muted);font-size:0.65rem;cursor:pointer;padding:0;font-family:'DM Mono',monospace;"></button></div>
+      <div class="tag-pill-list" id="tag-filter-list"></div>
+    </div>
+    <div class="ss">
+      <div class="sl">Cell size</div>
+      <div class="size-btns">
+        <button class="size-btn" id="sz-xs" onclick="setSize('xs')">XS</button>
+        <button class="size-btn" id="sz-s"  onclick="setSize('s')">S</button>
+        <button class="size-btn active" id="sz-m"  onclick="setSize('m')">M</button>
+        <button class="size-btn" id="sz-l"  onclick="setSize('l')">L</button>
+      </div>
+    </div>
+    <div class="ss">
+      <div class="toggle-row">
+        <span>Status tint</span>
+        <label class="toggle-switch"><input type="checkbox" id="tint-toggle" checked><span class="toggle-track"></span></label>
+      </div>
+      <div class="toggle-row" style="margin-top:8px">
+        <span>Status dot</span>
+        <label class="toggle-switch"><input type="checkbox" id="dot-toggle" checked><span class="toggle-track"></span></label>
+      </div>
+    </div>
+    <div class="ss">
+      <div class="toggle-row">
+        <span>Images only</span>
+        <label class="toggle-switch"><input type="checkbox" id="imgonly-toggle"><span class="toggle-track"></span></label>
+      </div>
+    </div>
+    <div class="ss" style="flex:1;overflow-y:auto;border-bottom:none">
+      <div class="sl">Categories</div>
+      <div id="cat-nav"></div>
+    </div>
+  </div>
+
+  <div id="main">
+    <div id="setup-screen"></div>
+    <div id="img-banner" style="display:none" onclick="syncImages()">
+      <span id="img-banner-text">🖼 Click to load images</span>
+      <span class="ib-hint">browser needs one click per session</span>
+    </div>
+    <div id="search-banner"><span id="sb-text"></span><span class="sbc" id="sb-clr">clear</span></div>
+    <div id="app"></div>
+  </div>
+</div>
+
+<div id="summary-bar">
+  <div class="sbi"><div class="sbd" style="background:var(--green)"></div><span id="sum-g">0</span></div>
+  <div class="sbi"><div class="sbd" style="background:var(--red)"></div><span id="sum-r">0</span></div>
+  <div class="sbi"><div class="sbd" style="background:var(--yellow)"></div><span id="sum-y">0</span></div>
+  <div class="sbi"><div class="sbd" style="background:var(--blue);box-shadow:0 0 4px var(--blue)"></div><span id="sum-b">0</span></div>
+  <span class="sbt" id="sum-t">0 total</span>
+</div>
+<div id="toast"></div>
+
+<div id="tm-backdrop">
+  <div id="tm-box">
+    <button id="tm-close">×</button>
+    <h3>Edit Tags</h3>
+    <div id="tm-file"></div>
+    <div class="tm-cur" id="tm-cur"></div>
+    <div class="tm-input-row">
+      <input type="text" id="tag-input" placeholder="New tag…">
+      <button id="tag-add-btn">Add</button>
+    </div>
+    <div class="tm-sug" id="tm-sug"></div>
+  </div>
+</div>
+
+<!-- Password modal -->
+<div id="pw-backdrop">
+  <div id="pw-box">
+    <button id="pw-close">×</button>
+    <div id="pw-icon">🔒</div>
+    <h3>Enter Edit Mode</h3>
+    <p id="pw-hint">Hint: Fred's favourite country</p>
+    <div class="pw-input-row">
+      <input type="password" id="pw-input" placeholder="Password…" autocomplete="off">
+      <button id="pw-submit" onclick="submitPassword()">Unlock</button>
+    </div>
+    <p id="pw-error"></p>
+  </div>
+</div>
+
+<!-- Quick-look modal -->
+<div id="ql-backdrop">
+  <div id="ql-box">
+    <button id="ql-close" aria-label="Close" onclick="document.getElementById('ql-video').pause();document.getElementById('ql-backdrop').classList.remove('open')">×</button>
+    <button id="ql-download" title="Download image">💾</button>
+    <button id="ql-toggle-media" title="Toggle image/video">▶</button>
+    <div id="ql-img-wrap">
+      <img id="ql-img" src="" alt="">
+      <video id="ql-video" src="" controls style="display:none;max-width:100%;max-height:60vh;border-radius:6px;"></video>
+    </div>
+    <div id="ql-name"></div>
+    <div id="ql-status-row"></div>
+    <div id="ql-tags"></div>
+    <div id="ql-tag-row" style="display:none">
+      <input type="text" id="ql-tag-input" placeholder="Type a tag and press Enter…" autocomplete="off">
+    </div>
+    <div id="ql-nav">
+      <button id="ql-prev">←</button>
+      <span id="ql-counter"></span>
+      <button id="ql-next">→</button>
+    </div>
+    <button id="ql-link-video" title="Link a video file to this image">＋ Link video</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

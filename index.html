@@ -1883,7 +1883,7 @@ function closeSheet(){
 // Mobile status buttons in quick-look
 function renderMobStatusBtns(item){
   const el=document.getElementById('ql-status-btns');
-  if(!isMob()){ el.style.display='none'; return; }
+  if(!isMob() || !editMode){ el.style.display='none'; return; }
   el.style.display='flex'; el.innerHTML='';
   [{key:'green',label:'Have'},{key:'red',label:'Missing'},{key:'yellow',label:'Request'},{key:'blue',label:'Animated'}].forEach(s=>{
     const btn=document.createElement('button');

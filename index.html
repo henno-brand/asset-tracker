@@ -289,7 +289,7 @@
     mark { background: rgba(181,255,90,0.2); color: var(--accent); border-radius: 2px; padding: 0 1px; }
 
     /* ── MOBILE ─────────────────────────────────────────────────────────── */
-    #mob-hamburger, #mob-search-btn {
+    #mob-hamburger {
       display: none;
       align-items: center; justify-content: center;
       width: 36px; height: 36px; flex-shrink: 0;
@@ -315,98 +315,124 @@
     #ql-status-btns { display: none; }
 
     @media (max-width: 768px) {
-      /* Topbar */
-      #topbar { padding: 0 10px; gap: 8px; height: 52px; }
-      #topbar h1 { font-size: 0.9rem; }
+      /* Topbar — just hamburger + status */
+      #topbar { padding: 0 10px; gap: 8px; height: 48px; }
+      #app-title { display: none; }
       .divider, .spacer,
       #btn-dropbox, #btn-reload, #btn-scan, #btn-scan-video,
       #topbar button[onclick="exportData()"],
       #btn-edit, #topbar button[onclick="clearAll()"],
-      #status-bar { display: none !important; }
-      #mob-hamburger, #mob-search-btn { display: flex; }
+      #status-bar,
+      #search-wrap { display: none !important; }
+      #mob-hamburger { display: flex; }
 
-      /* Search: expands but keeps hamburger + title visible */
-      #search-wrap { display: none; }
-      #search-wrap.mob-open {
-        display: flex; align-items: center;
-        position: fixed;
-        top: 0; left: 0; right: 0; height: 52px; z-index: 400;
-        padding: 0 10px; gap: 8px;
-        background: var(--surface);
-        border-bottom: 1px solid var(--border);
-      }
-      /* mob-hamburger stays visible inside search overlay */
-      #search-wrap.mob-open + * #mob-hamburger,
-      body #mob-hamburger { pointer-events: auto; }
-      #search-wrap.mob-open #search-input {
-        flex: 1; height: 36px; font-size: 0.85rem;
-        padding: 8px 32px 8px 30px;
-      }
-      /* Close button becomes the × at right */
-      #search-wrap.mob-open #search-clear { display: block; }
-
-      /* Sidebar becomes slide-in drawer */
-      #layout { display: block; height: calc(100vh - 52px); }
+      /* Sidebar — slim drawer */
+      #layout { display: block; height: calc(100vh - 48px); }
       #sidebar {
         position: fixed; top: 0; left: 0; bottom: 0;
-        width: 280px; z-index: 300;
+        width: 220px; z-index: 300;
         transform: translateX(-100%);
-        transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
-        box-shadow: none;
+        transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+        box-shadow: none; overflow-y: auto;
       }
-      #sidebar.open { transform: translateX(0); box-shadow: 8px 0 40px rgba(0,0,0,0.5); }
+      #sidebar.open { transform: translateX(0); box-shadow: 6px 0 32px rgba(0,0,0,0.5); }
       #sidebar-overlay.visible { display: block; }
       #sidebar-close-btn { display: flex; }
 
-      /* Main — leave room only for bottom nav, not summary bar */
-      #main { height: calc(100vh - 52px - 58px); padding: 12px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      /* Slim down sidebar sections */
+      .ss { padding: 10px 12px; }
+      .sl { font-size: 0.55rem; margin-bottom: 8px; }
+      .filter-btn { font-size: 0.65rem; padding: 5px 8px; margin-bottom: 2px; }
+      .filter-btn .fb-count { font-size: 0.58rem; padding: 1px 4px; }
+      .size-btns { gap: 4px; }
+      .size-btn { font-size: 0.65rem; padding: 4px 0; }
+      .theme-btn { font-size: 0.9rem; padding: 5px 0; }
+      .toggle-row { font-size: 0.65rem; }
+      .cat-nav-item { font-size: 0.63rem; padding: 4px 8px; }
 
-      /* Hide summary bar on mobile — info is already in topbar */
-      #summary-bar { display: none !important; }
-      #toast { bottom: 80px; }
+      /* Hide tags section in sidebar — it's in the bottom nav */
+      #tag-filter-section { display: none !important; }
 
-      /* Bottom nav — high z-index, pointer-events always on */
+      /* Main — room for bottom bar */
+      #main { height: calc(100vh - 48px - 52px); padding: 10px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+
+      /* ── BOTTOM BAR ── */
       #bottom-nav {
-        display: flex; position: fixed;
-        bottom: 0; left: 0; right: 0; height: 58px;
+        display: flex; align-items: center;
+        position: fixed; bottom: 0; left: 0; right: 0;
+        height: 52px; z-index: 500;
         background: var(--surface); border-top: 1px solid var(--border);
-        z-index: 500; align-items: stretch;
+        padding: 0 6px; gap: 2px;
         pointer-events: auto;
       }
       .bn-btn {
-        flex: 1; display: flex; flex-direction: column;
-        align-items: center; justify-content: center; gap: 2px;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center; gap: 1px;
+        width: 48px; flex-shrink: 0; height: 44px;
         background: none; border: none; color: var(--muted);
-        font-family: 'DM Mono', monospace; font-size: 0.58rem;
-        cursor: pointer; -webkit-tap-highlight-color: transparent;
+        font-family: 'DM Mono', monospace; font-size: 0.52rem;
+        cursor: pointer; border-radius: var(--radius);
+        -webkit-tap-highlight-color: transparent;
         pointer-events: auto; touch-action: manipulation;
-        min-height: 44px; /* iOS minimum tap target */
       }
-      .bn-btn .bn-icon { font-size: 1.15rem; line-height: 1; }
-      .bn-btn.active { color: var(--accent); }
+      .bn-btn .bn-icon { font-size: 1.05rem; line-height: 1; }
+      .bn-btn.active { color: var(--accent); background: var(--accent-dim); }
 
-      /* Bottom sheet — sits just above nav, high z-index */
+      /* Search bar fills remaining space */
+      #mob-search-wrap {
+        flex: 1; position: relative;
+        display: flex; align-items: center;
+        margin-left: 4px;
+      }
+      .mob-si {
+        position: absolute; left: 10px;
+        color: var(--muted); font-size: 0.9rem;
+        pointer-events: none; line-height: 1;
+      }
+      #mob-search-input {
+        width: 100%; height: 36px;
+        padding: 0 30px 0 30px;
+        background: var(--surface2); border: 1px solid var(--border);
+        border-radius: 18px; color: var(--text);
+        font-family: 'DM Mono', monospace; font-size: 0.75rem;
+        outline: none; transition: border-color 0.15s;
+      }
+      #mob-search-input:focus { border-color: var(--accent); }
+      #mob-search-input::placeholder { color: var(--muted); }
+      #mob-search-clear {
+        position: absolute; right: 8px;
+        background: none; border: none; color: var(--muted);
+        font-size: 1rem; cursor: pointer; display: none; padding: 4px;
+        line-height: 1;
+      }
+      #mob-search-input.has-val ~ #mob-search-clear { display: block; }
+
+      /* Bottom sheet */
       #bottom-sheet-overlay {
         display: none; position: fixed;
-        inset: 0; bottom: 58px; z-index: 490;
+        inset: 0; bottom: 52px; z-index: 490;
         background: rgba(0,0,0,0.45);
       }
       #bottom-sheet-overlay.vis { display: block; }
       #bottom-sheet {
         display: block; position: fixed;
-        bottom: 58px; left: 0; right: 0; z-index: 495;
+        bottom: 52px; left: 0; right: 0; z-index: 495;
         background: var(--surface); border-top: 1px solid var(--border);
         border-radius: 16px 16px 0 0; padding: 16px;
-        max-height: 72vh; overflow-y: auto;
+        max-height: 70vh; overflow-y: auto;
         transform: translateY(100%);
-        transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+        transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
         pointer-events: auto;
       }
       #bottom-sheet.open { transform: translateY(0); }
       .bs-handle { width: 36px; height: 4px; border-radius: 2px; background: var(--border); margin: 0 auto 14px; }
       .bs-title { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 10px; }
 
-      /* Quick-look: full screen */
+      /* Hide summary bar */
+      #summary-bar { display: none !important; }
+      #toast { bottom: 70px; }
+
+      /* Quick-look: full screen from bottom */
       #ql-backdrop { align-items: flex-end; }
       #ql-box {
         max-width: 100vw; width: 100%;
@@ -426,8 +452,7 @@
         font-family: 'DM Mono', monospace; font-size: 0.6rem;
         cursor: pointer; display: flex; align-items: center;
         justify-content: center; gap: 5px; transition: all 0.12s;
-        -webkit-tap-highlight-color: transparent;
-        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent; touch-action: manipulation;
       }
       .ql-s-btn .qsd { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
       .ql-s-btn.on-green  { border-color: var(--green);  background: var(--green-dim);  color: var(--green);  font-weight: 600; }
@@ -435,10 +460,9 @@
       .ql-s-btn.on-yellow { border-color: var(--yellow); background: var(--yellow-dim); color: var(--yellow); font-weight: 600; }
       .ql-s-btn.on-blue   { border-color: var(--blue);   background: var(--blue-dim);   color: var(--blue);   font-weight: 600; }
 
-      /* Misc */
-      .gallery { gap: 7px; }
-      #connect-screen, #setup-screen { margin: 20px auto; padding: 0 4px; }
-      .connect-title { font-size: 1.5rem; }
+      .gallery { gap: 6px; }
+      #connect-screen, #setup-screen { margin: 16px auto; padding: 0 4px; }
+      .connect-title { font-size: 1.4rem; }
     }
 
     /* GITHUB SETUP */
@@ -463,7 +487,7 @@
 
 <div id="topbar">
   <button id="mob-hamburger" onclick="toggleSidebar()" aria-label="Menu">☰</button>
-  <h1>Illustration Tracker</h1>
+  <h1 id="app-title">Illustration Tracker</h1>
   <div class="divider"></div>
   <div id="search-wrap">
     <span class="si">⌕</span>
@@ -480,7 +504,6 @@
   <button class="tb-btn" onclick="exportData()">📥 Export</button>
   <button class="tb-btn" id="btn-edit" onclick="toggleEditMode()">🔒 Edit Mode</button>
   <button class="tb-btn danger" onclick="clearAll()">↺ Reset</button>
-  <button id="mob-search-btn" onclick="toggleMobSearch()" aria-label="Search">⌕</button>
 </div>
 
 <div id="sidebar-overlay" onclick="closeSidebar()"></div>
@@ -561,13 +584,18 @@
   </div>
 </div><!-- /layout -->
 
-<!-- Mobile bottom nav -->
-<nav id="bottom-nav">
+<!-- Mobile bottom bar: search + nav -->
+<div id="bottom-nav">
   <button class="bn-btn" id="bn-filter" onclick="openSheet('filter')"><span class="bn-icon">◉</span>Filter</button>
   <button class="bn-btn" id="bn-cats"   onclick="openSheet('cats')"><span class="bn-icon">▦</span>Categories</button>
   <button class="bn-btn" id="bn-tags"   onclick="openSheet('tags')"><span class="bn-icon">#</span>Tags</button>
   <button class="bn-btn" id="bn-more"   onclick="openSheet('more')"><span class="bn-icon">⋯</span>More</button>
-</nav>
+  <div id="mob-search-wrap">
+    <span class="mob-si">⌕</span>
+    <input type="text" id="mob-search-input" placeholder="Search…" autocomplete="off">
+    <button id="mob-search-clear">×</button>
+  </div>
+</div>
 <div id="bottom-sheet-overlay" onclick="closeSheet()"></div>
 <div id="bottom-sheet"><div class="bs-handle"></div><div id="bs-content"></div></div>
 
@@ -1710,33 +1738,32 @@ function closeSidebar(){
   document.getElementById('sidebar-overlay').classList.remove('visible');
 }
 
-function toggleMobSearch(){
-  const wrap = document.getElementById('search-wrap');
-  const hamburger = document.getElementById('mob-hamburger');
-  const topbar = document.getElementById('topbar');
-  if(wrap.classList.contains('mob-open')){
-    wrap.classList.remove('mob-open');
-    // Move hamburger back to topbar
-    topbar.insertBefore(hamburger, topbar.firstChild);
-    clearSearch();
-  } else {
-    wrap.classList.add('mob-open');
-    // Move hamburger inside search bar so it stays visible
-    wrap.insertBefore(hamburger, wrap.firstChild);
-    setTimeout(()=>document.getElementById('search-input').focus(), 80);
-  }
+// ── MOBILE BOTTOM SEARCH ─────────────────────────────────────────────────────
+const mobSearchInput = document.getElementById('mob-search-input');
+const mobSearchClear = document.getElementById('mob-search-clear');
+
+if(mobSearchInput){
+  mobSearchInput.addEventListener('input', e => {
+    const val = e.target.value;
+    mobSearchInput.classList.toggle('has-val', !!val);
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => {
+      searchQuery = val.trim().toLowerCase();
+      // Also sync the desktop search input
+      document.getElementById('search-input').value = val;
+      document.getElementById('search-input').classList.toggle('has-value', !!val);
+      render();
+    }, 80);
+  });
+  mobSearchClear.addEventListener('click', () => {
+    mobSearchInput.value = '';
+    mobSearchInput.classList.remove('has-val');
+    searchQuery = '';
+    document.getElementById('search-input').value = '';
+    render();
+  });
 }
-// Close mobile search on Escape
-document.getElementById('search-input').addEventListener('keydown', e => {
-  if(e.key==='Escape' && isMob()){
-    const wrap = document.getElementById('search-wrap');
-    const hamburger = document.getElementById('mob-hamburger');
-    const topbar = document.getElementById('topbar');
-    wrap.classList.remove('mob-open');
-    topbar.insertBefore(hamburger, topbar.firstChild);
-    clearSearch();
-  }
-});
+// Desktop search clear on Escape handled by main keydown listener
 
 // Bottom sheet
 let _activeSheet = null;

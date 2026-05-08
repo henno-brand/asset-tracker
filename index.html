@@ -866,17 +866,18 @@ async function loadFromDropbox(){
 
     // 2. Build category structure from subfolders
     // Each top-level subfolder is a category; files anywhere under it belong to it
-    const catMap = {}; // categoryName → [{name, path}]
+    const catMap = {}; // categoryName (lowercase) → [{name, path, displayCat}]
     entries.forEach(e => {
       if(e['.tag'] !== 'file') return;
       if(!/\.(png|jpg|jpeg|gif|webp|svg)$/i.test(e.name)) return;
-      // relative path from root
       const rel = e.path_lower.slice(IMG_FOLDER.toLowerCase().length + 1);
+      const relDisplay = (e.path_display || e.path_lower).slice(IMG_FOLDER.length + 1);
       const parts = rel.split('/');
-      // top-level folder is the category
+      const partsDisplay = relDisplay.split('/');
       const cat = parts.length > 1 ? parts[0] : '_root';
+      const displayCat = parts.length > 1 ? partsDisplay[0] : '_root';
       if(!catMap[cat]) catMap[cat] = [];
-      catMap[cat].push({ name: e.name, path: e.path_display || e.path_lower });
+      catMap[cat].push({ name: e.name, path: e.path_display || e.path_lower, displayCat });
     });
 
     const catNames = Object.keys(catMap).sort();
@@ -885,7 +886,7 @@ async function loadFromDropbox(){
 
     // 3. Build assets array (paths only, load images lazily)
     assets = catNames.map(cat => ({
-      categoryName: cat,
+      categoryName: catMap[cat][0].displayCat,
       items: catMap[cat]
         .sort((a,b) => a.name.localeCompare(b.name, undefined, {numeric:true, sensitivity:'base'}))
         .map(f => ({
@@ -895,7 +896,7 @@ async function loadFromDropbox(){
             new RegExp(IMG_FOLDER.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'i'),
             IMG_FOLDER_THUMBS
           ),
-          staticThumbUrl: `${STATIC_THUMBS}/${encodeURIComponent(cat)}/${encodeURIComponent(f.name)}`,
+          staticThumbUrl: `${STATIC_THUMBS}/${encodeURIComponent(f.displayCat)}/${encodeURIComponent(f.name)}`,
           src: null,
           fullSrc: null,
           status: statuses[f.name] || null,
@@ -978,69 +979,22 @@ async function preloadAllImages(){
   preloadDone = 0;
   updatePreloadStatus();
 
-  // Try static GitHub Pages thumbs first — fast, no auth needed.
-  // We probe one image to see if the folder exists, then batch the rest.
-  let useStatic = false;
-  if(allItems.length > 0){
-    const probe = allItems[0];
-    try {
-      const r = await fetch(probe.item.staticThumbUrl, {method:'HEAD'});
-      useStatic = r.ok;
-    } catch(e){ useStatic = false; }
-  }
-
-  if(useStatic){
-    setStatus('saving', 'Loading thumbnails…');
-    // All static — just set URLs directly, browser handles parallel fetching
-    allItems.forEach(({item, ci, ii}) => {
-      item.src = item.staticThumbUrl;
-      const card = document.querySelector(`.asset-item[data-ci="${ci}"][data-ii="${ii}"]`);
-      if(card){ const img=card.querySelector('img'); if(img){ img.src=item.staticThumbUrl; img.classList.remove('loading'); } }
-      preloadDone++;
-    });
-    updatePreloadStatus();
-    return;
-  }
-
-  // Fallback: Dropbox _thumbs folder temp links
-  const hasThumbs = await checkThumbsFolder();
-  if(hasThumbs){
-    const BATCH = 20;
-    for(let i=0; i<allItems.length; i+=BATCH){
-      const batch = allItems.slice(i, i+BATCH);
-      await Promise.all(batch.map(async ({item, ci, ii}) => {
-        try {
-          const link = await dbxGetTempLink(item.thumbPath);
-          if(link){
-            item.src = link;
-            const card = document.querySelector(`.asset-item[data-ci="${ci}"][data-ii="${ii}"]`);
-            if(card){ const img=card.querySelector('img'); if(img){ img.src=link; img.classList.remove('loading'); } }
-          }
-        } catch(e){ /* skip */ }
-        preloadDone++; updatePreloadStatus();
-      }));
-      await new Promise(r=>setTimeout(r,0));
+  // Set all static URLs immediately — browser fetches in parallel, no API calls needed.
+  // onerror on each <img> will trigger Dropbox fallback for any that 404.
+  allItems.forEach(({item, ci, ii}) => {
+    item.src = item.staticThumbUrl;
+    const card = document.querySelector(`.asset-item[data-ci="${ci}"][data-ii="${ii}"]`);
+    if(card){
+      const img = card.querySelector('img');
+      if(img){
+        img.src = item.staticThumbUrl;
+        img.classList.remove('loading');
+        img.onerror = () => loadItemThumb(item, card); // fallback to Dropbox if 404
+      }
     }
-  } else {
-    // Last resort: Dropbox JPEG thumbnail API (white bg)
-    const BATCH = 25;
-    for(let i=0; i<allItems.length; i+=BATCH){
-      const batch = allItems.slice(i, i+BATCH);
-      const paths = batch.map(({item})=>item.path.toLowerCase());
-      const thumbs = await dbxGetThumbnailsBatch(paths);
-      batch.forEach(({item, ci, ii})=>{
-        const url = thumbs[item.path.toLowerCase()];
-        if(url){
-          item.src = url;
-          const card = document.querySelector(`.asset-item[data-ci="${ci}"][data-ii="${ii}"]`);
-          if(card){ const img=card.querySelector('img'); if(img){ img.src=url; img.classList.remove('loading'); } }
-        }
-        preloadDone++;
-      });
-      updatePreloadStatus();
-      await new Promise(r=>setTimeout(r,0));
-    }
-  }
+    preloadDone++;
+  });
+  updatePreloadStatus();
 }
 
 // Keep lazy loader for re-renders (items already have src, this is a no-op mostly)

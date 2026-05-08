@@ -695,6 +695,7 @@ const DROPBOX_REDIRECT  = 'https://henno-brand.github.io/asset-tracker/';
 const IMG_FOLDER        = '/Asset Tracker/Bolt Illustrations';
 const IMG_FOLDER_THUMBS = '/Asset Tracker/Bolt Illustrations _thumbs'; // 400px PNGs, transparent
 const VIDEO_FOLDER      = '/Asset Tracker/Animated Illustrations/MP4';
+const STATIC_THUMBS     = './img/thumbs'; // local GitHub Pages static thumbnails
 const GH_CONFIG_KEYS    = { token: 'at_gh_token', repo: 'at_gh_repo', path: 'at_gh_path' };
 const DEFAULT_FILENAME  = 'asset_tracker_data.json';
 // ────────────────────────────────────────────────────────────────────────────
@@ -889,11 +890,12 @@ async function loadFromDropbox(){
         .sort((a,b) => a.name.localeCompare(b.name, undefined, {numeric:true, sensitivity:'base'}))
         .map(f => ({
           name: f.name,
-          path: f.path,                          // full-res original
-          thumbPath: f.path.replace(            // 400px transparent PNG in _thumbs folder
+          path: f.path,                          // full-res original in Dropbox
+          thumbPath: f.path.replace(             // 400px PNG in Dropbox _thumbs folder
             new RegExp(IMG_FOLDER.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'i'),
             IMG_FOLDER_THUMBS
           ),
+          staticThumbUrl: `${STATIC_THUMBS}/${encodeURIComponent(cat)}/${encodeURIComponent(f.name)}`,
           src: null,
           fullSrc: null,
           status: statuses[f.name] || null,
@@ -976,13 +978,36 @@ async function preloadAllImages(){
   preloadDone = 0;
   updatePreloadStatus();
 
-  const hasThumbs = await checkThumbsFolder();
+  // Try static GitHub Pages thumbs first — fast, no auth needed.
+  // We probe one image to see if the folder exists, then batch the rest.
+  let useStatic = false;
+  if(allItems.length > 0){
+    const probe = allItems[0];
+    try {
+      const r = await fetch(probe.item.staticThumbUrl, {method:'HEAD'});
+      useStatic = r.ok;
+    } catch(e){ useStatic = false; }
+  }
 
+  if(useStatic){
+    setStatus('saving', 'Loading thumbnails…');
+    // All static — just set URLs directly, browser handles parallel fetching
+    allItems.forEach(({item, ci, ii}) => {
+      item.src = item.staticThumbUrl;
+      const card = document.querySelector(`.asset-item[data-ci="${ci}"][data-ii="${ii}"]`);
+      if(card){ const img=card.querySelector('img'); if(img){ img.src=item.staticThumbUrl; img.classList.remove('loading'); } }
+      preloadDone++;
+    });
+    updatePreloadStatus();
+    return;
+  }
+
+  // Fallback: Dropbox _thumbs folder temp links
+  const hasThumbs = await checkThumbsFolder();
   if(hasThumbs){
-    // Use _thumbs folder — transparent PNGs, temp links, batched in parallel
     const BATCH = 20;
-    for(let i = 0; i < allItems.length; i += BATCH){
-      const batch = allItems.slice(i, i + BATCH);
+    for(let i=0; i<allItems.length; i+=BATCH){
+      const batch = allItems.slice(i, i+BATCH);
       await Promise.all(batch.map(async ({item, ci, ii}) => {
         try {
           const link = await dbxGetTempLink(item.thumbPath);
@@ -992,20 +1017,18 @@ async function preloadAllImages(){
             if(card){ const img=card.querySelector('img'); if(img){ img.src=link; img.classList.remove('loading'); } }
           }
         } catch(e){ /* skip */ }
-        preloadDone++;
-        updatePreloadStatus();
+        preloadDone++; updatePreloadStatus();
       }));
-      await new Promise(r => setTimeout(r, 0));
+      await new Promise(r=>setTimeout(r,0));
     }
   } else {
-    // Fallback: Dropbox JPEG thumbnail API (white background, but works without setup)
-    setStatus('saving', 'Tip: run make_thumbs.py for transparent thumbnails');
+    // Last resort: Dropbox JPEG thumbnail API (white bg)
     const BATCH = 25;
-    for(let i = 0; i < allItems.length; i += BATCH){
-      const batch = allItems.slice(i, i + BATCH);
-      const paths = batch.map(({item}) => item.path.toLowerCase());
+    for(let i=0; i<allItems.length; i+=BATCH){
+      const batch = allItems.slice(i, i+BATCH);
+      const paths = batch.map(({item})=>item.path.toLowerCase());
       const thumbs = await dbxGetThumbnailsBatch(paths);
-      batch.forEach(({item, ci, ii}) => {
+      batch.forEach(({item, ci, ii})=>{
         const url = thumbs[item.path.toLowerCase()];
         if(url){
           item.src = url;
@@ -1015,7 +1038,7 @@ async function preloadAllImages(){
         preloadDone++;
       });
       updatePreloadStatus();
-      await new Promise(r => setTimeout(r, 0));
+      await new Promise(r=>setTimeout(r,0));
     }
   }
 }
@@ -1045,6 +1068,18 @@ function loadThumbnailsLazily(){
 // Load a single thumbnail (used by lazy loader)
 async function loadItemThumb(item, card){
   if(item.src) return;
+  // Try static GitHub Pages URL first
+  if(item.staticThumbUrl){
+    try {
+      const r = await fetch(item.staticThumbUrl, {method:'HEAD'});
+      if(r.ok){
+        item.src = item.staticThumbUrl;
+        if(card){ const img=card.querySelector('img'); if(img){ img.src=item.staticThumbUrl; img.classList.remove('loading'); } }
+        return;
+      }
+    } catch(e){ /* fall through */ }
+  }
+  // Fallback: Dropbox
   try {
     const hasThumbs = await checkThumbsFolder();
     let url = null;

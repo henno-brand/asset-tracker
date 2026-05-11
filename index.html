@@ -1757,6 +1757,12 @@ document.addEventListener('keydown', e => {
     }
     return;
   }
+
+  // Any printable character not in an input → focus search and let it type
+  if(!inInput && !anyModalOpen && e.key.length === 1 && !e.metaKey && !e.ctrlKey && !e.altKey){
+    searchInput.focus();
+    // Don't preventDefault — let the character land in the input naturally
+  }
 });
 
 // ── EDIT MODE ──

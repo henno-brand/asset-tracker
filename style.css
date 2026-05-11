@@ -317,3 +317,4 @@ body.images-only .asset-item { border-color: transparent !important; background:
 body.no-dot .status-pip { display: none !important; }
 
 mark { background: rgba(181,255,90,0.2); color: var(--accent); border-radius: 2px; padding: 0 1px; }
+

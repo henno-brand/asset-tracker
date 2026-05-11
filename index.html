@@ -760,7 +760,7 @@
       <div class="kb-row"><kbd>← →</kbd><span>Previous / next image</span></div>
       <div class="kb-row"><kbd>Space</kbd><span>Close quick-look</span></div>
       <div class="kb-row"><kbd>S</kbd><span>Save / download image</span></div>
-      <div class="kb-row"><kbd>L</kbd><span>Open work files in Dropbox</span></div>
+      <div class="kb-row"><kbd>L</kbd><span>Open work files in Dropbox (if not missing)</span></div>
       <div class="kb-row"><kbd>P</kbd><span>Play / pause video</span></div>
       <div class="kb-row"><kbd>Esc</kbd><span>Close</span></div>
     </div>
@@ -1590,6 +1590,9 @@ function renderQuickLook(item){
     ? `<div class="ql-status-dot" style="background:${STATUS_COLORS[item.status]}"></div><span>${STATUS_LABELS[item.status]}</span>`
     : '<span style="color:var(--muted)">No status set</span>';
 
+  // Hide workfiles button for missing (red) items — file doesn't exist
+  document.getElementById('ql-workfiles').style.display = item.status === 'red' ? 'none' : 'flex';
+
   const tl=document.getElementById('ql-tags'); tl.innerHTML='';
   (item.tags||[]).forEach(t=>{ const d=document.createElement('div'); d.className='ql-tag'; d.textContent=t; const x=document.createElement('button'); x.className='ql-tag-del'; x.textContent='×'; x.onclick=()=>qlRemoveTag(item,t); d.appendChild(x); tl.appendChild(d); });
 
@@ -1780,7 +1783,8 @@ document.addEventListener('keydown', e => {
   }
   if(qlOpen && e.key === 'l'){
     e.preventDefault();
-    document.getElementById('ql-workfiles').click();
+    const item = qlItems[qlIndex];
+    if(item && item.status !== 'red') document.getElementById('ql-workfiles').click();
     return;
   }
   if(qlOpen && e.key === 'p'){

@@ -280,6 +280,8 @@
     #ql-counter { font-size: 0.68rem; color: var(--muted); min-width: 50px; text-align: center; }
     #ql-download { position: absolute; bottom: 14px; left: 14px; background: var(--surface2); border: 1px solid var(--border); color: var(--muted); font-size: 1rem; width: 30px; height: 30px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: border-color 0.15s, color 0.15s; }
     #ql-download:hover { border-color: var(--accent); color: var(--accent); }
+    #ql-workfiles { position: absolute; bottom: 14px; left: 52px; background: var(--surface2); border: 1px solid var(--border); color: var(--muted); font-size: 1rem; width: 30px; height: 30px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: border-color 0.15s, color 0.15s; }
+    #ql-workfiles:hover { border-color: var(--blue); color: var(--blue); }
 
     body.images-only .asset-name { display: none !important; }
     body.images-only .status-pip { display: none !important; }
@@ -667,6 +669,7 @@
   <div id="ql-box">
     <button id="ql-close">×</button>
     <button id="ql-download" title="Download image">💾</button>
+    <button id="ql-workfiles" title="Open work files in Dropbox">📂</button>
     <button id="ql-toggle-media" title="Toggle image/video">▶</button>
     <div id="ql-img-wrap">
       <img id="ql-img" src="" alt="">
@@ -695,6 +698,7 @@ const DROPBOX_REDIRECT  = 'https://henno-brand.github.io/asset-tracker/';
 const IMG_FOLDER        = '/Asset Tracker/Bolt Illustrations';
 const IMG_FOLDER_THUMBS = '/Asset Tracker/Bolt Illustrations _thumbs'; // 400px PNGs, transparent
 const VIDEO_FOLDER      = '/Asset Tracker/Animated Illustrations/MP4';
+const WORKFILES_FOLDER  = '/Assets/3D Illustration workfiles'; // Dropbox work files root
 const STATIC_THUMBS     = './img/thumbs'; // local GitHub Pages static thumbnails
 const GH_CONFIG_KEYS    = { token: 'at_gh_token', repo: 'at_gh_repo', path: 'at_gh_path' };
 const DEFAULT_FILENAME  = 'asset_tracker_data.json';
@@ -1552,6 +1556,16 @@ document.getElementById('ql-download').onclick=e=>{
   const item=qlItems[qlIndex];
   if(!item.src){ toast('Image still loading'); return; }
   const a=document.createElement('a'); a.href=item.src; a.download=item.name; a.click();
+};
+
+document.getElementById('ql-workfiles').onclick=e=>{
+  e.stopPropagation();
+  const item=qlItems[qlIndex];
+  if(!item) return;
+  const folderName = item.name.replace(/\.[^/.]+$/,''); // strip .png
+  const path = WORKFILES_FOLDER + '/' + folderName;
+  const url = 'https://www.dropbox.com/home' + path.split('/').map(p=>encodeURIComponent(p)).join('/');
+  window.open(url, '_blank');
 };
 
 function qlRemoveTag(item,tag){

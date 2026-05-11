@@ -290,6 +290,41 @@
 
     mark { background: rgba(181,255,90,0.2); color: var(--accent); border-radius: 2px; padding: 0 1px; }
 
+    /* KEYBOARD SHORTCUTS MODAL */
+    #kb-backdrop.open { display: flex !important; }
+    #kb-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px 28px; width: 420px; max-width: 92vw;
+      position: relative; max-height: 80vh; overflow-y: auto;
+    }
+    #kb-box h3 { font-family: 'Syne', sans-serif; font-size: 1rem; margin-bottom: 20px; }
+    #kb-close {
+      position: absolute; top: 14px; right: 14px;
+      background: none; border: none; color: var(--muted);
+      font-size: 1.2rem; cursor: pointer; line-height: 1;
+    }
+    #kb-close:hover { color: var(--text); }
+    .kb-section { margin-bottom: 20px; }
+    .kb-section:last-child { margin-bottom: 0; }
+    .kb-section-title {
+      font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--accent); margin-bottom: 10px; font-weight: 600;
+    }
+    .kb-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 5px 0; border-bottom: 1px solid var(--border); gap: 12px;
+      font-size: 0.72rem; color: var(--muted);
+    }
+    .kb-row:last-child { border-bottom: none; }
+    .kb-row span { flex: 1; text-align: right; }
+    kbd {
+      display: inline-flex; align-items: center; gap: 3px;
+      padding: 3px 7px; border-radius: 4px;
+      background: var(--surface2); border: 1px solid var(--border);
+      color: var(--text); font-family: 'DM Mono', monospace;
+      font-size: 0.65rem; white-space: nowrap; flex-shrink: 0;
+    }
+
     .asset-item.kb-selected {
       outline: 2px solid var(--accent);
       outline-offset: 1px;
@@ -594,6 +629,11 @@
       <div class="sl">Categories</div>
       <div id="cat-nav"></div>
     </div>
+    <div class="ss" style="border-top:1px solid var(--border);border-bottom:none;padding:12px 16px;">
+      <button onclick="document.getElementById('kb-backdrop').classList.add('open')" style="width:100%;display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface2);color:var(--muted);font-family:'DM Mono',monospace;font-size:0.68rem;cursor:pointer;transition:all 0.15s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">
+        <span style="font-size:0.9rem">⌨</span> Keyboard shortcuts
+      </button>
+    </div>
   </div>
 
   <div id="main">
@@ -696,6 +736,33 @@
       <button id="ql-prev">←</button>
       <span id="ql-counter"></span>
       <button id="ql-next">→</button>
+    </div>
+  </div>
+</div>
+
+<!-- Keyboard shortcuts modal -->
+<div id="kb-backdrop" style="display:none;position:fixed;inset:0;z-index:400;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);align-items:center;justify-content:center;">
+  <div id="kb-box">
+    <button id="kb-close" onclick="document.getElementById('kb-backdrop').classList.remove('open')">×</button>
+    <h3>Keyboard Shortcuts</h3>
+
+    <div class="kb-section">
+      <div class="kb-section-title">Main Grid</div>
+      <div class="kb-row"><kbd>A–Z</kbd><span>Start typing to search</span></div>
+      <div class="kb-row"><kbd>↓</kbd><span>Jump to first result</span></div>
+      <div class="kb-row"><kbd>← → ↑ ↓</kbd><span>Navigate through grid</span></div>
+      <div class="kb-row"><kbd>Space</kbd><span>Open quick-look</span></div>
+      <div class="kb-row"><kbd>Esc</kbd><span>Clear selection</span></div>
+    </div>
+
+    <div class="kb-section">
+      <div class="kb-section-title">Quick-look</div>
+      <div class="kb-row"><kbd>← →</kbd><span>Previous / next image</span></div>
+      <div class="kb-row"><kbd>Space</kbd><span>Close quick-look</span></div>
+      <div class="kb-row"><kbd>S</kbd><span>Save / download image</span></div>
+      <div class="kb-row"><kbd>L</kbd><span>Open work files in Dropbox</span></div>
+      <div class="kb-row"><kbd>P</kbd><span>Play / pause video</span></div>
+      <div class="kb-row"><kbd>Esc</kbd><span>Close</span></div>
     </div>
   </div>
 </div>
@@ -1705,10 +1772,28 @@ document.addEventListener('keydown', e => {
     kbSelect(kbIndex >= 0 ? kbIndex : 0);
     return;
   }
+  if(qlOpen && e.key === 's'){
+    e.preventDefault();
+    const item = qlItems[qlIndex];
+    if(item && item.src){ const a=document.createElement('a'); a.href=item.src; a.download=item.name; a.click(); toast('💾 Saved'); }
+    return;
+  }
+  if(qlOpen && e.key === 'l'){
+    e.preventDefault();
+    document.getElementById('ql-workfiles').click();
+    return;
+  }
+  if(qlOpen && e.key === 'p'){
+    e.preventDefault();
+    const toggleBtn = document.getElementById('ql-toggle-media');
+    if(toggleBtn.style.display !== 'none') toggleBtn.click();
+    return;
+  }
   if(e.key === 'Escape'){
     closeModal();
     document.getElementById('ql-backdrop').classList.remove('open');
     document.getElementById('pw-backdrop').classList.remove('open');
+    document.getElementById('kb-backdrop').classList.remove('open');
     kbClear();
     return;
   }
@@ -1762,6 +1847,11 @@ document.addEventListener('keydown', e => {
 
   // Any printable character not in an input → focus search and let it type
   if(!inInput && !anyModalOpen && e.key.length === 1 && !e.metaKey && !e.ctrlKey && !e.altKey){
+    if(e.key === '?'){
+      e.preventDefault();
+      document.getElementById('kb-backdrop').classList.add('open');
+      return;
+    }
     searchInput.focus();
     // Don't preventDefault — let the character land in the input naturally
   }

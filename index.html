@@ -2015,15 +2015,28 @@ async function collectWorkNames(dirH, arr){
 }
 
 function workFilesMatch(imgBase, fileName){
-  const ci = imgBase.replace(/[^a-z0-9]/g,'');
-  const cf = fileName.replace(/[^a-z0-9]/g,'');
-  if(!ci||!cf) return false;
-  if(ci===cf) return true;
-  if(ci.length>=5 && cf.includes(ci)) return true;
-  if(cf.length>=5 && ci.includes(cf)) return true;
-  const wi=imgBase.split(/[^a-z0-9]+/).filter(w=>w.length>2);
-  const wf=fileName.split(/[^a-z0-9]+/).filter(w=>w.length>2);
-  if(wi.length>=2 && wi.filter(w=>wf.includes(w)).length/wi.length>=0.75) return true;
+  const strip = s => s
+    .replace(/[_-](off-x|off-axis|top|side|iso|dark|light|medium|mixed|full|base|v\d+|\d+)$/i,'')
+    .toLowerCase();
+
+  const norm = s => s.replace(/[^a-z0-9]/g,'');
+
+  const bases = [imgBase.toLowerCase(), strip(imgBase)];
+  const files = [fileName.toLowerCase(), strip(fileName)];
+
+  for(const b of bases){
+    for(const f of files){
+      const cb = norm(b), cf = norm(f);
+      if(!cb||!cf) continue;
+      if(cb===cf) return true;
+      if(cb.length>=3 && cf.includes(cb)) return true;
+      if(cf.length>=3 && cb.includes(cf)) return true;
+      // Word overlap
+      const wb = b.split(/[^a-z0-9]+/).filter(w=>w.length>=3);
+      const wf = f.split(/[^a-z0-9]+/).filter(w=>w.length>=3);
+      if(wb.length>=1 && wf.length>=1 && wb.filter(w=>wf.includes(w)).length/Math.max(wb.length,wf.length)>=0.75) return true;
+    }
+  }
   return false;
 }
 

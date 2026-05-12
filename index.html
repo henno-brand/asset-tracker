@@ -341,26 +341,26 @@
       position: relative;
     }
     .asset-item.item-selected {
-      outline: 2px solid var(--blue);
+      outline: 2px solid var(--accent);
       outline-offset: 1px;
-      background: var(--blue-dim) !important;
+      background: var(--accent-dim) !important;
       position: relative; z-index: 1;
     }
     .asset-item.kb-selected.item-selected {
       outline-color: var(--accent);
-      box-shadow: 0 4px 16px rgba(167,139,250,0.3);
+      box-shadow: 0 4px 16px rgba(181,255,90,0.35);
     }
     #selection-bar {
       position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
       display: flex; align-items: center; gap: 10px;
-      background: var(--surface); border: 1px solid var(--blue);
+      background: var(--surface); border: 1px solid var(--accent);
       border-radius: 40px; padding: 8px 20px;
       font-size: 0.72rem; color: var(--text);
       opacity: 0; pointer-events: none; transition: opacity 0.2s;
       z-index: 100;
     }
     #selection-bar.visible { opacity: 1; pointer-events: auto; }
-    #selection-bar .sel-count { color: var(--blue); font-weight: 600; }
+    #selection-bar .sel-count { color: var(--accent); font-weight: 600; }
     #selection-bar button { background: none; border: 1px solid var(--border); border-radius: 20px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.68rem; padding: 3px 10px; cursor: pointer; }
     #selection-bar button:hover { border-color: var(--accent); color: var(--accent); }
 

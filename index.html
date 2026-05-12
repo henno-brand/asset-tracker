@@ -1665,34 +1665,31 @@ document.getElementById('ql-download').onclick=e=>{
 document.getElementById('ql-workfiles').onclick=async e=>{
   e.stopPropagation();
   const item=qlItems[qlIndex];
-  if(!item) return;
+  if(!item || item.status === 'red') return;
 
-  const folderName = item.name.replace(/\.[^/.]+$/,''); // strip extension
-  // Base name = strip trailing _variant suffix (_off-x, _top, _side, _iso, _v1, _v2, _light, _dark etc.)
-  const baseName = folderName.replace(/[_-](off-x|top|side|iso|full|base|v\d+|light|dark|medium|mixed|left|right|front|back|off-axis|top-view|off-axis|vietnam|confetti|calendar|silver|new-colour|no-roof|ps-guide|bubbles|key|phone|no-icon|no-helmet|no-basket|with-helmet|with-glass|wheelchair|yellow|pink|red|cream|purple|aurora|ramadan|pride|sauna|canada-day|earth-day|easter|halloween|christmas|valentines|womens-day|norway|romania|standard|xl|xxl|plus|solo|solo-green|full-green|orange|alert|dash|check|download|warning|error|success|clear|approved|expiring|added|failed|missing|added|deleted|busy|step-\d+)$/i, '');
+  const folderName = item.name.replace(/\.[^/.]+$/,'');
+  const baseName = folderName.replace(/[_-](off-x|top|side|iso|full|base|v\d+|light|dark|medium|mixed|left|right|front|back|off-axis|top-view|vietnam|confetti|calendar|silver|new-colour|no-roof|ps-guide|bubbles|key|phone|no-icon|no-helmet|no-basket|with-helmet|with-glass|wheelchair|yellow|pink|red|cream|purple|aurora|ramadan|pride|sauna|canada-day|earth-day|easter|halloween|christmas|valentines|womens-day|norway|romania|standard|xl|xxl|plus|solo|solo-green|full-green|orange|alert|dash|check|download|warning|error|success|clear|approved|expiring|added|failed|missing|deleted|busy|step-\d+)$/i, '');
 
-  const makeUrl = name => 'https://www.dropbox.com/home' +
-    (WORKFILES_FOLDER + '/' + name).split('/').map(p=>encodeURIComponent(p)).join('/');
+  const openInFinder = name => {
+    // dropbox:// opens folder directly in Finder via Dropbox desktop app
+    window.location.href = 'dropbox://' + WORKFILES_FOLDER + '/' + name;
+  };
 
-  // Try specific folder via Dropbox API
+  // Try specific folder first via API, fall back to base name
   try {
     const res = await fetch('https://api.dropboxapi.com/2/files/get_metadata', {
       method: 'POST',
       headers: { 'Authorization': 'Bearer '+dropboxToken, 'Content-Type': 'application/json' },
       body: JSON.stringify({ path: WORKFILES_FOLDER + '/' + folderName })
     });
-    if(res.ok){
-      window.open(makeUrl(folderName), '_blank');
-      return;
-    }
+    if(res.ok){ openInFinder(folderName); return; }
   } catch(e){ /* fall through */ }
 
-  // Fall back to base name
   if(baseName && baseName !== folderName){
-    window.open(makeUrl(baseName), '_blank');
+    openInFinder(baseName);
     toast('📂 Opened base folder: ' + baseName);
   } else {
-    window.open(makeUrl(folderName), '_blank');
+    openInFinder(folderName);
   }
 };
 

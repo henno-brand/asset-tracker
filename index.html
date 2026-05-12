@@ -333,6 +333,29 @@
       z-index: 2;
       position: relative;
     }
+    .asset-item.item-selected {
+      outline: 2px solid var(--blue);
+      outline-offset: 1px;
+      background: var(--blue-dim) !important;
+      position: relative; z-index: 1;
+    }
+    .asset-item.kb-selected.item-selected {
+      outline-color: var(--accent);
+      box-shadow: 0 4px 16px rgba(167,139,250,0.3);
+    }
+    #selection-bar {
+      position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+      display: flex; align-items: center; gap: 10px;
+      background: var(--surface); border: 1px solid var(--blue);
+      border-radius: 40px; padding: 8px 20px;
+      font-size: 0.72rem; color: var(--text);
+      opacity: 0; pointer-events: none; transition: opacity 0.2s;
+      z-index: 100;
+    }
+    #selection-bar.visible { opacity: 1; pointer-events: auto; }
+    #selection-bar .sel-count { color: var(--blue); font-weight: 600; }
+    #selection-bar button { background: none; border: 1px solid var(--border); border-radius: 20px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.68rem; padding: 3px 10px; cursor: pointer; }
+    #selection-bar button:hover { border-color: var(--accent); color: var(--accent); }
 
     /* ── MOBILE ─────────────────────────────────────────────────────────── */
     #mob-hamburger {
@@ -674,6 +697,12 @@
 <div id="bottom-sheet-overlay" onclick="closeSheet()"></div>
 <div id="bottom-sheet"><div class="bs-handle"></div><div id="bs-content"></div></div>
 
+<div id="selection-bar">
+  <span class="sel-count" id="sel-count">0 selected</span>
+  <button onclick="downloadSelected()">↓ Download</button>
+  <button onclick="clearSelection()">✕ Clear</button>
+</div>
+
 <div id="summary-bar">
   <div class="sbi"><div class="sbd" style="background:var(--green)"></div><span id="sum-g">0</span></div>
   <div class="sbi"><div class="sbd" style="background:var(--red)"></div><span id="sum-r">0</span></div>
@@ -749,10 +778,13 @@
     <div class="kb-section">
       <div class="kb-section-title">Main Grid</div>
       <div class="kb-row"><kbd>A–Z</kbd><span>Start typing to search</span></div>
+      <div class="kb-row"><kbd>Esc</kbd><span>Clear search / deselect</span></div>
       <div class="kb-row"><kbd>↓</kbd><span>Jump to first result</span></div>
       <div class="kb-row"><kbd>← → ↑ ↓</kbd><span>Navigate through grid</span></div>
       <div class="kb-row"><kbd>Space</kbd><span>Open quick-look</span></div>
-      <div class="kb-row"><kbd>Esc</kbd><span>Clear selection</span></div>
+      <div class="kb-row"><kbd>S</kbd><span>Select / deselect image</span></div>
+      <div class="kb-row"><kbd>D</kbd><span>Download selected (or current)</span></div>
+      <div class="kb-row"><kbd>L</kbd><span>Open work files in Dropbox</span></div>
     </div>
 
     <div class="kb-section">
@@ -760,7 +792,7 @@
       <div class="kb-row"><kbd>← →</kbd><span>Previous / next image</span></div>
       <div class="kb-row"><kbd>Space</kbd><span>Close quick-look</span></div>
       <div class="kb-row"><kbd>S</kbd><span>Save / download image</span></div>
-      <div class="kb-row"><kbd>L</kbd><span>Open work files in Dropbox (if not missing)</span></div>
+      <div class="kb-row"><kbd>L</kbd><span>Open work files in Dropbox</span></div>
       <div class="kb-row"><kbd>P</kbd><span>Play / pause video</span></div>
       <div class="kb-row"><kbd>Esc</kbd><span>Close</span></div>
     </div>
@@ -785,6 +817,7 @@ let activeFilter = new Set(), activeTagFilter = null, searchQuery = '';
 let tagTarget = null, ghFileSha = null, editMode = false;
 let dropboxToken = null;
 let videoPathMap = {}; // basename (no ext, lowercase) → dropbox path
+let selectedItems = new Set(); // S to select, D to download all selected
 let saveTimer, toastT, searchTimer;
 const STATUS_CYCLE = [null,'green','red','yellow','blue'];
 const STATUS_LABELS = { green:'Have files', red:'Missing', yellow:'Need to request', blue:'Animated' };
@@ -1387,32 +1420,17 @@ function render(){
 
   if(!assets.length) return;
 
+  // Single flat gallery — no category sections or headers
+  const gallery=document.createElement('div'); gallery.className='gallery';
+  let anyVisible = false;
+
   assets.forEach((cat,ci)=>{
-    const visible=cat.items.filter(itemVisible);
-    if(!visible.length) return;
+    cat.items.forEach((item, idx)=>{
+      if(!itemVisible(item)) return;
+      anyVisible = true;
 
-    const sec=document.createElement('div'); sec.className='cat-section'; sec.id='cat-'+ci;
-    const cg=cat.items.filter(i=>i.status==='green').length;
-    const cr=cat.items.filter(i=>i.status==='red').length;
-    const cy=cat.items.filter(i=>i.status==='yellow').length;
-    const cb=cat.items.filter(i=>i.status==='blue').length;
-
-    const hdr=document.createElement('div'); hdr.className='cat-header';
-    hdr.innerHTML=`<span class="cat-name">${esc(cat.categoryName)}</span><span class="cat-count">${visible.length}</span>
-      <div class="cat-stats">
-        <div class="cat-stat"><div class="csd" style="background:var(--green)"></div>${cg}</div>
-        <div class="cat-stat"><div class="csd" style="background:var(--red)"></div>${cr}</div>
-        <div class="cat-stat"><div class="csd" style="background:var(--yellow)"></div>${cy}</div>
-        <div class="cat-stat"><div class="csd" style="background:var(--blue)"></div>${cb}</div>
-      </div>`;
-    sec.appendChild(hdr);
-
-    const gallery=document.createElement('div'); gallery.className='gallery';
-
-    visible.forEach(item=>{
-      const idx=cat.items.indexOf(item);
       const div=document.createElement('div');
-      div.className='asset-item'+(item.status?' s-'+item.status:'')+((item.tags&&item.tags.length)?' has-tags':'');
+      div.className='asset-item'+(item.status?' s-'+item.status:'')+((item.tags&&item.tags.length)?' has-tags':'')+(selectedItems.has(item)?' kb-selected':'');
       div.dataset.ci=ci; div.dataset.ii=idx;
 
       const tb=document.createElement('button'); tb.className='tag-btn'; tb.textContent='#'; tb.title='Edit tags';
@@ -1424,7 +1442,7 @@ function render(){
       const img=document.createElement('img');
       img.classList.add('loading');
       if(item.src){ img.src=item.src; img.classList.remove('loading'); }
-      else img.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='; // 1px placeholder
+      else img.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
 
       const nameEl=document.createElement('div'); nameEl.className='asset-name';
       nameEl.innerHTML=hi(item.name, searchQuery);
@@ -1437,17 +1455,15 @@ function render(){
       div.appendChild(nameEl); div.appendChild(pip);
       gallery.appendChild(div);
     });
-
-    sec.appendChild(gallery); app.appendChild(sec);
   });
 
-  if(!app.children.length){
+  if(!anyVisible){
     app.innerHTML='<div class="empty-state"><div class="esi">🔍</div><p>No results match your filters.</p></div>';
+  } else {
+    app.appendChild(gallery);
   }
 
   updateSummaryBar();
-
-  // Start lazy loading thumbnails
   loadThumbnailsLazily();
 }
 
@@ -1662,20 +1678,21 @@ document.getElementById('ql-download').onclick=e=>{
   const a=document.createElement('a'); a.href=item.src; a.download=item.name; a.click();
 };
 
-document.getElementById('ql-workfiles').onclick=e=>{
-  e.stopPropagation();
-  const item=qlItems[qlIndex];
+function openWorkfiles(item){
   if(!item || item.status === 'red') return;
-
   const folderName = item.name.replace(/\.[^/.]+$/,'');
   const baseName = folderName.replace(/[_-](off-x|top|side|iso|full|base|v\d+|light|dark|medium|mixed|left|right|front|back|off-axis|top-view|vietnam|confetti|calendar|silver|new-colour|no-roof|ps-guide|bubbles|key|phone|no-icon|no-helmet|no-basket|with-helmet|with-glass|wheelchair|yellow|pink|red|cream|purple|aurora|ramadan|pride|sauna|canada-day|earth-day|easter|halloween|christmas|valentines|womens-day|norway|romania|standard|xl|xxl|plus|solo|solo-green|full-green|orange|alert|dash|check|download|warning|error|success|clear|approved|expiring|added|failed|missing|deleted|busy|step-\d+)$/i, '');
-
   const makeUrl = name => 'https://www.dropbox.com/home' +
     (WORKFILES_FOLDER + '/' + name).split('/').map(p=>encodeURIComponent(p)).join('/');
-
   const target = (baseName && baseName !== folderName) ? baseName : folderName;
   window.open(makeUrl(target), '_blank');
+}
+
+document.getElementById('ql-workfiles').onclick=e=>{
+  e.stopPropagation();
+  openWorkfiles(qlItems[qlIndex]);
 };
+document.getElementById('ql-workfiles')._openForItem = openWorkfiles;
 
 function qlRemoveTag(item,tag){
   item.tags=(item.tags||[]).filter(t=>t!==tag);
@@ -1764,8 +1781,7 @@ document.addEventListener('keydown', e => {
   }
   if(qlOpen && e.key === 'l'){
     e.preventDefault();
-    const item = qlItems[qlIndex];
-    if(item && item.status !== 'red') document.getElementById('ql-workfiles').click();
+    openWorkfiles(qlItems[qlIndex]);
     return;
   }
   if(qlOpen && e.key === 'p'){
@@ -1827,6 +1843,55 @@ document.addEventListener('keydown', e => {
       const item = assets[ci]?.items[ii];
       if(item) openQuickLook(item);
     }
+    return;
+  }
+
+  // S = toggle selection of current card
+  if(e.key === 's' && kbIndex >= 0 && !inInput){
+    e.preventDefault();
+    const card = cards[kbIndex];
+    if(card){
+      const ci = parseInt(card.dataset.ci);
+      const ii = parseInt(card.dataset.ii);
+      const item = assets[ci]?.items[ii];
+      if(item) toggleItemSelected(item, card);
+    }
+    return;
+  }
+
+  // D = download all selected (or current if none selected)
+  if(e.key === 'd' && !inInput){
+    e.preventDefault();
+    if(selectedItems.size > 0) downloadSelected();
+    else if(kbIndex >= 0){
+      const card = cards[kbIndex];
+      if(card){
+        const ci = parseInt(card.dataset.ci);
+        const ii = parseInt(card.dataset.ii);
+        const item = assets[ci]?.items[ii];
+        if(item && item.src){ const a=document.createElement('a'); a.href=item.src; a.download=item.name; a.click(); toast('💾 '+item.name); }
+      }
+    }
+    return;
+  }
+
+  // L = open workfiles for current card
+  if(e.key === 'l' && kbIndex >= 0 && !inInput){
+    e.preventDefault();
+    const card = cards[kbIndex];
+    if(card){
+      const ci = parseInt(card.dataset.ci);
+      const ii = parseInt(card.dataset.ii);
+      const item = assets[ci]?.items[ii];
+      if(item && item.status !== 'red') document.getElementById('ql-workfiles')._openForItem(item);
+    }
+    return;
+  }
+
+  // Esc clears search if it has text
+  if(e.key === 'Escape' && searchQuery && !anyModalOpen){
+    clearSearch();
+    kbClear();
     return;
   }
 
@@ -1998,7 +2063,42 @@ function clearAll(){
 // ── MOBILE ───────────────────────────────────────────────────────────────────
 const isMob = () => window.innerWidth <= 768;
 
-function toggleSidebar(){
+function toggleItemSelected(item, card){
+  if(selectedItems.has(item)){
+    selectedItems.delete(item);
+    card?.classList.remove('item-selected');
+  } else {
+    selectedItems.add(item);
+    card?.classList.add('item-selected');
+  }
+  updateSelectionBar();
+}
+
+function updateSelectionBar(){
+  const bar = document.getElementById('selection-bar');
+  const n = selectedItems.size;
+  bar.classList.toggle('visible', n > 0);
+  document.getElementById('sel-count').textContent = n + ' selected';
+}
+
+function clearSelection(){
+  selectedItems.clear();
+  document.querySelectorAll('.asset-item.item-selected').forEach(c=>c.classList.remove('item-selected'));
+  updateSelectionBar();
+}
+
+async function downloadSelected(){
+  if(!selectedItems.size) return;
+  toast(`💾 Downloading ${selectedItems.size} image${selectedItems.size>1?'s':''}…`, 3000);
+  for(const item of selectedItems){
+    // Ensure full-res loaded
+    const src = item.fullSrc || await loadItemFullRes(item) || item.src;
+    if(!src) continue;
+    await new Promise(r => setTimeout(r, 120)); // small delay between downloads
+    const a = document.createElement('a'); a.href = src; a.download = item.name; a.click();
+  }
+  clearSelection();
+}
   document.getElementById('sidebar').classList.toggle('open');
   document.getElementById('sidebar-overlay').classList.toggle('visible');
 }

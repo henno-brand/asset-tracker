@@ -801,7 +801,7 @@ const hasCfg = () => getCfg('token') && getCfg('repo') && getCfg('path');
 // ── HELPERS ──
 function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 function hi(text,q){ if(!q)return esc(text); const i=text.toLowerCase().indexOf(q); if(i<0)return esc(text); return esc(text.slice(0,i))+'<mark>'+esc(text.slice(i,i+q.length))+'</mark>'+esc(text.slice(i+q.length)); }
-function toast(m,d=2400){ const el=document.getElementById('toast'); el.textContent=m; el.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(()=>el.classList.remove('show'),d); }
+function toast(m,d=2400){ const el=document.getElementById('toast'); el.innerHTML=m; el.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(()=>el.classList.remove('show'),d); }
 function setStatus(s,t){ document.getElementById('status-bar').className=s; document.getElementById('status-text').textContent=t; }
 function setLoading(vis, sub='', pct=0, detail=''){
   const s = document.getElementById('loading-screen');
@@ -1662,7 +1662,7 @@ document.getElementById('ql-download').onclick=e=>{
   const a=document.createElement('a'); a.href=item.src; a.download=item.name; a.click();
 };
 
-document.getElementById('ql-workfiles').onclick=async e=>{
+document.getElementById('ql-workfiles').onclick=e=>{
   e.stopPropagation();
   const item=qlItems[qlIndex];
   if(!item || item.status === 'red') return;
@@ -1670,26 +1670,14 @@ document.getElementById('ql-workfiles').onclick=async e=>{
   const folderName = item.name.replace(/\.[^/.]+$/,'');
   const baseName = folderName.replace(/[_-](off-x|top|side|iso|full|base|v\d+|light|dark|medium|mixed|left|right|front|back|off-axis|top-view|vietnam|confetti|calendar|silver|new-colour|no-roof|ps-guide|bubbles|key|phone|no-icon|no-helmet|no-basket|with-helmet|with-glass|wheelchair|yellow|pink|red|cream|purple|aurora|ramadan|pride|sauna|canada-day|earth-day|easter|halloween|christmas|valentines|womens-day|norway|romania|standard|xl|xxl|plus|solo|solo-green|full-green|orange|alert|dash|check|download|warning|error|success|clear|approved|expiring|added|failed|missing|deleted|busy|step-\d+)$/i, '');
 
-  const openInFinder = name => {
-    // dropbox:// opens folder directly in Finder via Dropbox desktop app
-    window.location.href = 'dropbox://' + WORKFILES_FOLDER + '/' + name;
-  };
+  const makeUrl = name => 'https://www.dropbox.com/home' +
+    (WORKFILES_FOLDER + '/' + name).split('/').map(p=>encodeURIComponent(p)).join('/');
 
-  // Try specific folder first via API, fall back to base name
-  try {
-    const res = await fetch('https://api.dropboxapi.com/2/files/get_metadata', {
-      method: 'POST',
-      headers: { 'Authorization': 'Bearer '+dropboxToken, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ path: WORKFILES_FOLDER + '/' + folderName })
-    });
-    if(res.ok){ openInFinder(folderName); return; }
-  } catch(e){ /* fall through */ }
+  // Open specific folder; if different from base, show a fallback button in toast
+  window.open(makeUrl(folderName), '_blank');
 
   if(baseName && baseName !== folderName){
-    openInFinder(baseName);
-    toast('📂 Opened base folder: ' + baseName);
-  } else {
-    openInFinder(folderName);
+    toast(`📂 Not found? Try base: <a href="${makeUrl(baseName)}" target="_blank" style="color:var(--accent)">${baseName}</a>`, 5000);
   }
 };
 

@@ -1673,10 +1673,21 @@ document.getElementById('ql-workfiles').onclick=e=>{
   const makeUrl = name => 'https://www.dropbox.com/home' +
     (WORKFILES_FOLDER + '/' + name).split('/').map(p=>encodeURIComponent(p)).join('/');
 
-  // Use base name (e.g. "motorcycle") — more reliable since work folders
-  // are named after the base illustration, not the variant
+  const makeFinderUrl = name => 'db-browse://' +
+    (WORKFILES_FOLDER + '/' + name).split('/').map(p=>encodeURIComponent(p)).join('/');
+
   const target = (baseName && baseName !== folderName) ? baseName : folderName;
-  window.open(makeUrl(target), '_blank');
+
+  // Try db-browse:// first (opens Finder via Dropbox desktop app)
+  // Fall back to web URL if app not installed
+  const finderUrl = makeFinderUrl(target);
+  const webUrl = makeUrl(target);
+
+  // Attempt desktop app open; if it fails after a short delay, open web
+  let opened = false;
+  window.addEventListener('blur', () => { opened = true; }, { once: true });
+  window.location.href = finderUrl;
+  setTimeout(() => { if(!opened) window.open(webUrl, '_blank'); }, 800);
 };
 
 function qlRemoveTag(item,tag){
@@ -1798,28 +1809,28 @@ document.addEventListener('keydown', e => {
   if(e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.key === 'ArrowDown' || e.key === 'ArrowUp'){
     // Only activate grid nav if we're already navigating OR search has a value
     if(kbIndex === -1 && !searchQuery) return;
-    if(inInput && e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return; // let left/right work in search input
+    if(inInput && e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
 
     e.preventDefault();
-    // First arrow key press always goes to first result regardless of direction
+    // First arrow key press always goes to index 0 regardless of direction
     if(kbIndex === -1){ kbSelect(0); if(inInput) active.blur(); return; }
+
+    // Fix #2: ArrowDown from first row should go to row below, not jump by cols from -1
     const cur = kbIndex;
     let next = cur;
     if(e.key === 'ArrowRight') next = cur + 1;
     else if(e.key === 'ArrowLeft') next = cur - 1;
     else if(e.key === 'ArrowDown') next = cur + cols;
-    else if(e.key === 'ArrowUp') next = Math.max(0, cur - cols);
+    else if(e.key === 'ArrowUp') next = cur - cols;
 
-    if(next < 0) next = 0;
-    if(next >= cards.length) next = cards.length - 1;
+    next = Math.max(0, Math.min(next, cards.length - 1));
     kbSelect(next);
 
-    // Blur search so arrows don't move cursor
     if(inInput) active.blur();
     return;
   }
 
-  // Space = open quick-look (like macOS Finder), Enter = same when ql is open
+  // Space = open quick-look
   if(e.key === ' ' && kbIndex >= 0 && !inInput){
     e.preventDefault();
     const card = cards[kbIndex];
@@ -1832,15 +1843,21 @@ document.addEventListener('keydown', e => {
     return;
   }
 
-  // Any printable character not in an input → focus search and let it type
+  // Any printable character not in an input → focus search
   if(!inInput && !anyModalOpen && e.key.length === 1 && !e.metaKey && !e.ctrlKey && !e.altKey){
     if(e.key === '?'){
       e.preventDefault();
       document.getElementById('kb-backdrop').classList.add('open');
       return;
     }
+    // Fix #3: if grid is selected and we start typing, clear old search first
+    if(kbIndex >= 0){
+      searchInput.value = '';
+      searchQuery = '';
+      kbClear();
+    }
     searchInput.focus();
-    // Don't preventDefault — let the character land in the input naturally
+    // Don't preventDefault — let the character land naturally
   }
 });
 

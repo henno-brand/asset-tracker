@@ -1673,21 +1673,8 @@ document.getElementById('ql-workfiles').onclick=e=>{
   const makeUrl = name => 'https://www.dropbox.com/home' +
     (WORKFILES_FOLDER + '/' + name).split('/').map(p=>encodeURIComponent(p)).join('/');
 
-  const makeFinderUrl = name => 'db-browse://' +
-    (WORKFILES_FOLDER + '/' + name).split('/').map(p=>encodeURIComponent(p)).join('/');
-
   const target = (baseName && baseName !== folderName) ? baseName : folderName;
-
-  // Try db-browse:// first (opens Finder via Dropbox desktop app)
-  // Fall back to web URL if app not installed
-  const finderUrl = makeFinderUrl(target);
-  const webUrl = makeUrl(target);
-
-  // Attempt desktop app open; if it fails after a short delay, open web
-  let opened = false;
-  window.addEventListener('blur', () => { opened = true; }, { once: true });
-  window.location.href = finderUrl;
-  setTimeout(() => { if(!opened) window.open(webUrl, '_blank'); }, 800);
+  window.open(makeUrl(target), '_blank');
 };
 
 function qlRemoveTag(item,tag){

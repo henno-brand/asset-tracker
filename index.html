@@ -1673,12 +1673,10 @@ document.getElementById('ql-workfiles').onclick=e=>{
   const makeUrl = name => 'https://www.dropbox.com/home' +
     (WORKFILES_FOLDER + '/' + name).split('/').map(p=>encodeURIComponent(p)).join('/');
 
-  // Open specific folder; if different from base, show a fallback button in toast
-  window.open(makeUrl(folderName), '_blank');
-
-  if(baseName && baseName !== folderName){
-    toast(`📂 Not found? Try base: <a href="${makeUrl(baseName)}" target="_blank" style="color:var(--accent)">${baseName}</a>`, 5000);
-  }
+  // Use base name (e.g. "motorcycle") — more reliable since work folders
+  // are named after the base illustration, not the variant
+  const target = (baseName && baseName !== folderName) ? baseName : folderName;
+  window.open(makeUrl(target), '_blank');
 };
 
 function qlRemoveTag(item,tag){

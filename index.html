@@ -1791,11 +1791,24 @@ document.addEventListener('keydown', e => {
     return;
   }
   if(e.key === 'Escape'){
-    closeModal();
-    document.getElementById('ql-backdrop').classList.remove('open');
-    document.getElementById('pw-backdrop').classList.remove('open');
-    document.getElementById('kb-backdrop').classList.remove('open');
+    // Priority 1: close any open modal
+    if(anyModalOpen){
+      closeModal();
+      document.getElementById('ql-backdrop').classList.remove('open');
+      document.getElementById('pw-backdrop').classList.remove('open');
+      document.getElementById('kb-backdrop').classList.remove('open');
+      kbClear();
+      return;
+    }
+    // Priority 2: clear search if active
+    if(searchQuery){
+      clearSearch();
+      kbClear();
+      return;
+    }
+    // Priority 3: clear grid selection
     kbClear();
+    clearSelection();
     return;
   }
   if(anyModalOpen) return;
@@ -1885,13 +1898,6 @@ document.addEventListener('keydown', e => {
       const item = assets[ci]?.items[ii];
       if(item && item.status !== 'red') document.getElementById('ql-workfiles')._openForItem(item);
     }
-    return;
-  }
-
-  // Esc clears search if it has text
-  if(e.key === 'Escape' && searchQuery && !anyModalOpen){
-    clearSearch();
-    kbClear();
     return;
   }
 

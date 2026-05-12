@@ -747,9 +747,6 @@
     "calendar-icon_base_green.png": "blue",
     "calendar-icon_base_red.png": "blue",
     "calendar-icon_base_yellow.png": "blue",
-    "calendar-icon_solo_check.png": "blue",
-    "calendar-icon_solo_dash.png": "blue",
-    "calendar-icon_solo_exclamation.png": "blue",
     "cancel-ride_icon.png": "red",
     "chinese-flag_option.png": "red",
     "credit-card_v2.png": "red",
@@ -950,7 +947,11 @@
     "man-and-woman-taxi_v2.png": "red",
     "ride-for-someone-else_dark.png": "blue",
     "family_dark.png": "blue",
-    "earth-planet.png": "blue"
+    "earth-planet.png": "blue",
+    "calendar-icon_solo_x.png": "green",
+    "calendar-icon_solo_exclamation.png": "green",
+    "calendar-icon_solo_dash.png": "green",
+    "calendar-icon_solo_check.png": "green"
   },
   "tags": {
     "groceries_basket.png": [
